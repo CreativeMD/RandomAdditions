@@ -30,6 +30,7 @@ import com.creativemd.creativecore.common.container.SubContainer;
 import com.creativemd.creativecore.common.gui.IGuiCreator;
 import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
+import com.creativemd.creativecore.core.CreativeCore;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
 
@@ -329,7 +330,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator{
 		{
 			if(!world.isRemote)
 			{
-				((EntityPlayerMP)player).openGui(RandomAdditions.instance, 0, world, x, y, z);
+				((EntityPlayerMP)player).openGui(CreativeCore.instance, 0, world, x, y, z);
 			}
 			return true;
 		}
