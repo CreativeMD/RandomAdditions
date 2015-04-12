@@ -1,0 +1,46 @@
+package com.creativemd.randomadditions.common.systems.ic2.blocks;
+
+import net.minecraft.tileentity.TileEntity;
+
+import com.creativemd.creativecore.common.container.SubContainer;
+import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
+import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
+import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
+import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
+import com.creativemd.randomadditions.common.systems.ic2.SubBlockIC2;
+import com.creativemd.randomadditions.common.systems.ic2.SubContainerIC2;
+import com.creativemd.randomadditions.common.systems.ic2.SubGuiIC2toRA;
+import com.creativemd.randomadditions.common.systems.ic2.tileentity.TileEntityIC2toRA;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class IC2toRAConverter extends SubBlockIC2{
+
+	public IC2toRAConverter(SubBlockSystem system) {
+		super("IC2toRAConverter", system);
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+		return new SubGuiIC2toRA((TileEntityIC2toRA) tileEntity, this);
+	}
+
+	@Override
+	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
+		return new SubContainerIC2((TileEntityRandom) tileEntity);
+	}
+
+	@Override
+	public TileEntityRandom getTileEntity() {
+		return new TileEntityIC2toRA();
+	}
+
+	@Override
+	public String getTextureName() {
+		return "IC2toRA";
+	}
+
+}

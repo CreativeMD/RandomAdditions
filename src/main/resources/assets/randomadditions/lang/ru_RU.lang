@@ -1,0 +1,350 @@
+itemGroup.RandomAdditions=Random Items
+
+tile.BlockRAOre.name=Блок рандомной руды
+tile.BlockRAOre.copperOre.name=Медная руда
+tile.BlockRAOre.tinOre.name=Оловянная руда
+tile.BlockRAOre.tourmalineOre.name=Турмалиновая руда
+tile.BlockRAOre.rubyOre.name=Рубиновая руда
+
+tile.BlockRABattery.Battery0.name=Механическая батарея I уровня
+tile.BlockRABattery.Battery1.name=Механическая батарея II уровня
+tile.BlockRABattery.Battery2.name=Механическая батарея III уровня
+tile.BlockRABattery.Battery3.name=Механическая батарея IV уровня
+tile.BlockRABattery.Battery4.name=Механическая батарея V уровня
+tile.BlockRABattery.Battery5.name=Механическая батарея VI уровня
+tile.BlockRABattery.Battery6.name=Механическая батарея VII уровня
+tile.BlockRABattery.Battery7.name=Механическая батарея VIII уровня
+
+tile.BlockRACable.Cable0.name=Механический кабель I уровня
+tile.BlockRACable.Cable1.name=Механический кабель II уровня
+tile.BlockRACable.Cable2.name=Механический кабель III уровня
+tile.BlockRACable.Cable3.name=Механический кабель IV уровня
+tile.BlockRACable.Wire.name=Разъем для провода
+
+tile.BlockRARAIC2Converter.IC2toRAConverter.name=Преобразователь IC2 в RA
+tile.BlockRARAIC2Converter.RAtoIC2Converter.name=Преобразователь RA в IC2
+
+tile.BlockRAProducer.Creative.name=Креативный производитель
+tile.BlockRAProducer.Mill.name=Ветряная мельница
+tile.BlockRAProducer.Watermill.name=Водяная мельница
+tile.BlockRAMachine.Furnace.name=Механическая печь
+tile.BlockRAMachine.Anvil.name=Механическая наковальня
+tile.BlockRAMachine.Crusher.name=Механическая дробилка
+tile.BlockRAMachine.CoolingPool.name=Бассейн для охлаждения
+
+tile.BlockRAUpgrade.UpgradeTable.name=Стол модернизаций
+tile.BlockRAUpgrade.CombineTable.name=Стол объединения
+tile.BlockRAUpgrade.RepairTable.name=Стол починки
+
+tile.BlockRADecoration.Sofa00.name=Белый деревянный диван из дуба
+tile.BlockRADecoration.Sofa01.name=Оранжевый деревянный диван из дуба
+tile.BlockRADecoration.Sofa02.name=Пурпурный деревянный диван из дуба
+tile.BlockRADecoration.Sofa03.name=Голубой деревянный диван из дуба
+tile.BlockRADecoration.Sofa04.name=Жёлтый деревянный диван из дуба
+tile.BlockRADecoration.Sofa05.name=Лаймовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa06.name=Розовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa07.name=Серый деревянный диван из дуба
+tile.BlockRADecoration.Sofa08.name=Светло-серый деревянный диван из дуба
+tile.BlockRADecoration.Sofa09.name=Бирюзовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa010.name=Фиолетовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa011.name=Синий деревянный диван из дуба
+tile.BlockRADecoration.Sofa012.name=Коричневый деревянный диван из дуба
+tile.BlockRADecoration.Sofa013.name=Зелёный деревянный диван из дуба
+tile.BlockRADecoration.Sofa014.name=Красный деревянный диван из дуба
+tile.BlockRADecoration.Sofa015.name=Чёрный деревянный диван из дуба
+
+tile.BlockRADecoration.Sofa10.name=Белый деревянный диван из ели
+tile.BlockRADecoration.Sofa11.name=Оранжевый деревянный диван из ели
+tile.BlockRADecoration.Sofa12.name=Пурпурный деревянный диван из ели
+tile.BlockRADecoration.Sofa13.name=Голубой деревянный диван из ели
+tile.BlockRADecoration.Sofa14.name=Жёлтый деревянный диван из ели
+tile.BlockRADecoration.Sofa15.name=Лаймовый деревянный диван из ели
+tile.BlockRADecoration.Sofa16.name=Розовый деревянный диван из ели
+tile.BlockRADecoration.Sofa17.name=Серый деревянный диван из ели
+tile.BlockRADecoration.Sofa18.name=Светло-серый деревянный диван из ели
+tile.BlockRADecoration.Sofa19.name=Бирюзовый деревянный диван из ели
+tile.BlockRADecoration.Sofa110.name=Фиолетовый деревянный диван из ели
+tile.BlockRADecoration.Sofa111.name=Синий деревянный диван из ели
+tile.BlockRADecoration.Sofa112.name=Коричневый деревянный диван из ели
+tile.BlockRADecoration.Sofa113.name=Зелёный деревянный диван из ели
+tile.BlockRADecoration.Sofa114.name=Красный деревянный диван из ели
+tile.BlockRADecoration.Sofa115.name=Чёрный деревянный диван из ели
+
+tile.BlockRADecoration.Sofa20.name=Белый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa21.name=Оранжевый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa22.name=Пурпурный деревянный диван из берёзы
+tile.BlockRADecoration.Sofa23.name=Голубой деревянный диван из берёзы
+tile.BlockRADecoration.Sofa24.name=Жёлтый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa25.name=Лаймовый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa26.name=Розовый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa27.name=Серый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa28.name=Светло-серый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa29.name=Бирюзовый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa210.name=Фиолетовый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa211.name=Синий деревянный диван из берёзы
+tile.BlockRADecoration.Sofa212.name=Коричневый деревянный диван из берёзы
+tile.BlockRADecoration.Sofa213.name=Зелёный деревянный диван из берёзы
+tile.BlockRADecoration.Sofa214.name=Красный деревянный диван из берёзы
+tile.BlockRADecoration.Sofa215.name=Чёрный деревянный диван из берёзы
+
+tile.BlockRADecoration.Sofa30.name=Белый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa31.name=Оранжевый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa32.name=Пурпурный деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa33.name=Голубой деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa34.name=Жёлтый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa35.name=Лаймовый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa36.name=Розовый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa37.name=Серый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa38.name=Светло-серый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa39.name=Бирюзовый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa310.name=Фиолетовый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa311.name=Синий деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa312.name=Коричневый деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa313.name=Зелёный деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa314.name=Красный деревянный диван из тропического дерева
+tile.BlockRADecoration.Sofa315.name=Чёрный деревянный диван из тропического дерева
+
+tile.BlockRADecoration.Sofa40.name=Белый деревянный диван из акации
+tile.BlockRADecoration.Sofa41.name=Оранжевый деревянный диван из акации
+tile.BlockRADecoration.Sofa42.name=Пурпурный деревянный диван из акации
+tile.BlockRADecoration.Sofa43.name=Голубой деревянный диван из акации
+tile.BlockRADecoration.Sofa44.name=Жёлтый деревянный диван из акации
+tile.BlockRADecoration.Sofa45.name=Лаймовый деревянный диван из акации
+tile.BlockRADecoration.Sofa46.name=Розовый деревянный диван из акации
+tile.BlockRADecoration.Sofa47.name=Серый деревянный диван из акации
+tile.BlockRADecoration.Sofa48.name=Светло-серый деревянный диван из акации
+tile.BlockRADecoration.Sofa49.name=Бирюзовый деревянный диван из акации
+tile.BlockRADecoration.Sofa410.name=Фиолетовый деревянный диван из акации
+tile.BlockRADecoration.Sofa411.name=Синий деревянный диван из акации
+tile.BlockRADecoration.Sofa412.name=Коричневый деревянный диван из акации
+tile.BlockRADecoration.Sofa413.name=Зелёный деревянный диван из акации
+tile.BlockRADecoration.Sofa414.name=Красный деревянный диван из акации
+tile.BlockRADecoration.Sofa415.name=Чёрный деревянный диван из акации
+
+tile.BlockRADecoration.Sofa50.name=Тёмно-белый деревянный диван из дуба
+tile.BlockRADecoration.Sofa51.name=Тёмно-оранжевый деревянный диван из дуба
+tile.BlockRADecoration.Sofa52.name=Тёмно-пурпурный деревянный диван из дуба
+tile.BlockRADecoration.Sofa53.name=Тёмно-голубой деревянный диван из дуба
+tile.BlockRADecoration.Sofa54.name=Тёмно-жёлтый деревянный диван из дуба
+tile.BlockRADecoration.Sofa55.name=Тёмно-лаймовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa56.name=Тёмно-розовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa57.name=Тёмно-серый деревянный диван из дуба
+tile.BlockRADecoration.Sofa58.name=Тёмно-серый деревянный диван из дуба
+tile.BlockRADecoration.Sofa59.name=Тёмно-бирюзовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa510.name=Тёмно-Фиолетовый деревянный диван из дуба
+tile.BlockRADecoration.Sofa511.name=Тёмно-синий деревянный диван из дуба
+tile.BlockRADecoration.Sofa512.name=Тёмно-коричневый деревянный диван из дуба
+tile.BlockRADecoration.Sofa513.name=Тёмно-зелёный деревянный диван из дуба
+tile.BlockRADecoration.Sofa514.name=Тёмно-красный деревянный диван из дуба
+tile.BlockRADecoration.Sofa515.name=Тёмно-чёрный деревянный диван из дуба
+
+tile.BlockRADecoration.Chair0.name=Стул из дуба
+tile.BlockRADecoration.Chair1.name=Стул из ели
+tile.BlockRADecoration.Chair2.name=Стул из берёзы
+tile.BlockRADecoration.Chair3.name=Стул из тропического дерева
+tile.BlockRADecoration.Chair4.name=Стул из акации
+tile.BlockRADecoration.Chair5.name=Стул из тёмного дуба
+
+tile.BlockRADecoration.Table00.name=Стол из дуба
+tile.BlockRADecoration.Table01.name=Стол из дуба со стеклом
+tile.BlockRADecoration.Table02.name=Стол для гостей из дуба
+
+tile.BlockRADecoration.Table10.name=Стол из ели
+tile.BlockRADecoration.Table11.name=Стол из ели со стеклом
+tile.BlockRADecoration.Table12.name=Стол для гостей из ели
+
+tile.BlockRADecoration.Table20.name=Стол из берёзы
+tile.BlockRADecoration.Table21.name=Стол из берёзы со стеклом
+tile.BlockRADecoration.Table22.name=Стол для гостей из берёзы
+
+tile.BlockRADecoration.Table30.name=Стол из тропического дерева
+tile.BlockRADecoration.Table31.name=Стол из тропического дерева со стеклом
+tile.BlockRADecoration.Table32.name=Стол для гостей из тропического дерева
+
+tile.BlockRADecoration.Table40.name=Стол из акации
+tile.BlockRADecoration.Table41.name=Стол из акации со стеклом
+tile.BlockRADecoration.Table42.name=Стол для гостей из акации
+
+tile.BlockRADecoration.Table50.name=Стол из тёмного дуба
+tile.BlockRADecoration.Table51.name=Стол из тёмного дуба со стеклом
+tile.BlockRADecoration.Table52.name=Стол для гостей из тёмного дуба
+
+tile.BlockRADecoration.Shelf0.name=Полка из дуба
+tile.BlockRADecoration.Shelf1.name=Полка из ели
+tile.BlockRADecoration.Shelf2.name=Полка из берёзы
+tile.BlockRADecoration.Shelf3.name=Полка из тропического дерева
+tile.BlockRADecoration.Shelf4.name=Полка из акации
+tile.BlockRADecoration.Shelf5.name=Полка из тёмного дуба
+
+item.ItemRAIngot.bronze.name=Бронзовый слиток
+item.ItemRAIngot.copper.name=Медный слиток
+item.ItemRAIngot.tin.name=Оловянный слиток
+item.ItemRAIngot.ruby.name=Рубин
+item.ItemRAIngot.tourmaline.name=Турмалин
+item.ItemRAIngot.obsidian.name=Обсидиановый Слиток
+item.ItemRA.SpeedUpgrade1.name=Улучшение карты: Скорость I
+item.ItemRA.SpeedUpgrade2.name=Улучшение карты: Скорость II
+item.ItemRA.SpeedUpgrade3.name=Улучшение карты: Скорость III
+item.ItemRA.StorageUpgrade1.name=Улучшение карты: Хранилище I
+item.ItemRA.StorageUpgrade2.name=Улучшение карты: Хранилище II
+item.ItemRA.StorageUpgrade3.name=Улучшение карты: Хранилище III
+item.ItemRA.InputUpgrade1.name=Улучшение карты: Ввод I
+item.ItemRA.InputUpgrade2.name=Улучшение карты: Ввод II
+item.ItemRA.InputUpgrade3.name=Улучшение карты: Ввод III
+item.ItemRA.PowerUpgrade1.name=Улучшение карты: Мощность I
+item.ItemRA.PowerUpgrade2.name=Улучшение карты: Мощность II
+item.ItemRA.PowerUpgrade3.name=Улучшение карты: Мощность III
+
+item.ItemRA.aluminumDust.name=Алюминиевая Пыль
+item.ItemRA.bronzeDust.name=Бронзовая Пыль
+item.ItemRA.coalDust.name=Пыль из угля
+item.ItemRA.copperDust.name=Медная Пыль
+item.ItemRA.diamondDust.name=Алмазная Пыль
+item.ItemRA.emeraldDust.name=Изумрудная Пыль
+item.ItemRA.goldDust.name=Золотая Пыль
+item.ItemRA.ironDust.name=Железная Пыль
+item.ItemRA.lapisDust.name=Лазуритная Пыль
+item.ItemRA.leadDust.name=Свинцовая Пыль
+item.ItemRA.obsidianDust.name=Обсидиановая Пыль
+item.ItemRA.rubyDust.name=Рубиновая Пыль
+item.ItemRA.silverDust.name=Серебряная Пыль
+item.ItemRA.tinDust.name=Оловянная Пыль
+item.ItemRA.tourmalineDust.name=Турмалиновая Пыль
+
+item.ItemRA.axePlate.name=Железная заготовка для топора
+item.ItemRA.shovelPlate.name=Железная заготовка для лопаты
+item.ItemRA.swordPlate.name=Железная заготовка для меча
+item.ItemRA.pickaxePlate.name=Железная заготовка для кирки
+item.ItemRA.hoePlate.name=Железная заготовка для мотыги
+item.ItemRA.bowPlate.name=Железная заготовка для лука
+item.ItemRA.throwingstarPlate.name=Железная заготовка для сюрикена
+item.ItemRA.helmetPlate.name=Железная заготовка для шлема
+item.ItemRA.chestplatePlate.name=Железная заготовка для нагрудника
+item.ItemRA.leggingsPlate.name=Железная заготовка для понож
+item.ItemRA.bootsPlate.name=Железная заготовка для сапог
+
+item.ItemRA.plastic.name=Гибкая слизь
+item.ItemRA.compressedplastic.name=Сжатая гибкая слизь
+item.ItemRA.compressedplastic2.name=Дважды сжатая гибкая слизь
+item.ItemRA.heatresistantplastic.name=Термостойкая гибкая слизь
+
+item.ItemRA.cobblestoneWeight1.name=Булыжниковая Масса I
+item.ItemRA.cobblestoneWeight2.name=Булыжниковая Масса II
+item.ItemRA.cobblestoneWeight3.name=Булыжниковая Масса III
+item.ItemRA.bronzeWeight1.name=Бронзовая Масса I
+item.ItemRA.bronzeWeight2.name=Бронзовая Масса II
+item.ItemRA.bronzeWeight3.name=Бронзовая Масса III
+item.ItemRA.obsidianWeight1.name=Обсидиановая Масса I
+item.ItemRA.obsidianWeight2.name=Обсидиановая Масса II
+item.ItemRA.obsidianWeight3.name=Обсидиановая Масса III
+
+item.ItemRA.millarm.name=Миларм
+item.ItemRA.watermillarm.name=Водный Миларм
+
+item.ItemRA.flour.name=Мука
+
+item.ItemRA.battery1.name=Переносной аккумулятор I уровня
+item.ItemRA.battery2.name=Переносной аккумулятор II уровня
+item.ItemRA.battery3.name=Переносной аккумулятор III уровня
+
+item.ItemRA.itemwire.name=Провод
+
+item.RAArmorHelmetBronze.name=Бронзовый шлем
+item.RAArmorHelmetCopper.name=Медный шлем
+item.RAArmorHelmetTin.name=Оловянный шлем
+item.RAArmorHelmetRuby.name=Рубиновый шлем
+item.RAArmorHelmetTourmaline.name=Турмалиновый шлем
+item.RAArmorHelmetEmerald.name=Изумрудный шлем
+item.RAArmorHelmetObsidian.name=Обсидиановый шлем
+item.RAArmorHelmetLapis.name=Лазуритный шлем
+
+item.RAArmorChestplateBronze.name=Бронзовый нагрудник
+item.RAArmorChestplateCopper.name=Медный нагрудник
+item.RAArmorChestplateTin.name=Оловянный нагрудник
+item.RAArmorChestplateRuby.name=Рубиновый нагрудник
+item.RAArmorChestplateTourmaline.name=Турмалиновый нагрудник
+item.RAArmorChestplateEmerald.name=Изумрудный нагрудник
+item.RAArmorChestplateObsidian.name=Обсидиановый нагрудник
+item.RAArmorChestplateLapis.name=Лазуритный нагрудник
+
+item.RAArmorLeggingsBronze.name=Бронзовые поножи
+item.RAArmorLeggingsCopper.name=Медные поножи
+item.RAArmorLeggingsTin.name=Оловянные поножи
+item.RAArmorLeggingsRuby.name=Рубиновые поножи
+item.RAArmorLeggingsTourmaline.name=Турмалиновые поножи
+item.RAArmorLeggingsEmerald.name=Изумрудные поножи
+item.RAArmorLeggingsObsidian.name=Обсидиановые поножи
+item.RAArmorLeggingsLapis.name=Лазуритные поножи
+
+item.RAArmorBootsBronze.name=Бронзовые сапоги
+item.RAArmorBootsCopper.name=Медные сапоги
+item.RAArmorBootsTin.name=Оловянные сапоги
+item.RAArmorBootsRuby.name=Рубиновые сапоги
+item.RAArmorBootsTourmaline.name=Турмалиновые сапоги
+item.RAArmorBootsEmerald.name=Изумрудные сапоги
+item.RAArmorBootsObsidian.name=Обсидиановые сапоги
+item.RAArmorBootsLapis.name=Лазуритные сапоги
+
+item.RATools.bronze.Pickaxe.name=Бронзовая кирка
+item.RATools.bronze.Axe.name=Бронзовый топор
+item.RATools.bronze.Shovel.name=Бронзовая лопата
+item.RATools.bronze.Hoe.name=Бронзовая мотыга
+item.RATools.bronze.Sword.name=Бронзовый меч
+item.RATools.bronze.Throwingstar.name=Бронзовый сюрикен
+item.RATools.bronze.Bow.name=Бронзовый лук
+
+item.RATools.copper.Pickaxe.name=Медная кирка
+item.RATools.copper.Axe.name=Медный топор
+item.RATools.copper.Shovel.name=Медная лопата
+item.RATools.copper.Hoe.name=Медная мотыга
+item.RATools.copper.Sword.name=Медный меч
+item.RATools.copper.Throwingstar.name=Медный сюрикен
+item.RATools.copper.Bow.name=Медный лук
+
+item.RATools.tin.Pickaxe.name=Оловянная кирка
+item.RATools.tin.Axe.name=Оловянный топор
+item.RATools.tin.Shovel.name=Оловянная лопата
+item.RATools.tin.Hoe.name=Оловянная мотыга
+item.RATools.tin.Sword.name=Оловянный меч
+item.RATools.tin.Throwingstar.name=Оловянный сюрикен
+item.RATools.tin.Bow.name=Оловянный лук
+
+item.RATools.ruby.Pickaxe.name=Рубиновая кирка
+item.RATools.ruby.Axe.name=Рубиновый топор
+item.RATools.ruby.Shovel.name=Рубиновая лопата
+item.RATools.ruby.Hoe.name=Рубиновая мотыга
+item.RATools.ruby.Sword.name=Рубиновый меч
+item.RATools.ruby.Throwingstar.name=Рубиновый сюрикен
+item.RATools.ruby.Bow.name=Рубиновый лук
+
+item.RATools.tourmaline.Pickaxe.name=Турмалиновая кирка
+item.RATools.tourmaline.Axe.name=Турмалиновый топор
+item.RATools.tourmaline.Shovel.name=Турмалиновая лопата
+item.RATools.tourmaline.Hoe.name=Турмалиновая мотыга
+item.RATools.tourmaline.Sword.name=Турмалиновый меч
+item.RATools.tourmaline.Throwingstar.name=Турмалиновый сюрикен
+item.RATools.tourmaline.Bow.name=Турмалиновый лук
+
+item.RATools.emerald.Pickaxe.name=Изумрудная кирка
+item.RATools.emerald.Axe.name=Изумрудный топор
+item.RATools.emerald.Shovel.name=Изумрудная лопата
+item.RATools.emerald.Hoe.name=Изумрудная мотыга
+item.RATools.emerald.Sword.name=Изумрудный меч
+item.RATools.emerald.Throwingstar.name=Изумрудный сюрикен
+item.RATools.emerald.Bow.name=Изумрудный лук
+
+item.RATools.obsidian.Pickaxe.name=Обсидиановая кирка
+item.RATools.obsidian.Axe.name=Обсидиановый топор
+item.RATools.obsidian.Shovel.name=Обсидиановая лопата
+item.RATools.obsidian.Hoe.name=Обсидиановая мотыга
+item.RATools.obsidian.Sword.name=Обсидиановая меч
+item.RATools.obsidian.Throwingstar.name=Обсидиановый сюрикен
+item.RATools.obsidian.Bow.name=Обсидиановый лук
+
+item.RATools.lapis.Pickaxe.name=Лазуритная кирка
+item.RATools.lapis.Axe.name=Лазуритный топор
+item.RATools.lapis.Shovel.name=Лазуритная лопата
+item.RATools.lapis.Hoe.name=Лазуритная мотыга
+item.RATools.lapis.Sword.name=Лазуритная меч
+item.RATools.lapis.Throwingstar.name=Лазуритный сюрикен
+item.RATools.lapis.Bow.name=Лазуритный лук

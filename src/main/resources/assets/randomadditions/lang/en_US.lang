@@ -1,0 +1,288 @@
+itemGroup.RandomAdditions=Random Items
+
+tile.BlockRAOre.name=Block Random Ore
+tile.BlockRAOre.copperOre.name=Copper Ore
+tile.BlockRAOre.tinOre.name=Tin Ore
+tile.BlockRAOre.tourmalineOre.name=Tourmaline Ore
+tile.BlockRAOre.rubyOre.name=Ruby Ore
+
+tile.BlockRABattery.Battery0.name=Mechanic Battery Tier I
+tile.BlockRABattery.Battery1.name=Mechanic Battery Tier II
+tile.BlockRABattery.Battery2.name=Mechanic Battery Tier III
+tile.BlockRABattery.Battery3.name=Mechanic Battery Tier IV
+tile.BlockRABattery.Battery4.name=Mechanic Battery Tier V
+tile.BlockRABattery.Battery5.name=Mechanic Battery Tier VI
+tile.BlockRABattery.Battery6.name=Mechanic Battery Tier VII
+tile.BlockRABattery.Battery7.name=Mechanic Battery Tier VIII
+
+tile.BlockRACable.Cable0.name=Mechanic Cable Tier I
+tile.BlockRACable.Cable1.name=Mechanic Cable Tier II
+tile.BlockRACable.Cable2.name=Mechanic Cable Tier III
+tile.BlockRACable.Cable3.name=Mechanic Cable Tier IV
+tile.BlockRACable.Wire.name=Wire Connector
+
+tile.BlockRARAIC2Converter.IC2toRAConverter.name=IC2 to RA Converter
+tile.BlockRARAIC2Converter.RAtoIC2Converter.name=RA to IC2 Converter
+
+tile.BlockRAProducer.Creative.name=Creative Producer
+tile.BlockRAProducer.Mill.name=Wind Mill
+tile.BlockRAProducer.Watermill.name=Water Mill
+tile.BlockRAProducer.HeatGenerator.name=Heat Generator
+tile.BlockRAMachine.Furnace.name=Mechanic Furnace
+tile.BlockRAMachine.Anvil.name=Mechanic Anvil
+tile.BlockRAMachine.Crusher.name=Mechanic Crusher
+tile.BlockRAMachine.CoolingPool.name=Cooling Pool
+
+tile.BlockRAUpgrade.UpgradeTable.name=Upgrade Table
+tile.BlockRAUpgrade.CombineTable.name=Combine Table
+tile.BlockRAUpgrade.RepairTable.name=Repair Table
+
+tile.BlockRADecoration.Sofa00.name=White Oak Wood Sofa
+tile.BlockRADecoration.Sofa01.name=Orange Oak Wood Sofa
+tile.BlockRADecoration.Sofa02.name=Magenta Oak Wood Sofa
+tile.BlockRADecoration.Sofa03.name=Light Blue Oak Wood Sofa
+tile.BlockRADecoration.Sofa04.name=Yellow Oak Wood Sofa
+tile.BlockRADecoration.Sofa05.name=Lime Oak Wood Sofa
+tile.BlockRADecoration.Sofa06.name=Pink Oak Wood Sofa
+tile.BlockRADecoration.Sofa07.name=Gray Oak Wood Sofa
+tile.BlockRADecoration.Sofa08.name=Light Gray Oak Wood Sofa
+tile.BlockRADecoration.Sofa09.name=Cyan Oak Wood Sofa
+tile.BlockRADecoration.Sofa010.name=Purple Oak Wood Sofa
+tile.BlockRADecoration.Sofa011.name=Blue Oak Wood Sofa
+tile.BlockRADecoration.Sofa012.name=Brown Oak Wood Sofa
+tile.BlockRADecoration.Sofa013.name=Green Oak Wood Sofa
+tile.BlockRADecoration.Sofa014.name=Red Oak Wood Sofa
+tile.BlockRADecoration.Sofa015.name=Black Oak Wood Sofa
+
+tile.BlockRADecoration.Sofa10.name=White Spruce Wood Sofa
+tile.BlockRADecoration.Sofa11.name=Orange Spruce Wood Sofa
+tile.BlockRADecoration.Sofa12.name=Magenta Spruce Wood Sofa
+tile.BlockRADecoration.Sofa13.name=Light Blue Spruce Wood Sofa
+tile.BlockRADecoration.Sofa14.name=Yellow Spruce Wood Sofa
+tile.BlockRADecoration.Sofa15.name=Lime Spruce Wood Sofa
+tile.BlockRADecoration.Sofa16.name=Pink Spruce Wood Sofa
+tile.BlockRADecoration.Sofa17.name=Gray Spruce Wood Sofa
+tile.BlockRADecoration.Sofa18.name=Light Gray Spruce Wood Sofa
+tile.BlockRADecoration.Sofa19.name=Cyan Spruce Wood Sofa
+tile.BlockRADecoration.Sofa110.name=Purple Spruce Wood Sofa
+tile.BlockRADecoration.Sofa111.name=Blue Spruce Wood Sofa
+tile.BlockRADecoration.Sofa112.name=Brown Spruce Wood Sofa
+tile.BlockRADecoration.Sofa113.name=Green Spruce Wood Sofa
+tile.BlockRADecoration.Sofa114.name=Red Spruce Wood Sofa
+tile.BlockRADecoration.Sofa115.name=Black Spruce Wood Sofa
+
+tile.BlockRADecoration.Sofa20.name=White Birch Wood Sofa
+tile.BlockRADecoration.Sofa21.name=Orange Birch Wood Sofa
+tile.BlockRADecoration.Sofa22.name=Magenta Birch Wood Sofa
+tile.BlockRADecoration.Sofa23.name=Light Blue Birch Wood Sofa
+tile.BlockRADecoration.Sofa24.name=Yellow Birch Wood Sofa
+tile.BlockRADecoration.Sofa25.name=Lime Birch Wood Sofa
+tile.BlockRADecoration.Sofa26.name=Pink Birch Wood Sofa
+tile.BlockRADecoration.Sofa27.name=Gray Birch Wood Sofa
+tile.BlockRADecoration.Sofa28.name=Light Gray Birch Wood Sofa
+tile.BlockRADecoration.Sofa29.name=Cyan Birch Wood Sofa
+tile.BlockRADecoration.Sofa210.name=Purple Birch Wood Sofa
+tile.BlockRADecoration.Sofa211.name=Blue Birch Wood Sofa
+tile.BlockRADecoration.Sofa212.name=Brown Birch Wood Sofa
+tile.BlockRADecoration.Sofa213.name=Green Birch Wood Sofa
+tile.BlockRADecoration.Sofa214.name=Red Birch Wood Sofa
+tile.BlockRADecoration.Sofa215.name=Black Birch Wood Sofa
+
+tile.BlockRADecoration.Sofa30.name=White Jungle Wood Sofa
+tile.BlockRADecoration.Sofa31.name=Orange Jungle Wood Sofa
+tile.BlockRADecoration.Sofa32.name=Magenta Jungle Wood Sofa
+tile.BlockRADecoration.Sofa33.name=Light Blue Jungle Wood Sofa
+tile.BlockRADecoration.Sofa34.name=Yellow Jungle Wood Sofa
+tile.BlockRADecoration.Sofa35.name=Lime Jungle Wood Sofa
+tile.BlockRADecoration.Sofa36.name=Pink Jungle Wood Sofa
+tile.BlockRADecoration.Sofa37.name=Gray Jungle Wood Sofa
+tile.BlockRADecoration.Sofa38.name=Light Gray Jungle Wood Sofa
+tile.BlockRADecoration.Sofa39.name=Cyan Jungle Wood Sofa
+tile.BlockRADecoration.Sofa310.name=Purple Jungle Wood Sofa
+tile.BlockRADecoration.Sofa311.name=Blue Jungle Wood Sofa
+tile.BlockRADecoration.Sofa312.name=Brown Jungle Wood Sofa
+tile.BlockRADecoration.Sofa313.name=Green Jungle Wood Sofa
+tile.BlockRADecoration.Sofa314.name=Red Jungle Wood Sofa
+tile.BlockRADecoration.Sofa315.name=Black Jungle Wood Sofa
+
+tile.BlockRADecoration.Sofa40.name=White Acacia Wood Sofa
+tile.BlockRADecoration.Sofa41.name=Orange Acacia Wood Sofa
+tile.BlockRADecoration.Sofa42.name=Magenta Acacia Wood Sofa
+tile.BlockRADecoration.Sofa43.name=Light Blue Acacia Wood Sofa
+tile.BlockRADecoration.Sofa44.name=Yellow Acacia Wood Sofa
+tile.BlockRADecoration.Sofa45.name=Lime Acacia Wood Sofa
+tile.BlockRADecoration.Sofa46.name=Pink Acacia Wood Sofa
+tile.BlockRADecoration.Sofa47.name=Gray Acacia Wood Sofa
+tile.BlockRADecoration.Sofa48.name=Light Gray Acacia Wood Sofa
+tile.BlockRADecoration.Sofa49.name=Cyan Acacia Wood Sofa
+tile.BlockRADecoration.Sofa410.name=Purple Acacia Wood Sofa
+tile.BlockRADecoration.Sofa411.name=Blue Acacia Wood Sofa
+tile.BlockRADecoration.Sofa412.name=Brown Acacia Wood Sofa
+tile.BlockRADecoration.Sofa413.name=Green Acacia Wood Sofa
+tile.BlockRADecoration.Sofa414.name=Red Acacia Wood Sofa
+tile.BlockRADecoration.Sofa415.name=Black Acacia Wood Sofa
+
+tile.BlockRADecoration.Sofa50.name=White Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa51.name=Orange Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa52.name=Magenta Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa53.name=Light Blue Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa54.name=Yellow Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa55.name=Lime Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa56.name=Pink Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa57.name=Gray Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa58.name=Light Gray Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa59.name=Cyan Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa510.name=Purple Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa511.name=Blue Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa512.name=Brown Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa513.name=Green Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa514.name=Red Dark Oak Wood Sofa
+tile.BlockRADecoration.Sofa515.name=Black Dark Oak Wood Sofa
+
+tile.BlockRADecoration.Chair0.name=Oak Chair
+tile.BlockRADecoration.Chair1.name=Spruce Chair
+tile.BlockRADecoration.Chair2.name=Birch Chair
+tile.BlockRADecoration.Chair3.name=Jungle Chair
+tile.BlockRADecoration.Chair4.name=Acacia Chair
+tile.BlockRADecoration.Chair5.name=Dark Oak Chair
+
+tile.BlockRADecoration.Table00.name=Oak Table
+tile.BlockRADecoration.Table01.name=Oak Glass Table
+tile.BlockRADecoration.Table02.name=Oak Living Room Table
+
+tile.BlockRADecoration.Table10.name=Spruce Table
+tile.BlockRADecoration.Table11.name=Spruce Glass Table
+tile.BlockRADecoration.Table12.name=Spruce Living Room Table
+
+tile.BlockRADecoration.Table20.name=Birch Table
+tile.BlockRADecoration.Table21.name=Birch Glass Table
+tile.BlockRADecoration.Table22.name=Birch Living Room Table
+
+tile.BlockRADecoration.Table30.name=Jungle Table
+tile.BlockRADecoration.Table31.name=Jungle Glass Table
+tile.BlockRADecoration.Table32.name=Jungle Living Room Table
+
+tile.BlockRADecoration.Table40.name=Acacia Table
+tile.BlockRADecoration.Table41.name=Acacia Glass Table
+tile.BlockRADecoration.Table42.name=Acacia Living Room Table
+
+tile.BlockRADecoration.Table50.name=Dark Oak Table
+tile.BlockRADecoration.Table51.name=Dark Oak Glass Table
+tile.BlockRADecoration.Table52.name=Dark Oak Living Room Table
+
+tile.BlockRADecoration.Shelf0.name=Oak Shelf
+tile.BlockRADecoration.Shelf1.name=Spruce Shelf
+tile.BlockRADecoration.Shelf2.name=Birch Shelf
+tile.BlockRADecoration.Shelf3.name=Jungle Shelf
+tile.BlockRADecoration.Shelf4.name=Acacia Shelf
+tile.BlockRADecoration.Shelf5.name=Dark Oak Shelf
+tile.BlockRADecoration.MiddleGlass.name=Glass Roof
+
+item.ItemRAIngot.bronze.name=Bronze Ingot
+item.ItemRAIngot.copper.name=Copper Ingot
+item.ItemRAIngot.tin.name=Tin Ingot
+item.ItemRAIngot.ruby.name=Ruby
+item.ItemRAIngot.tourmaline.name=Tourmaline
+item.ItemRAIngot.obsidian.name=Obsidian Ingot
+item.ItemRA.SpeedUpgrade1.name=Speed Upgrade Card I
+item.ItemRA.SpeedUpgrade2.name=Speed Upgrade Card II
+item.ItemRA.SpeedUpgrade3.name=Speed Upgrade Card III
+item.ItemRA.StorageUpgrade1.name=Storage Upgrade Card I
+item.ItemRA.StorageUpgrade2.name=Storage Upgrade Card II
+item.ItemRA.StorageUpgrade3.name=Storage Upgrade Card III
+item.ItemRA.InputUpgrade1.name=Input Upgrade Card I
+item.ItemRA.InputUpgrade2.name=Input Upgrade Card II
+item.ItemRA.InputUpgrade3.name=Input Upgrade Card III
+item.ItemRA.PowerUpgrade1.name=Power Upgrade Card I
+item.ItemRA.PowerUpgrade2.name=Power Upgrade Card II
+item.ItemRA.PowerUpgrade3.name=Power Upgrade Card III
+
+item.ItemRA.aluminumDust.name=Aluminum Dust
+item.ItemRA.bronzeDust.name=Bronze Dust
+item.ItemRA.coalDust.name=Coal Dust
+item.ItemRA.copperDust.name=Copper Dust
+item.ItemRA.diamondDust.name=Diamond Dust
+item.ItemRA.emeraldDust.name=Emerald Dust
+item.ItemRA.goldDust.name=Gold Dust
+item.ItemRA.ironDust.name=Iron Dust
+item.ItemRA.lapisDust.name=Lapis Dust
+item.ItemRA.leadDust.name=Lead Dust
+item.ItemRA.obsidianDust.name=Obsidian Dust
+item.ItemRA.rubyDust.name=Ruby Dust
+item.ItemRA.silverDust.name=Silver Dust
+item.ItemRA.tinDust.name=Tin Dust
+item.ItemRA.tourmalineDust.name=Tourmaline Dust
+
+item.ItemRA.axePlate.name=Iron Axe Plate
+item.ItemRA.shovelPlate.name=Iron Shovel Plate
+item.ItemRA.swordPlate.name=Iron Sword Plate
+item.ItemRA.pickaxePlate.name=Iron Pickaxe Plate
+item.ItemRA.hoePlate.name=Iron Hoe Plate
+item.ItemRA.bowPlate.name=Iron Bow Plate
+item.ItemRA.throwingstarPlate.name=Iron Throwing Star Plate
+item.ItemRA.helmetPlate.name=Iron Helmet Plate
+item.ItemRA.chestplatePlate.name=Iron Chestplate Plate
+item.ItemRA.leggingsPlate.name=Iron Leggings Plate
+item.ItemRA.bootsPlate.name=Iron Boots Plate
+
+item.ItemRA.plastic.name=Flexible Slime
+item.ItemRA.compressedplastic.name=Compressed Flexible Slime
+item.ItemRA.compressedplastic2.name=Double-Compressed Flexible Slime
+item.ItemRA.heatresistantplastic.name=Heat-Resistant Flexible Slime
+
+item.ItemRA.cobblestoneWeight1.name=Cobblestone Weight I
+item.ItemRA.cobblestoneWeight2.name=Cobblestone Weight II
+item.ItemRA.cobblestoneWeight3.name=Cobblestone Weight III
+item.ItemRA.bronzeWeight1.name=Bronze Weight I
+item.ItemRA.bronzeWeight2.name=Bronze Weight II
+item.ItemRA.bronzeWeight3.name=Bronze Weight III
+item.ItemRA.obsidianWeight1.name=Obsidian Weight I
+item.ItemRA.obsidianWeight2.name=Obsidian Weight II
+item.ItemRA.obsidianWeight3.name=Obsidian Weight III
+
+item.ItemRA.millarm.name=Millarm
+item.ItemRA.watermillarm.name=Watermillarm
+
+item.ItemRA.flour.name=Flour
+
+item.ItemRA.battery1.name=Battery Level 1
+item.ItemRA.battery2.name=Battery Level 2
+item.ItemRA.battery3.name=Battery Level 3
+
+item.ItemRA.itemwire.name=Wire
+
+item.RAArmorHelmetBronze.name=Bronze Helmet
+item.RAArmorHelmetCopper.name=Copper Helmet
+item.RAArmorHelmetTin.name=Tin Helmet
+item.RAArmorHelmetRuby.name=Ruby Helmet
+item.RAArmorHelmetTourmaline.name=Tourmaline Helmet
+item.RAArmorHelmetEmerald.name=Emerald Helmet
+item.RAArmorHelmetObsidian.name=Obsidian Helmet
+item.RAArmorHelmetLapis.name=Lapis Helmet
+
+item.RAArmorChestplateBronze.name=Bronze Chestplate
+item.RAArmorChestplateCopper.name=Copper Chestplate
+item.RAArmorChestplateTin.name=Tin Chestplate
+item.RAArmorChestplateRuby.name=Ruby Chestplate
+item.RAArmorChestplateTourmaline.name=Tourmaline Chestplate
+item.RAArmorChestplateEmerald.name=Emerald Chestplate
+item.RAArmorChestplateObsidian.name=Obsidian Chestplate
+item.RAArmorChestplateLapis.name=Lapis Chestplate
+
+item.RAArmorLeggingsBronze.name=Bronze Leggings
+item.RAArmorLeggingsCopper.name=Copper Leggings
+item.RAArmorLeggingsTin.name=Tin Leggings
+item.RAArmorLeggingsRuby.name=Ruby Leggings
+item.RAArmorLeggingsTourmaline.name=Tourmaline Leggings
+item.RAArmorLeggingsEmerald.name=Emerald Leggings
+item.RAArmorLeggingsObsidian.name=Obsidian Leggings
+item.RAArmorLeggingsLapis.name=Lapis Leggings
+
+item.RAArmorBootsBronze.name=Bronze Boots
+item.RAArmorBootsCopper.name=Copper Boots
+item.RAArmorBootsTin.name=Tin Boots
+item.RAArmorBootsRuby.name=Ruby Boots
+item.RAArmorBootsTourmaline.name=Tourmaline Boots
+item.RAArmorBootsEmerald.name=Emerald Boots
+item.RAArmorBootsObsidian.name=Obsidian Boots
+item.RAArmorBootsLapis.name=Lapis Boots
