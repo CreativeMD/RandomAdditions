@@ -425,6 +425,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator{
     }
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public SubGui getGui(EntityPlayer player, ItemStack stack, World world,
 			int x, int y, int z) {
 		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getGui(world.getTileEntity(x, y, z));
