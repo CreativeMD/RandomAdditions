@@ -27,6 +27,7 @@ tile.BlockRARAIC2Converter.RAtoIC2Converter.name=Преобразователь 
 tile.BlockRAProducer.Creative.name=Креативный производитель
 tile.BlockRAProducer.Mill.name=Ветряная мельница
 tile.BlockRAProducer.Watermill.name=Водяная мельница
+tile.BlockRAProducer.HeatGenerator.name=Теплогенератор
 tile.BlockRAMachine.Furnace.name=Механическая печь
 tile.BlockRAMachine.Anvil.name=Механическая наковальня
 tile.BlockRAMachine.Crusher.name=Механическая дробилка
@@ -175,6 +176,7 @@ tile.BlockRADecoration.Shelf2.name=Полка из берёзы
 tile.BlockRADecoration.Shelf3.name=Полка из тропического дерева
 tile.BlockRADecoration.Shelf4.name=Полка из акации
 tile.BlockRADecoration.Shelf5.name=Полка из тёмного дуба
+tile.BlockRADecoration.MiddleGlass.name=Стеклянная крыша
 
 item.ItemRAIngot.bronze.name=Бронзовый слиток
 item.ItemRAIngot.copper.name=Медный слиток
