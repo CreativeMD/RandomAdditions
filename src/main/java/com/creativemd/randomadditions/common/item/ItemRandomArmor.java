@@ -173,8 +173,8 @@ public class ItemRandomArmor extends ItemArmor{
 	{
 		if(ItemCore.isHot(par1ItemStack))
 		{
-			par3List.add("Heatet");
-			par3List.add("Care! It damages you!");
+			par3List.add("Heated");
+			par3List.add("Take care! It damages you!");
 		}
 		
 		for (int i = 0; i < RandomAdditions.materials.size(); i++) {

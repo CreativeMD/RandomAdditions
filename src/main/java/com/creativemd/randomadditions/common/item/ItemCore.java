@@ -40,8 +40,8 @@ public class ItemCore extends Item{
 	{
 		if(isHot(stack))
 		{
-			list.add("Heatet");
-			list.add("Care! It damages you!");
+			list.add("Heated");
+			list.add("Take care! It damages you!");
 		}
 	}
 	
