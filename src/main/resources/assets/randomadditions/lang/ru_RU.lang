@@ -6,19 +6,19 @@ tile.BlockRAOre.tinOre.name=Оловянная руда
 tile.BlockRAOre.tourmalineOre.name=Турмалиновая руда
 tile.BlockRAOre.rubyOre.name=Рубиновая руда
 
-tile.BlockRABattery.Battery0.name=Механическая батарея I уровня
-tile.BlockRABattery.Battery1.name=Механическая батарея II уровня
-tile.BlockRABattery.Battery2.name=Механическая батарея III уровня
-tile.BlockRABattery.Battery3.name=Механическая батарея IV уровня
-tile.BlockRABattery.Battery4.name=Механическая батарея V уровня
-tile.BlockRABattery.Battery5.name=Механическая батарея VI уровня
-tile.BlockRABattery.Battery6.name=Механическая батарея VII уровня
-tile.BlockRABattery.Battery7.name=Механическая батарея VIII уровня
+tile.BlockRABattery.Battery0.name=Механическая батарея (I уровень)
+tile.BlockRABattery.Battery1.name=Механическая батарея (II уровень)
+tile.BlockRABattery.Battery2.name=Механическая батарея (III уровень)
+tile.BlockRABattery.Battery3.name=Механическая батарея (IV уровень)
+tile.BlockRABattery.Battery4.name=Механическая батарея (V уровень)
+tile.BlockRABattery.Battery5.name=Механическая батарея (VI уровень)
+tile.BlockRABattery.Battery6.name=Механическая батарея (VII уровень)
+tile.BlockRABattery.Battery7.name=Механическая батарея (VIII уровень)
 
-tile.BlockRACable.Cable0.name=Механический кабель I уровня
-tile.BlockRACable.Cable1.name=Механический кабель II уровня
-tile.BlockRACable.Cable2.name=Механический кабель III уровня
-tile.BlockRACable.Cable3.name=Механический кабель IV уровня
+tile.BlockRACable.Cable0.name=Механический кабель (I уровень)
+tile.BlockRACable.Cable1.name=Механический кабель (II уровень)
+tile.BlockRACable.Cable2.name=Механический кабель (III уровень)
+tile.BlockRACable.Cable3.name=Механический кабель (IV уровень)
 tile.BlockRACable.Wire.name=Разъём для провода
 
 tile.BlockRARAIC2Converter.IC2toRAConverter.name=Преобразователь IC2 в RA
@@ -31,7 +31,7 @@ tile.BlockRAProducer.HeatGenerator.name=Теплогенератор
 tile.BlockRAMachine.Furnace.name=Механическая печь
 tile.BlockRAMachine.Anvil.name=Механическая наковальня
 tile.BlockRAMachine.Crusher.name=Механическая дробилка
-tile.BlockRAMachine.CoolingPool.name=Бассейн для охлаждения
+tile.BlockRAMachine.CoolingPool.name=Охлаждающий бассейн
 
 tile.BlockRAUpgrade.UpgradeTable.name=Стол модернизаций
 tile.BlockRAUpgrade.CombineTable.name=Стол объединения
@@ -184,18 +184,18 @@ item.ItemRAIngot.tin.name=Оловянный слиток
 item.ItemRAIngot.ruby.name=Рубин
 item.ItemRAIngot.tourmaline.name=Турмалин
 item.ItemRAIngot.obsidian.name=Обсидиановый слиток
-item.ItemRA.SpeedUpgrade1.name=Карточка улучшения скорости I
-item.ItemRA.SpeedUpgrade2.name=Карточка улучшения скорости II
-item.ItemRA.SpeedUpgrade3.name=Карточка улучшения скорости III
-item.ItemRA.StorageUpgrade1.name=Карточка улучшения хранилища I
-item.ItemRA.StorageUpgrade2.name=Карточка улучшения хранилища II
-item.ItemRA.StorageUpgrade3.name=Карточка улучшения хранилища III
-item.ItemRA.InputUpgrade1.name=Карточка улучшения ввода I
-item.ItemRA.InputUpgrade2.name=Карточка улучшения ввода II
-item.ItemRA.InputUpgrade3.name=Карточка улучшения ввода III
-item.ItemRA.PowerUpgrade1.name=Карточка улучшения мощности I
-item.ItemRA.PowerUpgrade2.name=Карточка улучшения мощности II
-item.ItemRA.PowerUpgrade3.name=Карточка улучшения мощности III
+item.ItemRA.SpeedUpgrade1.name=Карточка улучшения скорости (I уровень)
+item.ItemRA.SpeedUpgrade2.name=Карточка улучшения скорости (II уровень)
+item.ItemRA.SpeedUpgrade3.name=Карточка улучшения скорости (III уровень)
+item.ItemRA.StorageUpgrade1.name=Карточка улучшения хранилища (I уровень)
+item.ItemRA.StorageUpgrade2.name=Карточка улучшения хранилища (II уровень)
+item.ItemRA.StorageUpgrade3.name=Карточка улучшения хранилища (III уровень)
+item.ItemRA.InputUpgrade1.name=Карточка улучшения ввода (I уровень)
+item.ItemRA.InputUpgrade2.name=Карточка улучшения ввода (II уровень)
+item.ItemRA.InputUpgrade3.name=Карточка улучшения ввода (III уровень)
+item.ItemRA.PowerUpgrade1.name=Карточка улучшения мощности (I уровень)
+item.ItemRA.PowerUpgrade2.name=Карточка улучшения мощности (II уровень)
+item.ItemRA.PowerUpgrade3.name=Карточка улучшения мощности (III уровень)
 
 item.ItemRA.aluminumDust.name=Алюминиевая пыль
 item.ItemRA.bronzeDust.name=Бронзовая пыль
@@ -230,24 +230,24 @@ item.ItemRA.compressedplastic.name=Сжатая гибкая слизь
 item.ItemRA.compressedplastic2.name=Дважды сжатая гибкая слизь
 item.ItemRA.heatresistantplastic.name=Термостойкая гибкая слизь
 
-item.ItemRA.cobblestoneWeight1.name=Булыжниковая масса I
-item.ItemRA.cobblestoneWeight2.name=Булыжниковая масса II
-item.ItemRA.cobblestoneWeight3.name=Булыжниковая масса III
-item.ItemRA.bronzeWeight1.name=Бронзовая масса I
-item.ItemRA.bronzeWeight2.name=Бронзовая масса II
-item.ItemRA.bronzeWeight3.name=Бронзовая масса III
-item.ItemRA.obsidianWeight1.name=Обсидиановая масса I
-item.ItemRA.obsidianWeight2.name=Обсидиановая масса II
-item.ItemRA.obsidianWeight3.name=Обсидиановая масса III
+item.ItemRA.cobblestoneWeight1.name=Булыжниковая масса (I уровень)
+item.ItemRA.cobblestoneWeight2.name=Булыжниковая масса (II уровень)
+item.ItemRA.cobblestoneWeight3.name=Булыжниковая масса (III уровень)
+item.ItemRA.bronzeWeight1.name=Бронзовая масса (I уровень)
+item.ItemRA.bronzeWeight2.name=Бронзовая масса (II уровень)
+item.ItemRA.bronzeWeight3.name=Бронзовая масса (III уровень)
+item.ItemRA.obsidianWeight1.name=Обсидиановая масса (I уровень)
+item.ItemRA.obsidianWeight2.name=Обсидиановая масса (II уровень)
+item.ItemRA.obsidianWeight3.name=Обсидиановая масса (III уровень)
 
 item.ItemRA.millarm.name=Крыло мельницы
 item.ItemRA.watermillarm.name=Крыло водяной мельницы
 
 item.ItemRA.flour.name=Мука
 
-item.ItemRA.battery1.name=Переносной аккумулятор I уровня
-item.ItemRA.battery2.name=Переносной аккумулятор II уровня
-item.ItemRA.battery3.name=Переносной аккумулятор III уровня
+item.ItemRA.battery1.name=Переносной аккумулятор (I уровень)
+item.ItemRA.battery2.name=Переносной аккумулятор (II уровень)
+item.ItemRA.battery3.name=Переносной аккумулятор (III уровень)
 
 item.ItemRA.itemwire.name=Провод
 
