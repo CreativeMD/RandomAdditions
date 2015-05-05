@@ -1,0 +1,288 @@
+itemGroup.RandomAdditions=Willekeurig Voorwerp
+
+tile.BlockRAOre.name=Block Willekeurig erts
+tile.BlockRAOre.copperOre.name=Koper erts
+tile.BlockRAOre.tinOre.name=Tin erts
+tile.BlockRAOre.tourmalineOre.name=Toermalijn erts
+tile.BlockRAOre.rubyOre.name=Robijn erts
+
+tile.BlockRABattery.Battery0.name=Mechanische Batterij Level I
+tile.BlockRABattery.Battery1.name=Mechanische Batterij Level II
+tile.BlockRABattery.Battery2.name=Mechanische Batterij Level III
+tile.BlockRABattery.Battery3.name=Mechanische Batterij Level IV
+tile.BlockRABattery.Battery4.name=Mechanische Batterij Level V
+tile.BlockRABattery.Battery5.name=Mechanische Batterij Level VI
+tile.BlockRABattery.Battery6.name=Mechanische Batterij Level VII
+tile.BlockRABattery.Battery7.name=Mechanische Batterij Level VIII
+
+tile.BlockRACable.Cable0.name=Mechanische Kabel Level I
+tile.BlockRACable.Cable1.name=Mechanische Kabel Level II
+tile.BlockRACable.Cable2.name=Mechanische Kabel Level III
+tile.BlockRACable.Cable3.name=Mechanische Kabel Level IV
+tile.BlockRACable.Wire.name=Draad Verbinder
+
+tile.BlockRARAIC2Converter.IC2toRAConverter.name=IC2 naar RA Omzetter
+tile.BlockRARAIC2Converter.RAtoIC2Converter.name=RA naar IC2 Omzetter
+
+tile.BlockRAProducer.Creative.name=Creative Producer
+tile.BlockRAProducer.Mill.name=Wind Molen
+tile.BlockRAProducer.Watermill.name=Water Molen
+tile.BlockRAProducer.HeatGenerator.name=Hitte Generator
+tile.BlockRAMachine.Furnace.name=Mechanische Oven
+tile.BlockRAMachine.Anvil.name=Mechanische Aanbeeld
+tile.BlockRAMachine.Crusher.name=Mechanische Vergruizer
+tile.BlockRAMachine.CoolingPool.name=Cooling Bak
+
+tile.BlockRAUpgrade.UpgradeTable.name=BijWerk tafel
+tile.BlockRAUpgrade.CombineTable.name=Combineer tafel
+tile.BlockRAUpgrade.RepairTable.name=Reparatie tafel
+
+tile.BlockRADecoration.Sofa00.name=Witte EikenHouten Sofa
+tile.BlockRADecoration.Sofa01.name=Oranje EikenHouten Sofa
+tile.BlockRADecoration.Sofa02.name=Magenta EikenHouten Sofa
+tile.BlockRADecoration.Sofa03.name=Licht Blauwe EikenHouten Sofa
+tile.BlockRADecoration.Sofa04.name=Gele EikenHouten Sofa
+tile.BlockRADecoration.Sofa05.name=Groen-Gele EikenHouten Sofa
+tile.BlockRADecoration.Sofa06.name=Roze EikenHouten Sofa
+tile.BlockRADecoration.Sofa07.name=Grijze EikenHouten Sofa
+tile.BlockRADecoration.Sofa08.name=Licht Grijze EikenHouten Sofa
+tile.BlockRADecoration.Sofa09.name=Blauw-Groene EikenHouten Sofa
+tile.BlockRADecoration.Sofa010.name=Paarse EikenHouten Sofa
+tile.BlockRADecoration.Sofa011.name=Blauwe EikenHouten Sofa
+tile.BlockRADecoration.Sofa012.name=Brown EikenHouten Sofa
+tile.BlockRADecoration.Sofa013.name=Groene EikenHouten Sofa
+tile.BlockRADecoration.Sofa014.name=Rode EikenHouten Sofa
+tile.BlockRADecoration.Sofa015.name=Zwarte EikenHouten Sofa
+
+tile.BlockRADecoration.Sofa10.name=Witte SparrenHouten Sofa
+tile.BlockRADecoration.Sofa11.name=Oranje SparrenHouten Sofa
+tile.BlockRADecoration.Sofa12.name=Magenta SparrenHouten Sofa
+tile.BlockRADecoration.Sofa13.name=Licht Blauwe SparrenHouten Sofa
+tile.BlockRADecoration.Sofa14.name=Gele SparrenHouten Sofa
+tile.BlockRADecoration.Sofa15.name=Groen-Gele SparrenHouten Sofa
+tile.BlockRADecoration.Sofa16.name=Roze SparrenHouten Sofa
+tile.BlockRADecoration.Sofa17.name=Grijze SparrenHouten Sofa
+tile.BlockRADecoration.Sofa18.name=Licht Grijze SparrenHouten Sofa
+tile.BlockRADecoration.Sofa19.name=Blauw-Groene SparrenHouten Sofa
+tile.BlockRADecoration.Sofa110.name=Paarse SparrenHouten Sofa
+tile.BlockRADecoration.Sofa111.name=Blauwe SparrenHouten Sofa
+tile.BlockRADecoration.Sofa112.name=Brown SparrenHouten Sofa
+tile.BlockRADecoration.Sofa113.name=Groene SparrenHouten Sofa
+tile.BlockRADecoration.Sofa114.name=Rode SparrenHouten Sofa
+tile.BlockRADecoration.Sofa115.name=Zwarte SparrenHouten Sofa
+
+tile.BlockRADecoration.Sofa20.name=Witte BerkenHouten Sofa
+tile.BlockRADecoration.Sofa21.name=Oranje BerkenHouten Sofa
+tile.BlockRADecoration.Sofa22.name=Magenta BerkenHouten Sofa
+tile.BlockRADecoration.Sofa23.name=Licht Blauwe BerkenHouten Sofa
+tile.BlockRADecoration.Sofa24.name=Gele BerkenHouten Sofa
+tile.BlockRADecoration.Sofa25.name=Groen-Gele BerkenHouten Sofa
+tile.BlockRADecoration.Sofa26.name=Roze BerkenHouten Sofa
+tile.BlockRADecoration.Sofa27.name=Grijze BerkenHouten Sofa
+tile.BlockRADecoration.Sofa28.name=Licht Grijze BerkenHouten Sofa
+tile.BlockRADecoration.Sofa29.name=Blauw-Groene BerkenHouten Sofa
+tile.BlockRADecoration.Sofa210.name=Paarse BerkenHouten Sofa
+tile.BlockRADecoration.Sofa211.name=Blauwe BerkenHouten Sofa
+tile.BlockRADecoration.Sofa212.name=Brown BerkenHouten Sofa
+tile.BlockRADecoration.Sofa213.name=Groene BerkenHouten Sofa
+tile.BlockRADecoration.Sofa214.name=Rode BerkenHouten Sofa
+tile.BlockRADecoration.Sofa215.name=Zwarte BerkenHouten Sofa
+
+tile.BlockRADecoration.Sofa30.name=Witte TropischHouten Sofa
+tile.BlockRADecoration.Sofa31.name=Oranje TropischHouten Sofa
+tile.BlockRADecoration.Sofa32.name=Magenta TropischHouten Sofa
+tile.BlockRADecoration.Sofa33.name=Licht Blauwe TropischHouten Sofa
+tile.BlockRADecoration.Sofa34.name=Gele TropischHouten Sofa
+tile.BlockRADecoration.Sofa35.name=Groen-Gele TropischHouten Sofa
+tile.BlockRADecoration.Sofa36.name=Roze TropischHouten Sofa
+tile.BlockRADecoration.Sofa37.name=Grijze TropischHouten Sofa
+tile.BlockRADecoration.Sofa38.name=Licht Grijze TropischHouten Sofa
+tile.BlockRADecoration.Sofa39.name=Blauw-Groene TropischHouten Sofa
+tile.BlockRADecoration.Sofa310.name=Paarse TropischHouten Sofa
+tile.BlockRADecoration.Sofa311.name=Blauwe TropischHouten Sofa
+tile.BlockRADecoration.Sofa312.name=Brown TropischHouten Sofa
+tile.BlockRADecoration.Sofa313.name=Groene TropischHouten Sofa
+tile.BlockRADecoration.Sofa314.name=Rode TropischHouten Sofa
+tile.BlockRADecoration.Sofa315.name=Zwarte TropischHouten Sofa
+
+tile.BlockRADecoration.Sofa40.name=Witte AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa41.name=Oranje AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa42.name=Magenta AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa43.name=Licht Blauwe AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa44.name=Gele AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa45.name=Groen-Gele AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa46.name=Roze AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa47.name=Grijze AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa48.name=Licht Grijze AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa49.name=Blauw-Groene AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa410.name=Paarse AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa411.name=Blauwe AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa412.name=Brown AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa413.name=Groene AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa414.name=Rode AcaciaHouten Sofa
+tile.BlockRADecoration.Sofa415.name=Zwarte AcaciaHouten Sofa
+
+tile.BlockRADecoration.Sofa50.name=Witte Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa51.name=Oranje Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa52.name=Magenta Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa53.name=Licht Blauwe Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa54.name=Gele Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa55.name=Groen-Gele Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa56.name=Roze Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa57.name=Grijze Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa58.name=Licht Grijze Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa59.name=Blauw-Groene Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa510.name=Paarse Dark Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa511.name=Blauwe Dark Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa512.name=Brown Dark Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa513.name=Groene Dark Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa514.name=Rode Dark Donker EikenHouten Sofa
+tile.BlockRADecoration.Sofa515.name=Zwarte Dark Donker EikenHouten Sofa
+
+tile.BlockRADecoration.Chair0.name=Eiken Stoel
+tile.BlockRADecoration.Chair1.name=Sparren Stoel
+tile.BlockRADecoration.Chair2.name=Berken Stoel
+tile.BlockRADecoration.Chair3.name=TropischHouten Stoel
+tile.BlockRADecoration.Chair4.name=AcaciaHouten Stoel
+tile.BlockRADecoration.Chair5.name=Donker Eiken Stoel
+
+tile.BlockRADecoration.Table00.name=Eiken Tafel
+tile.BlockRADecoration.Table01.name=Eiken Glazen Tafel
+tile.BlockRADecoration.Table02.name=Eiken WoonKamer Tafel
+
+tile.BlockRADecoration.Table10.name=Sparren Tafel
+tile.BlockRADecoration.Table11.name=Sparren Glazen Tafel
+tile.BlockRADecoration.Table12.name=Sparren WoonKamer Tafel
+
+tile.BlockRADecoration.Table20.name=Berken Tafel
+tile.BlockRADecoration.Table21.name=Berken Glazen Tafel
+tile.BlockRADecoration.Table22.name=Berken WoonKamer Tafel
+
+tile.BlockRADecoration.Table30.name=TropischHouten Tafel
+tile.BlockRADecoration.Table31.name=TropischHouten Glazen Tafel
+tile.BlockRADecoration.Table32.name=TropischHouten WoonKamer Tafel
+
+tile.BlockRADecoration.Table40.name=AcaciaHouten Tafel
+tile.BlockRADecoration.Table41.name=AcaciaHouten Glazen Tafel
+tile.BlockRADecoration.Table42.name=AcaciaHouten WoonKamer Tafel
+
+tile.BlockRADecoration.Table50.name=Donker Eiken Tafel
+tile.BlockRADecoration.Table51.name=Donker Eiken Glazen Tafel
+tile.BlockRADecoration.Table52.name=Donker Eiken WoonKamer Tafel
+
+tile.BlockRADecoration.Shelf0.name=Eiken plank
+tile.BlockRADecoration.Shelf1.name=Sparren plank
+tile.BlockRADecoration.Shelf2.name=Berken plank
+tile.BlockRADecoration.Shelf3.name=TropischHouten plank
+tile.BlockRADecoration.Shelf4.name=AcaciaHouten plank
+tile.BlockRADecoration.Shelf5.name=Donker Eiken plank
+tile.BlockRADecoration.MiddleGlass.name=Glazen Dak
+
+item.ItemRAIngot.bronze.name=Bronzen Staaf
+item.ItemRAIngot.copper.name=Koperen Staaf
+item.ItemRAIngot.tin.name=Tinnen Staaf
+item.ItemRAIngot.ruby.name=Robijn
+item.ItemRAIngot.tourmaline.name=Toermalijn
+item.ItemRAIngot.obsidian.name=LavaGlazen Staaf
+item.ItemRA.SpeedUpgrade1.name=Snelheid BijwerkKaart I
+item.ItemRA.SpeedUpgrade2.name=Snelheid BijwerkKaart II
+item.ItemRA.SpeedUpgrade3.name=Snelheid BijwerkKaart III
+item.ItemRA.StorageUpgrade1.name=Opslag BijwerkKaart I
+item.ItemRA.StorageUpgrade2.name=Opslag BijwerkKaart II
+item.ItemRA.StorageUpgrade3.name=Opslag BijwerkKaart III
+item.ItemRA.InputUpgrade1.name=Import BijwerkKaart I
+item.ItemRA.InputUpgrade2.name=Import BijwerkKaart II
+item.ItemRA.InputUpgrade3.name=Import BijwerkKaart III
+item.ItemRA.PowerUpgrade1.name=Weerstand BijwerkKaart I
+item.ItemRA.PowerUpgrade2.name=Weerstand BijwerkKaart II
+item.ItemRA.PowerUpgrade3.name=Weerstand BijwerkKaart III
+
+item.ItemRA.aluminumDust.name=Aluminium Stof
+item.ItemRA.bronzeDust.name=Brons Stof
+item.ItemRA.coalDust.name=Kool Stof
+item.ItemRA.copperDust.name=Koper Stof
+item.ItemRA.diamondDust.name=Diamand Stof
+item.ItemRA.emeraldDust.name=Smaragd Stof
+item.ItemRA.goldDust.name=Goud Stof
+item.ItemRA.ironDust.name=Ijzer Stof
+item.ItemRA.lapisDust.name=Lazuriet Stof
+item.ItemRA.leadDust.name=Lood Stof
+item.ItemRA.obsidianDust.name=LavaGlas Stof
+item.ItemRA.rubyDust.name=Robijn Stof
+item.ItemRA.silverDust.name=Zilver Stof
+item.ItemRA.tinDust.name=Tin Stof
+item.ItemRA.tourmalineDust.name=Toermalijn Stof
+
+item.ItemRA.axePlate.name=Ijzeren Bijl Plaat
+item.ItemRA.shovelPlate.name=Ijzeren Schep Plaat
+item.ItemRA.swordPlate.name=Ijzeren Zwaard Plaat
+item.ItemRA.pickaxePlate.name=Ijzeren pikhouweel Plaat
+item.ItemRA.hoePlate.name=Ijzeren Schoffel Plaat
+item.ItemRA.bowPlate.name=Ijzeren Boog Plaat
+item.ItemRA.throwingstarPlate.name=Ijzeren WerpSter Plaat
+item.ItemRA.helmetPlate.name=Ijzeren Helm Plaat
+item.ItemRA.chestplatePlate.name=Ijzeren Borstplaat Plaat
+item.ItemRA.leggingsPlate.name=Ijzeren Beenplaten Plaat
+item.ItemRA.bootsPlate.name=Ijzeren Schoenen Plaat
+
+item.ItemRA.plastic.name=Flexibele Gelei
+item.ItemRA.compressedplastic.name=Gecomprimeerde Flexibele Gelei
+item.ItemRA.compressedplastic2.name=Dubbel Gecomprimeerde Flexibele Gelei
+item.ItemRA.heatresistantplastic.name=HitteBestendige Flexibele Gelei
+
+item.ItemRA.cobblestoneWeight1.name=Keistenen Gewicht I
+item.ItemRA.cobblestoneWeight2.name=Keistenen Gewicht II
+item.ItemRA.cobblestoneWeight3.name=Keistenen Gewicht III
+item.ItemRA.bronzeWeight1.name=Bronzen Gewicht I
+item.ItemRA.bronzeWeight2.name=Bronzen Gewicht II
+item.ItemRA.bronzeWeight3.name=Bronzen Gewicht III
+item.ItemRA.obsidianWeight1.name=LavaGlas Gewicht I
+item.ItemRA.obsidianWeight2.name=LavaGlas Gewicht II
+item.ItemRA.obsidianWeight3.name=LavaGlas Gewicht III
+
+item.ItemRA.millarm.name= Molen Handel
+item.ItemRA.watermillarm.name= Watermolen Handel
+
+item.ItemRA.flour.name=Meel
+
+item.ItemRA.battery1.name=Batterij Niveau 1
+item.ItemRA.battery2.name=Batterij Niveau 2
+item.ItemRA.battery3.name=Batterij Niveau 3
+
+item.ItemRA.itemwire.name=Wire
+
+item.RAArmorHelmetBronze.name=Bronzen Helm
+item.RAArmorHelmetCopper.name=Koperen Helm
+item.RAArmorHelmetTin.name=Tinnen Helm
+item.RAArmorHelmetRuby.name=Robijnen Helm
+item.RAArmorHelmetTourmaline.name=Toermalijnen Helm
+item.RAArmorHelmetEmerald.name=Smaragden Helm
+item.RAArmorHelmetObsidian.name=LavaGlazen Helm
+item.RAArmorHelmetLapis.name=Lazurieten Helm
+
+item.RAArmorChestplateBronze.name=Bronzen Borstplaat
+item.RAArmorChestplateCopper.name=Koperen Borstplaat
+item.RAArmorChestplateTin.name=Tinnen Borstplaat
+item.RAArmorChestplateRuby.name=Robijnen Borstplaat
+item.RAArmorChestplateTourmaline.name=Toermalijnen Borstplaat
+item.RAArmorChestplateEmerald.name=Smaragden Borstplaat
+item.RAArmorChestplateObsidian.name=LavaGlazen Borstplaat
+item.RAArmorChestplateLapis.name=Lazurieten Borstplaat
+
+item.RAArmorLeggingsBronze.name=Bronzen BeenPlaten
+item.RAArmorLeggingsCopper.name=Koperen BeenPlaten
+item.RAArmorLeggingsTin.name=Tinnen BeenPlaten
+item.RAArmorLeggingsRuby.name=Robijnen BeenPlaten
+item.RAArmorLeggingsTourmaline.name=Toermalijnen BeenPlaten
+item.RAArmorLeggingsEmerald.name=Smaragden BeenPlaten
+item.RAArmorLeggingsObsidian.name=LavaGlazen BeenPlaten
+item.RAArmorLeggingsLapis.name=Lazurieten BeenPlaten
+
+item.RAArmorBootsBronze.name=Bronzen Schoenen
+item.RAArmorBootsCopper.name=Koperen Schoenen
+item.RAArmorBootsTin.name=Tinnen Schoenen
+item.RAArmorBootsRuby.name=Robijnen Schoenen
+item.RAArmorBootsTourmaline.name=Toermalijnen Schoenen
+item.RAArmorBootsEmerald.name=Smaragden Schoenen
+item.RAArmorBootsObsidian.name=LavaGlazen Schoenen
+item.RAArmorBootsLapis.name=Lazurieten Schoenen
