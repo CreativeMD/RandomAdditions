@@ -38,6 +38,12 @@ public abstract class SubBlockProducer extends SubBlock {
 			return new SubGuiProducer((TileEntityProducer) tileEntity, this);
 		return null;
 	}
+	
+	@Override
+	public boolean hasBlockTexture()
+	{
+		return false;
+	}
 
 	@Override
 	public SubContainerTileEntity getContainer(TileEntity tileEntity) {

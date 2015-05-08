@@ -37,6 +37,12 @@ public abstract class SubBlockDeco extends SubBlock{
 	}
 	
 	@Override
+	public boolean hasBlockTexture()
+	{
+		return false;
+	}
+	
+	@Override
 	public int getLightOpacity(IBlockAccess world, int x, int y, int z)
     {
         return 0;

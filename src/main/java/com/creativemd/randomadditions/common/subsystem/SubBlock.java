@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import mcp.mobius.waila.api.IWailaConfigHandler;
+import mcp.mobius.waila.api.IWailaDataAccessor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPistonBase;
 import net.minecraft.client.Minecraft;
@@ -27,6 +29,7 @@ import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.common.utils.RotationUtils;
 import com.creativemd.randomadditions.core.RandomAdditions;
 
+import cpw.mods.fml.common.Optional.Method;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -88,7 +91,8 @@ public abstract class SubBlock {
 	
 	public void registerIcon(IIconRegister register)
 	{
-		icons = new IIcon[]{register.registerIcon(RandomAdditions.modid + ":" + name)};
+		if(hasBlockTexture())
+			icons = new IIcon[]{register.registerIcon(RandomAdditions.modid + ":" + name)};
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -157,39 +161,46 @@ public abstract class SubBlock {
     {
 		int type = system.getSubBlock(meta).getRotation();
 		int index = 0;
-		switch(type)
+		ForgeDirection direction = null;
+		if(type == 2 && useSideForRotation())
 		{
-		case 1:
-			index = ((MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3) % 4);
-			switch(index)
+			direction = ForgeDirection.getOrientation(side).getOpposite();
+		}else{
+			switch(type)
 			{
-			case 0:
-				index = 2;
-				break;
 			case 1:
-				index = 5;
+				index = ((MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3) % 4);
+				switch(index)
+				{
+				case 0:
+					index = 2;
+					break;
+				case 1:
+					index = 5;
+					break;
+				case 2:
+					index = 3;
+					break;
+				case 3:
+					index = 4;
+					break;
+				}
 				break;
 			case 2:
-				index = 3;
-				break;
-			case 3:
-				index = 4;
+				index = BlockPistonBase.determineOrientation(world, x, y, z, (EntityLivingBase) entity);
 				break;
 			}
-			break;
-		case 2:
-			index = BlockPistonBase.determineOrientation(world, x, y, z, (EntityLivingBase) entity);
-			break;
+				direction = ForgeDirection.getOrientation(index);
+				if(entity instanceof EntityPlayer && entity.isSneaking() && allowShiftRotation())
+					direction = direction.getOpposite();
 		}
-		ForgeDirection direction = ForgeDirection.getOrientation(index);
-		if(entity instanceof EntityPlayer && entity.isSneaking() && allowShiftRotation())
-			direction = direction.getOpposite();
 		
 		TileEntity tile = world.getTileEntity(x, y, z);
 		if(tile instanceof TileEntityRandom)
 		{
 			((TileEntityRandom) tile).direction = (byte) RotationUtils.getIndex(direction);
 		}
+		
     }
 	
 	public boolean allowShiftRotation()
@@ -298,11 +309,26 @@ public abstract class SubBlock {
 		return "tile.BlockRA" + system.name + "." + name; 
     }
 	
+	public boolean hasBlockTexture()
+	{
+		return true;
+	}
+	
 	public void onRegister(){}
 	
 	/**0: none Rotation; 1: (North, South, West, East); 2: All**/
 	public int getRotation()
 	{
 		return 0;
+	}
+	
+	public boolean useSideForRotation()
+	{
+		return false;
+	}
+	
+	@Method(modid = "Waila")
+	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+		return currenttip;
 	}
 }

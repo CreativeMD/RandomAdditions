@@ -1,0 +1,14 @@
+{
+  "electricspark": {
+	  "category": "block",
+	  "sounds": [
+		  "lightning/espark1",
+		  "lightning/espark2",
+		  "lightning/espark3",
+		  "lightning/espark4", 
+		  "lightning/espark5",
+		  "lightning/espark6",
+		  "lightning/espark7"
+		]
+  }
+}

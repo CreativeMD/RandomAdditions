@@ -51,17 +51,6 @@ public class SubBlockWire extends SubBlockCableBase{
 	}
 	
 	@Override
-	public void onBlockPlacedEvent(World world, Entity entity, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int meta)
-    {
-		TileEntity tile = world.getTileEntity(x, y, z);
-		if(tile instanceof TileEntityRandom)
-		{
-			((TileEntityRandom) tile).direction = (byte) RotationUtils.getIndex(ForgeDirection.getOrientation(side).getOpposite());
-		}
-		onNeighborBlockChange(world, x, y, z, null);
-    }
-	
-	@Override
 	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) 
 	{
 		if(!canBlockStay(world, x, y, z))

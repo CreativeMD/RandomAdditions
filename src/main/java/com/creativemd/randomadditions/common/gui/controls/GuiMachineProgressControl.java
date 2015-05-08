@@ -85,8 +85,11 @@ public class GuiMachineProgressControl extends GuiControl{
 		{
 			ArrayList<String> strings = new ArrayList<String>();
 			MachineRecipe recipe = block.getRecipe(machine.getInput());
-        	double progress = (double)machine.progress/(double)recipe.neededPower;
-        	strings.add((int)(progress*100D) + "%");
+			if(recipe != null)
+			{
+	        	double progress = (double)machine.progress/(double)recipe.neededPower;
+	        	strings.add((int)(progress*100D) + "%");
+			}
         	return strings;
 		}
 		return new ArrayList<String>();

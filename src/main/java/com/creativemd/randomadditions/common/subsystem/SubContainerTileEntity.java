@@ -10,4 +10,9 @@ public abstract class SubContainerTileEntity extends SubContainer {
 	{
 		this.tileEntity = tileEntity;
 	}
+	
+	public void sendUpdate()
+	{
+		tileEntity.updateBlock();
+	}
 }

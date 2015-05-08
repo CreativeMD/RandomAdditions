@@ -34,6 +34,12 @@ public abstract class SubBlockEnchant extends SubBlock{
 	}
 	
 	@Override
+	public boolean hasBlockTexture()
+	{
+		return false;
+	}
+	
+	@Override
 	public int getRotation()
 	{
 		return 1;

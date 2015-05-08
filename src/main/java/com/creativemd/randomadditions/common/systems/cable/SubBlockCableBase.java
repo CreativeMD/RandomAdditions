@@ -27,6 +27,11 @@ public abstract class SubBlockCableBase extends SubBlock{
 		return null;
 	}
 	
+	@Override
+	public boolean hasBlockTexture()
+	{
+		return false;
+	}
 
 	@Override
 	public boolean isSolid(TileEntity tileEntity) {

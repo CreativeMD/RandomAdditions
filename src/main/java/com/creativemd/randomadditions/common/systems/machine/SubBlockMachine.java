@@ -37,6 +37,12 @@ public abstract class SubBlockMachine extends SubBlock{
 		return recipes;
 	}
 	
+	@Override
+	public boolean hasBlockTexture()
+	{
+		return false;
+	}
+	
 	public void registerRecipe(MachineRecipe recipe)
 	{
 		recipes.add(recipe);

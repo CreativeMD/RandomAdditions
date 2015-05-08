@@ -31,6 +31,7 @@ import com.creativemd.creativecore.common.gui.IGuiCreator;
 import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.core.CreativeCore;
+import com.creativemd.randomadditions.client.IBlockAccessFake;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
 
@@ -279,11 +280,14 @@ public class BlockSub extends BlockContainer implements IGuiCreator{
 			if(cubes.get(i).block != null)
 				if(cubes.get(i).meta != -1)
 				{
-					RenderHelper3D.renderBlocks.blockAccess = renderer.blockAccess;
+					
 					RenderHelper3D.renderBlocks.clearOverrideBlockTexture();
 					RenderHelper3D.renderBlocks.setRenderBounds(cubes.get(i).minX, cubes.get(i).minY, cubes.get(i).minZ, cubes.get(i).maxX, cubes.get(i).maxY, cubes.get(i).maxZ);
 					RenderHelper3D.renderBlocks.meta = cubes.get(i).meta;
-					RenderHelper3D.renderBlocks.renderStandardBlock(cubes.get(i).block, x, y, z);
+					IBlockAccessFake fake = new IBlockAccessFake(renderer.blockAccess);
+					RenderHelper3D.renderBlocks.blockAccess = fake;
+					fake.overrideMeta = cubes.get(i).meta;
+					RenderHelper3D.renderBlocks.renderBlockAllFaces(cubes.get(i).block, x, y, z);
 					return true;
 				}
 				else

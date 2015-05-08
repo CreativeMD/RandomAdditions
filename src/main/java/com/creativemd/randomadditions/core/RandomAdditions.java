@@ -44,6 +44,7 @@ import com.creativemd.randomadditions.common.item.items.RandomItem;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
 import com.creativemd.randomadditions.common.systems.battery.SubSystemBattery;
 import com.creativemd.randomadditions.common.systems.cable.SubSystemCable;
+import com.creativemd.randomadditions.common.systems.cmachine.SubSystemCMachine;
 import com.creativemd.randomadditions.common.systems.deco.SubSystemDeco;
 import com.creativemd.randomadditions.common.systems.enchant.SubSystemEnchant;
 import com.creativemd.randomadditions.common.systems.ic2.SubBlockIC2;
@@ -67,6 +68,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -158,6 +160,7 @@ public class RandomAdditions {
 		SubBlockSystem.registerSystem(new SubSystemCable());	
 		SubBlockSystem.registerSystem(new SubSystemEnchant());
 		SubBlockSystem.registerSystem(new SubSystemDeco());
+		SubBlockSystem.registerSystem(new SubSystemCMachine());
 		
 		if(Loader.isModLoaded("CoFHCore"))
 			SubBlockSystem.registerSystem(new SubSystemRF());
@@ -224,5 +227,7 @@ public class RandomAdditions {
 		ItemRandomArmor.registerRecipes();
 		
 		GameRegistry.registerWorldGenerator(new WorldGenerator(), 1);
+		
+		FMLInterModComms.sendMessage("Waila", "register", "com.creativemd.randomadditions.common.subsystem.waila.WailaHandler.callbackRegister");
     }
 }
