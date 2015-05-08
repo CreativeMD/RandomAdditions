@@ -8,7 +8,9 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.IIcon;
 import net.minecraftforge.client.event.FOVUpdateEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
@@ -25,6 +27,7 @@ import com.creativemd.randomadditions.common.item.items.RandomItem;
 import com.creativemd.randomadditions.common.item.items.RandomItemBattery;
 import com.creativemd.randomadditions.common.item.tools.Tool;
 import com.creativemd.randomadditions.common.item.tools.ToolBow;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.core.CraftMaterial;
 import com.creativemd.randomadditions.core.RandomAdditions;
 
@@ -148,7 +151,7 @@ public class EventHandlerRandom {
 	        {
 	        	newSpeed /= 5.0F;
 	        }
-			if(ItemTool.getItemDamage(stack) >= ItemTool.getTool(stack).durabilityFactor*ItemTool.getMaterial(stack.getItemDamage()).durability)
+			if(ItemTool.getItemDamage(stack) >= ItemTool.getTool(stack).durabilityFactor*ItemTool.getMaterial(stack).durability)
 			{
 				newSpeed = 1;
 			}else{

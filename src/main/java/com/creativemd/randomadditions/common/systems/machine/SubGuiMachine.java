@@ -9,6 +9,7 @@ import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiGearInformation;
 import com.creativemd.randomadditions.common.gui.controls.GuiMachineProgressControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiPowerOMeter;
+import com.creativemd.randomadditions.common.gui.controls.GuiRedstoneControl;
 import com.creativemd.randomadditions.common.gui.controls.SubGuiMachineRecipeControl;
 import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.systems.machine.tileentity.TileEntityMachine;
@@ -36,6 +37,7 @@ public class SubGuiMachine extends SubGuiTileEntity{
 		meter.rotation = -90;
 		controls.add(meter);
 		controls.add(new GuiGearInformation(block, machine, 155, 68, 30, 30));
+		controls.add(new GuiRedstoneControl(35, 70, 20, 20, 0, machine));
 		if(Loader.isModLoaded("NotEnoughItems"))
 			controls.add(new SubGuiMachineRecipeControl(block, 155, 13, 16, 16));
 		return controls;

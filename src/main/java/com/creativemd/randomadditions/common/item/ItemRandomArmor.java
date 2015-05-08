@@ -189,11 +189,19 @@ public class ItemRandomArmor extends ItemArmor{
 					par3List.add("Level " + levelName);
 			}
 		}
-		int max = getMaxDamage(par1ItemStack);
-		int damage = getDamage(par1ItemStack);
-		par3List.add((max-damage + " duration are left"));
-		
-		par3List.add(EnumChatFormatting.BLUE + "" + getArmorMaterial().getDamageReductionAmount(armorType) + " Protection");
+		Tool tool = ItemTool.getTool(par1ItemStack);
+		CraftMaterial material = ItemTool.getMaterial(par1ItemStack);
+		if(tool != null && material != null)
+		{
+			int max = material.durability*tool.durabilityFactor;
+			int damage = par1ItemStack.getItemDamage();
+			par3List.add((max-damage + " Uses are left"));
+		}
+		String modifier = ItemTool.getTool(par1ItemStack).getAttributeModifiers(par1ItemStack);
+		if(!modifier.equals(""))
+		{
+			par3List.add(EnumChatFormatting.BLUE + modifier);
+		}
 	}
 	
 	@Override
@@ -211,6 +219,33 @@ public class ItemRandomArmor extends ItemArmor{
 		else
 			return RandomAdditions.modid + ":textures/armor/" + material.displayName + "_layer_2.png";
     }
+	
+	public Tool getTool()
+	{
+		switch(armorType)
+		{
+		case 0:
+			return ItemTool.helmet;
+		case 1:
+			return ItemTool.chestplate;
+		case 2:
+			return ItemTool.leggings;
+		case 3:
+			return ItemTool.boots;
+		default:
+			return ItemTool.helmet;
+		}
+	}
+	
+	public int getToolID()
+	{
+		Tool tool = getTool();
+		for (int i = 0; i < ItemTool.tools.size(); i++) {
+			if(ItemTool.tools.get(i) == tool)
+				return i;
+		}
+		return -1;
+	}
 	
 	@Override
 	public boolean onEntityItemUpdate(EntityItem entityItem)

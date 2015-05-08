@@ -12,8 +12,10 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.creativemd.creativecore.common.utils.RotationUtils;
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.MachineEntry;
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.SearchResult;
+import com.creativemd.randomadditions.common.redstone.IRedstoneControl;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 
-public abstract class EnergyComponent extends EnergyCore{
+public abstract class EnergyComponent extends EnergyCore implements IRedstoneControl{
 	
 	public abstract boolean canRecieveEnergy(ForgeDirection direction);
 	
@@ -100,6 +102,8 @@ public abstract class EnergyComponent extends EnergyCore{
 	
 	public int getRecieveablePower()
 	{
+		if(!active)
+			return 0;
 		int input = getMaxInput() - inputPower;
 		int space = getInteralStorage() - getCurrentPower();
 		if(space < input)
@@ -148,29 +152,32 @@ public abstract class EnergyComponent extends EnergyCore{
 	{
 		if(!worldObj.isRemote)
 		{
-			if(canProvidePower())
+			if(RedstoneControlHelper.handleRedstoneInput(this, this))
 			{
-				ArrayList<SearchResult> results = new ArrayList<EnergyUtils.SearchResult>();
-				for (int i = 0; i < 6; i++) {
-					ForgeDirection direction = ForgeDirection.getOrientation(i);
-					if(canProduceEnergy(direction))
-						results.add(EnergyUtils.getNetwork(worldObj, xCoord, yCoord, zCoord, direction));
-				}
-				for (int j = 0; j < results.size(); j++) {
-					int providedpower = 0;
-					SearchResult result = results.get(j);
-					int i = 0;
-					while(i < result.machines.size() && providedpower < result.transmitPower && getCurrentPower() > 0)
-					{
-						if(this != result.machines.get(i).machine && result.machines.get(i).recieve)
-							providedpower += providePower(result.machines.get(i).machine, result.transmitPower);
-						i++;
+				if(canProvidePower())
+				{
+					ArrayList<SearchResult> results = new ArrayList<EnergyUtils.SearchResult>();
+					for (int i = 0; i < 6; i++) {
+						ForgeDirection direction = ForgeDirection.getOrientation(i);
+						if(canProduceEnergy(direction))
+							results.add(EnergyUtils.getNetwork(worldObj, xCoord, yCoord, zCoord, direction));
 					}
-					for (int q = 0; q < result.cables.size(); q++) {
-						result.cables.get(q).transmitedPower += providedpower;
+					for (int j = 0; j < results.size(); j++) {
+						int providedpower = 0;
+						SearchResult result = results.get(j);
+						int i = 0;
+						while(i < result.machines.size() && providedpower < result.transmitPower && getCurrentPower() > 0)
+						{
+							if(this != result.machines.get(i).machine && result.machines.get(i).recieve)
+								providedpower += providePower(result.machines.get(i).machine, result.transmitPower);
+							i++;
+						}
+						for (int q = 0; q < result.cables.size(); q++) {
+							result.cables.get(q).transmitedPower += providedpower;
+						}
 					}
+					
 				}
-				
 			}
 			if(sendedInputPower != inputPower || sendedOutputPower != outputPower)
 			{
@@ -208,6 +215,9 @@ public abstract class EnergyComponent extends EnergyCore{
     {
        super.readFromNBT(nbt);
        currentPower = nbt.getInteger("power");
+       mode = nbt.getInteger("mode");
+       active = nbt.getBoolean("active");
+       hadSignal = nbt.getBoolean("hadSignal");
     }
 	
 	@Override
@@ -215,6 +225,9 @@ public abstract class EnergyComponent extends EnergyCore{
     {
         super.writeToNBT(nbt);
         nbt.setInteger("power", currentPower);
+        nbt.setInteger("mode", mode);
+        nbt.setBoolean("active", active);
+        nbt.setBoolean("hadSignal", hadSignal);
     }
 	
 	@Override
@@ -224,6 +237,8 @@ public abstract class EnergyComponent extends EnergyCore{
 		nbt.setInteger("output", sendedOutputPower);
 		nbt.setInteger("input", sendedInputPower);
 		nbt.setInteger("power", currentPower);
+		nbt.setInteger("mode", mode);
+        nbt.setBoolean("active", active);
     }
 	
 	@Override
@@ -233,6 +248,44 @@ public abstract class EnergyComponent extends EnergyCore{
 		inputPower = pkt.func_148857_g().getInteger("input");
 		outputPower = pkt.func_148857_g().getInteger("output");
 		currentPower = pkt.func_148857_g().getInteger("power");
+		mode = pkt.func_148857_g().getInteger("mode");
+	     active = pkt.func_148857_g().getBoolean("active");
 		worldObj.markBlockRangeForRenderUpdate(xCoord, yCoord, zCoord, xCoord, yCoord, zCoord);
     }
+	
+	public boolean active = true;
+	public boolean hadSignal = false;
+	public int mode = 0;
+
+	@Override
+	public void setMode(int mode) {
+		this.mode = mode;
+		updateBlock();
+	}
+
+	@Override
+	public int getMode() {
+		return mode;
+	}
+
+	@Override
+	public boolean hadSignal() {
+		return hadSignal;
+	}
+
+	@Override
+	public void setSignal(boolean hadSignal) {
+		this.hadSignal = hadSignal;
+	}
+
+	@Override
+	public boolean isActive() {
+		return active;
+	}
+
+	@Override
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
 }

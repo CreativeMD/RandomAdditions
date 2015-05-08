@@ -13,6 +13,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
 import com.creativemd.randomadditions.common.item.items.RandomItemUpgrade;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.common.systems.machine.MachineRecipe;
 import com.creativemd.randomadditions.common.systems.machine.SubBlockMachine;
 import com.creativemd.randomadditions.common.systems.machine.SubSystemMachine;
@@ -279,53 +280,62 @@ public class TileEntityMachine extends EnergyComponent implements ISidedInventor
 		super.updateEntity();
 		if(!worldObj.isRemote)
 		{
-			MachineRecipe recipe = getBlock().getRecipe(getInput());
-			if(recipe != null && canDoProgress(recipe))
+			if(RedstoneControlHelper.handleRedstoneInput(this, this))
 			{
-				int speed = getProgressSpeed();
-				int neededPower = getNeededPower(speed);
-				if(getCurrentPower() >= neededPower)
+				MachineRecipe recipe = getBlock().getRecipe(getInput());
+				if(recipe != null && canDoProgress(recipe))
 				{
-					drainPower(neededPower);
-					progress += speed;
-					if(!working)
+					int speed = getProgressSpeed();
+					int neededPower = getNeededPower(speed);
+					if(getCurrentPower() >= neededPower)
 					{
-						working = true;
-						worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-					}
-				}
-			}
-			else
-			{
-				if(working)
-				{
-					working = false;
-					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-				}
-				progress = 0;
-			}
-			ArrayList<ItemStack> input = getInput();
-			if(recipe != null && progress >= recipe.neededPower)
-			{
-				if(getStackInSlot(0) == null)
-					setInventorySlotContents(0, recipe.getOutput(input).copy());
-				else
-					getStackInSlot(0).stackSize += recipe.getOutput(input).stackSize;
-				for (int j = 0; j < recipe.input.size(); j++) {
-					boolean done = false;
-					for (int i = 0; i < input.size(); i++) {
-						if(!done && recipe.isObjectEqual(input.get(i), recipe.input.get(j)))
+						drainPower(neededPower);
+						progress += speed;
+						if(!working)
 						{
-							ItemStack stack = getStackInSlot(4+i);
-							stack.stackSize -= recipe.getStackSize(j);
-							if(stack.stackSize == 0)
-								stack = null;
-							setInventorySlotContents(4+i, stack);
-							done = true;
+							working = true;
+							updateBlock();
 						}
 					}
 				}
-				progress = 0;
+				else
+				{
+					if(working)
+					{
+						working = false;
+						updateBlock();
+					}
+					progress = 0;
+				}
+				ArrayList<ItemStack> input = getInput();
+				if(recipe != null && progress >= recipe.neededPower)
+				{
+					if(getStackInSlot(0) == null)
+						setInventorySlotContents(0, recipe.getOutput(input).copy());
+					else
+						getStackInSlot(0).stackSize += recipe.getOutput(input).stackSize;
+					for (int j = 0; j < recipe.input.size(); j++) {
+						boolean done = false;
+						for (int i = 0; i < input.size(); i++) {
+							if(!done && recipe.isObjectEqual(input.get(i), recipe.input.get(j)))
+							{
+								ItemStack stack = getStackInSlot(4+i);
+								stack.stackSize -= recipe.getStackSize(j);
+								if(stack.stackSize == 0)
+									stack = null;
+								setInventorySlotContents(4+i, stack);
+								done = true;
+							}
+						}
+					}
+					progress = 0;
+				}
+			}
+		}else{
+			if(working)
+			{
+				working = false;
+				updateBlock();
 			}
 		}
 	}

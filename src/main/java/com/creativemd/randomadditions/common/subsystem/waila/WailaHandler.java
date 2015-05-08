@@ -56,6 +56,8 @@ public class WailaHandler implements IWailaDataProvider {
 		if(te instanceof EnergyComponent)
 		{
 			currenttip.add(((EnergyComponent) te).getCurrentPower() + "/" + ((EnergyComponent) te).getInteralStorage() + " RA");
+			if(!((EnergyComponent) te).isActive())
+				currenttip.add("not running");
 		}
 		if(te instanceof EnergyCable)
 		{

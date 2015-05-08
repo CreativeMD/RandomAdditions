@@ -90,6 +90,8 @@ public class RandomItem {
 	public static RandomItem tungstenDust = new RandomItemDust("tungsten");
 	public static RandomItem ferrousDust = new RandomItemDust("ferrous");
 	
+	public static RandomItem coil = new RandomItem("coil");
+	
 	public static void loadItems()
 	{
 		System.out.println("[RandomAdditions] Loaded RandomItems");
@@ -113,6 +115,13 @@ public class RandomItem {
 				return items.get(i);
 		}
 		return null;
+	}
+	
+	public ItemStack getItemStack(int stackSize)
+	{
+		ItemStack stack = getItemStack();
+		stack.stackSize = stackSize;
+		return stack;
 	}
 	
 	public ItemStack getItemStack()

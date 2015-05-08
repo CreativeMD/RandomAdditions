@@ -35,6 +35,7 @@ public class Watermill extends SubBlockProducer{
 	}
 	
 	public static float Generation;
+	public static float speed;
 
 	@Override
 	public int getMaxSpeed(TileEntityProducer tileEntity, ItemStack stack) {
@@ -183,7 +184,7 @@ public class Watermill extends SubBlockProducer{
 		int[] modi = producer.getModifiers();
 		int size = modi[0];
 		int length = modi[1];
-		return producer.rotationOffset + nanoTime/500000000D*producer.speed/(size+length);
+		return (producer.rotationOffset + nanoTime/500000000D*producer.speed/(size+length)) * speed;
 	}
 	
 	

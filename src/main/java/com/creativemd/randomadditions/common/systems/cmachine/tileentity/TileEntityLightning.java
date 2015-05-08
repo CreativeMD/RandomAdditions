@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.core.RandomAdditions;
 
 public class TileEntityLightning extends EnergyComponent{
@@ -51,7 +52,7 @@ public class TileEntityLightning extends EnergyComponent{
 		double distance = range+1;
 		for (int h = 0; h < entities.size(); h++)
 		{
-			double tempdistance = ((Entity) entities.get(h)).getDistance(xCoord, yCoord, zCoord);
+			double tempdistance = ((Entity) entities.get(h)).getDistance(xCoord+0.5, yCoord+0.5, zCoord+0.5);
 			if(range >= tempdistance && tempdistance < distance)
 			{
 				distance = tempdistance;
@@ -67,22 +68,31 @@ public class TileEntityLightning extends EnergyComponent{
 	{
 		if(!worldObj.isRemote)
 		{
-			//super.updateEntity();
-			if(getCurrentPower() > usePerHit)
+			if(RedstoneControlHelper.handleRedstoneInput(this, this))
 			{
-				EntityLivingBase living = getEntityInRange();
-				if(living != null)
+				setInputPower(0);
+				if(getCurrentPower() > usePerHit)
 				{
-					if(living.attackEntityFrom(DamageSource.magic, 5F))
+					EntityLivingBase living = getEntityInRange();
+					if(living != null)
 					{
-						drainPower(usePerHit);
-						worldObj.playSoundEffect(xCoord, yCoord, zCoord, RandomAdditions.modid + ":electricspark", 1, 1);
+						if(living.attackEntityFrom(DamageSource.magic, 5F))
+						{
+							drainPower(usePerHit);
+							worldObj.playSoundEffect(xCoord, yCoord, zCoord, RandomAdditions.modid + ":electricspark", 1, 1);
+						}
 					}
-				}
-				if(!canDischarge)
-				{
-					canDischarge = true;
-					updateBlock();
+					if(!canDischarge)
+					{
+						canDischarge = true;
+						updateBlock();
+					}
+				}else{
+					if(canDischarge)
+					{
+						canDischarge = false;
+						updateBlock();
+					}
 				}
 			}else{
 				if(canDischarge)

@@ -15,8 +15,10 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
+import com.creativemd.creativecore.common.packet.CreativeCorePacket;
 import com.creativemd.randomadditions.client.RandomTab;
 import com.creativemd.randomadditions.common.entity.EntityRandomArrow;
+import com.creativemd.randomadditions.common.entity.EntitySit;
 import com.creativemd.randomadditions.common.entity.EntityThrow;
 import com.creativemd.randomadditions.common.event.EventHandlerRandom;
 import com.creativemd.randomadditions.common.item.ItemCoreRandom;
@@ -40,7 +42,9 @@ import com.creativemd.randomadditions.common.item.enchantment.EnchantmentSpeed;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentTorch;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentUnbreaking;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentWater;
+import com.creativemd.randomadditions.common.item.enchantment.armor.EnchantmentFireResistance;
 import com.creativemd.randomadditions.common.item.items.RandomItem;
+import com.creativemd.randomadditions.common.packet.RedstonePacket;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
 import com.creativemd.randomadditions.common.systems.battery.SubSystemBattery;
 import com.creativemd.randomadditions.common.systems.cable.SubSystemCable;
@@ -119,7 +123,9 @@ public class RandomAdditions {
 		HeatGenerator.fuelGeneration = config.getFloat("FuelGeneration", "MachineConfig", 0.25F, 0, 100000, "Fuel/FuelGeneration; example: Coal=1600");
 		TileEntityHeatGenerator.producePerTick = config.getInt("FuelGeneration", "producePerTick", 60, 0, 100, "Use of one heat producer (one core) per Tick");
 		Watermill.Generation = config.getFloat("WatermillGeneration", "MachineConfig", 6, 0, 100000, "(All Waterblocks below the center)/Generation");
+		Watermill.speed = config.getFloat("WatermillSpeed", "MachineConfig", 1, 0, 100000, "normalspeed*configuratedspeed");
 		Mill.Generation = config.getFloat("MillGeneration", "MachineConfig", 2, 0, 100000, "(arms * length * 4)/Generation");
+		Mill.speed = config.getFloat("MillSpeed", "MachineConfig", 1, 0, 100000, "normalspeed*configuratedspeed");
 		WorldGenerator.generateCopper = config.getBoolean("GenerateCopper", "WorldGeneration", true, "");
 		WorldGenerator.generateTin = config.getBoolean("GenerateTin", "WorldGeneration", true, "");
 		WorldGenerator.generateRuby = config.getBoolean("GenerateRuby", "WorldGeneration", true, "");
@@ -136,7 +142,7 @@ public class RandomAdditions {
 		bronze = new CraftMaterial("bronze", 0, 1000, 9, 6, 20, 3, 6, 5, 2).setOres("", "ingotBronze").setAllModifier(new EnchantmentUnbreaking());
 		copper = new CraftMaterial("copper", 3, 600, 6.5, 5, 10, 2, 4, 4, 2).setOres("oreCopper", "ingotCopper").setSwordModifier(new EnchantmentPosion()).setHarvestLevel(2).setBowModifier(new EnchantmentInfinity());
 		tin = new CraftMaterial("tin", 3, 500, 6, 4, 10, 2, 4, 3, 1).setOres("oreTin", "ingotTin").setToolModifier(new EnchantmentTorch()).setSwordModifier(new EnchantmentEnderman()).setHarvestLevel(2);
-		ruby = new CraftMaterial("ruby", 2, 900, 8, 7, 25, 3, 7, 5, 3).setOres("oreRuby", "gemRuby").setToolModifier(new EnchantmentAutoSmelt()).setSwordModifier(new EnchantmentFlame()).setDropItem().setBowModifier(new EnchantmentFlame());
+		ruby = new CraftMaterial("ruby", 2, 900, 8, 7, 25, 3, 7, 5, 3).setOres("oreRuby", "gemRuby").setChestplateModifier(new EnchantmentFireResistance()).setToolModifier(new EnchantmentAutoSmelt()).setSwordModifier(new EnchantmentFlame()).setDropItem().setBowModifier(new EnchantmentFlame());
 		tourmaline = new CraftMaterial("tourmaline", 1, 3000, 10, 8, 35, 3, 8, 6, 3).setOres("oreTourmaline", "gemTourmaline").setToolModifier(new EnchantmentFortune()).setSwordModifier(new EnchantmentLooting()).setDropItem().setHarvestLevel(3).setBowModifier(new EnchantmentLooting());
 		emerald = new CraftMaterial("emerald", 0, 2700, 10, 8, 35, 3, 8, 6, 3).setOres("", "gemEmerald").setCustomIngot("gemEmerald").setToolModifier(new EnchantmentSilkTouch()).setSwordModifier(new EnchantmentIgnoreArmor()).setBowModifier(new EnchantmentPower());
 		obsidian = new CraftMaterial("obsidian", 0, 5000, 7.5, 6, 25, 3, 7, 5, 2).setOres("", "ingotObsidian").setToolModifier(new EnchantmentSpeed()).setSwordModifier(new EnchantmentSharpness()).setBowModifier(new EnchantmentCharge());
@@ -218,6 +224,7 @@ public class RandomAdditions {
 		
 		EntityRegistry.registerModEntity(EntityThrow.class, "Throw", 0, this, 250, 250, true);
 		EntityRegistry.registerModEntity(EntityRandomArrow.class, "RAArrow", 1, this, 250, 250, true);
+		EntityRegistry.registerModEntity(EntitySit.class, "Sit", 2, this, 250, 250, true);
 		
 		RandomItem.startRegistry();
 		
@@ -227,6 +234,8 @@ public class RandomAdditions {
 		ItemRandomArmor.registerRecipes();
 		
 		GameRegistry.registerWorldGenerator(new WorldGenerator(), 1);
+		
+		CreativeCorePacket.registerPacket(RedstonePacket.class, "RedstonePacket");
 		
 		FMLInterModComms.sendMessage("Waila", "register", "com.creativemd.randomadditions.common.subsystem.waila.WailaHandler.callbackRegister");
     }

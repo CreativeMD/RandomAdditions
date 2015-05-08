@@ -33,6 +33,9 @@ tile.BlockRAMachine.Anvil.name=Mechanic Anvil
 tile.BlockRAMachine.Crusher.name=Mechanic Crusher
 tile.BlockRAMachine.CoolingPool.name=Cooling Pool
 
+tile.BlockRAcmachine.Lightning.name=Lightning Machine
+
+
 tile.BlockRAUpgrade.UpgradeTable.name=Upgrade Table
 tile.BlockRAUpgrade.CombineTable.name=Combine Table
 tile.BlockRAUpgrade.RepairTable.name=Repair Table
@@ -212,6 +215,9 @@ item.ItemRA.rubyDust.name=Ruby Dust
 item.ItemRA.silverDust.name=Silver Dust
 item.ItemRA.tinDust.name=Tin Dust
 item.ItemRA.tourmalineDust.name=Tourmaline Dust
+item.ItemRA.zincDust.name=Zinc Dust
+item.ItemRA.ferrousDust.name=Ferrous Dust
+item.ItemRA.tungstenDust.name=Tungsten Dust
 
 item.ItemRA.axePlate.name=Iron Axe Plate
 item.ItemRA.shovelPlate.name=Iron Shovel Plate
@@ -250,6 +256,7 @@ item.ItemRA.battery2.name=Battery Level 2
 item.ItemRA.battery3.name=Battery Level 3
 
 item.ItemRA.itemwire.name=Wire
+item.ItemRA.coil.name=Coil
 
 item.RAArmorHelmetBronze.name=Bronze Helmet
 item.RAArmorHelmetCopper.name=Copper Helmet
@@ -286,3 +293,8 @@ item.RAArmorBootsTourmaline.name=Tourmaline Boots
 item.RAArmorBootsEmerald.name=Emerald Boots
 item.RAArmorBootsObsidian.name=Obsidian Boots
 item.RAArmorBootsLapis.name=Lapis Boots
+
+custom.redstone.ignore=Ignore Signal
+custom.redstone.signal=Signal
+custom.redstone.nosignal=No Signal
+custom.redstone.impluse=Impluse Signal

@@ -34,6 +34,7 @@ public abstract class Tool {
 	public float damageAmount;	
 	public RandomItem plate;
 	public int cost = 1;
+	public boolean external = false;
 	
 	@SideOnly(Side.CLIENT)
 	public ArrayList<IIcon> icons;

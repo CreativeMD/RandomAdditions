@@ -32,6 +32,7 @@ import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.core.CreativeCore;
 import com.creativemd.randomadditions.client.IBlockAccessFake;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
 
@@ -390,6 +391,11 @@ public class BlockSub extends BlockContainer implements IGuiCreator{
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register)
     {
+		RedstoneControlHelper.ignore = register.registerIcon(RandomAdditions.modid + ":custom/signals/ignoresignal");
+		RedstoneControlHelper.impulse = register.registerIcon(RandomAdditions.modid + ":custom/signals/impulsesignal");
+		RedstoneControlHelper.nosignal = register.registerIcon(RandomAdditions.modid + ":custom/signals/nosignal");
+		RedstoneControlHelper.signal = register.registerIcon(RandomAdditions.modid + ":custom/signals/signal");
+		RedstoneControlHelper.icons = new IIcon[]{RedstoneControlHelper.ignore, RedstoneControlHelper.signal, RedstoneControlHelper.nosignal, RedstoneControlHelper.impulse};
         this.blockIcon = register.registerIcon(this.getTextureName());
 		for (int j = 0; j < system.blocks.size(); j++) {
 			((SubBlock) system.blocks.get(j)).registerIcon(register);

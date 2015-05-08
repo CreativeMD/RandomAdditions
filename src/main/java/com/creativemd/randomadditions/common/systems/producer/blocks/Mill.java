@@ -39,6 +39,7 @@ public class Mill extends SubBlockProducer{
 	}
 	
 	public static float Generation;
+	public static float speed;
 
 	public CubeObject getArea(TileEntityProducer producer, int expand)
 	{
@@ -251,7 +252,7 @@ public class Mill extends SubBlockProducer{
 		int[] modi = producer.getModifiers();
 		int size = modi[0];
 		int length = modi[1];
-		return producer.rotationOffset + nanoTime/500000000D*producer.speed/((size+length)/2);
+		return (producer.rotationOffset + nanoTime/500000000D*producer.speed/((size+length)/2))*speed;
 	}
 	
 	@Override

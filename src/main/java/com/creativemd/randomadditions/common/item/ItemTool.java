@@ -11,6 +11,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.StatList;
@@ -23,6 +24,7 @@ import net.minecraft.world.World;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentModifier;
 import com.creativemd.randomadditions.common.item.items.RandomItem;
 import com.creativemd.randomadditions.common.item.tools.Tool;
+import com.creativemd.randomadditions.common.item.tools.ToolArmor;
 import com.creativemd.randomadditions.common.item.tools.ToolAxe;
 import com.creativemd.randomadditions.common.item.tools.ToolBow;
 import com.creativemd.randomadditions.common.item.tools.ToolHoe;
@@ -54,16 +56,24 @@ public class ItemTool extends ItemCore{
 	public static Tool throwingStar = new ToolStar(RandomItem.throwingstarPlate, "throwingstar").setCost(4); //TODO Not finished ThrowingStar/Bow
 	public static Tool bow = new ToolBow(RandomItem.bowPlate, "bow").setCost(3).setMaxDuration(72000);
 	
+	public static Tool helmet = new ToolArmor(RandomItem.helmetPlate, "helmet", 0, 5);
+	public static Tool chestplate = new ToolArmor(RandomItem.chestplatePlate, "chestplate", 1, 8);
+	public static Tool leggings = new ToolArmor(RandomItem.leggingsPlate, "leggings", 2, 7);
+	public static Tool boots = new ToolArmor(RandomItem.bootsPlate, "boots", 3, 4);
+	
 	public static void registerRecipes()
 	{
 		for (int i = 0; i < tools.size(); i++) {
-			for (int j = 0; j < RandomAdditions.materials.size(); j++) {
-				Object input = RandomAdditions.materials.get(j).ingot;
-				if(input == null && !RandomAdditions.materials.get(j).itemName.equals(""))
-					input = RandomAdditions.materials.get(j).itemName;
-				if (input == null)
-					input = RandomAdditions.materials.get(j).getIngot();
-				tools.get(i).addRecipe(input, getStack(tools.get(i), RandomAdditions.materials.get(j).id));
+			if(!tools.get(i).external)
+			{
+				for (int j = 0; j < RandomAdditions.materials.size(); j++) {
+					Object input = RandomAdditions.materials.get(j).ingot;
+					if(input == null && !RandomAdditions.materials.get(j).itemName.equals(""))
+						input = RandomAdditions.materials.get(j).itemName;
+					if (input == null)
+						input = RandomAdditions.materials.get(j).getIngot();
+					tools.get(i).addRecipe(input, getStack(tools.get(i), RandomAdditions.materials.get(j).id));
+				}
 			}
 		}
 	}
@@ -76,7 +86,7 @@ public class ItemTool extends ItemCore{
 		{
 			damageItem(par1ItemStack, 1, par3EntityLivingBase);
 			ArrayList<EnchantmentModifier> modifiers = CraftMaterial.getModifiers(par1ItemStack);
-			float damage = getMaterial(par1ItemStack.getItemDamage()).getDamage(CraftMaterial.getLevel(ItemTool.getMaterial(par1ItemStack), par1ItemStack));
+			float damage = getMaterial(par1ItemStack).getDamage(CraftMaterial.getLevel(ItemTool.getMaterial(par1ItemStack), par1ItemStack));
 	    	for (int i = 0; i < modifiers.size(); i++) {
 	    		damage = modifiers.get(i).getDamageOnEntity((EntityPlayer) par3EntityLivingBase, par2EntityLivingBase, damage);
 			}
@@ -113,7 +123,7 @@ public class ItemTool extends ItemCore{
 					amount = modifiers.get(i).onToolTakenDamage((EntityPlayer)entity, stack, amount);
 				}
             	Tool tool = getTool(stack);
-            	CraftMaterial material = getMaterial(stack.getItemDamage());
+            	CraftMaterial material = getMaterial(stack);
             	if(getItemDamage(stack) < tool.durabilityFactor*material.durability)
             		setItemDamage(stack, getItemDamage(stack)+amount);
             	if(getItemDamage(stack) >= tool.durabilityFactor*material.durability && CraftMaterial.getLevel(material, stack) == 0)
@@ -218,7 +228,7 @@ public class ItemTool extends ItemCore{
 	public int getHarvestLevel(ItemStack stack, String toolClass)
     {
 		if(getTool(stack).harvest == 1)
-			return getMaterial(stack.getItemDamage()).harvestLevel;
+			return getMaterial(stack).harvestLevel;
 		return 0;
     }
 	
@@ -231,13 +241,15 @@ public class ItemTool extends ItemCore{
 	@Override
 	public boolean canHarvestBlock(Block par1Block, ItemStack itemStack)
     {
-		if(itemStack.stackTagCompound.getInteger("damage") >= ItemTool.getTool(itemStack).durabilityFactor*ItemTool.getMaterial(itemStack.getItemDamage()).durability)
+		if(itemStack.stackTagCompound.getInteger("damage") >= ItemTool.getTool(itemStack).durabilityFactor*ItemTool.getMaterial(itemStack).durability)
 			return false;
         return getTool(itemStack).isToolEffective(itemStack, par1Block);  
     }
 	
 	public static int getItemDamage(ItemStack stack)
 	{
+		if(stack.getItem() instanceof ItemRandomArmor)
+			return stack.getItemDamage();
 		if(stack.stackTagCompound == null)
 			stack.stackTagCompound = new NBTTagCompound();
 		return stack.stackTagCompound.getInteger("damage");
@@ -245,9 +257,13 @@ public class ItemTool extends ItemCore{
 	
 	public static void setItemDamage(ItemStack stack, int damage)
 	{
-		if(stack.stackTagCompound == null)
-			stack.stackTagCompound = new NBTTagCompound();
-		stack.stackTagCompound.setInteger("damage", damage);
+		if(stack.getItem() instanceof ItemRandomArmor)
+			stack.setItemDamage(damage);
+		else{
+			if(stack.stackTagCompound == null)
+				stack.stackTagCompound = new NBTTagCompound();
+			stack.stackTagCompound.setInteger("damage", damage);
+		}
 	}
 	
 	@Override
@@ -271,7 +287,7 @@ public class ItemTool extends ItemCore{
     {
 		if(getTool(itemstack).isToolEffective(itemstack, block))
 		{
-			float speed = getMaterial(itemstack.getItemDamage()).getSpeed(CraftMaterial.getLevel(getMaterial(itemstack), itemstack));
+			float speed = getMaterial(itemstack).getSpeed(CraftMaterial.getLevel(getMaterial(itemstack), itemstack));
 			ArrayList<EnchantmentModifier> modifiers = CraftMaterial.getModifiers(itemstack);
 	    	for (int i = 0; i < modifiers.size(); i++) {
 	    		speed = (int) modifiers.get(i).getMiningSpeed(player, true, block, speed);
@@ -296,7 +312,8 @@ public class ItemTool extends ItemCore{
 		{			
 			for(int toolZahl = 0; toolZahl < tools.size(); toolZahl++)
 			{
-				tools.get(toolZahl).registerIcon(par1IconRegister, RandomAdditions.materials.get(zahl));
+				if(!tools.get(toolZahl).external)
+					tools.get(toolZahl).registerIcon(par1IconRegister, RandomAdditions.materials.get(zahl));
 			}
 		}
     }
@@ -326,9 +343,12 @@ public class ItemTool extends ItemCore{
 			
 			for(int toolZahl = 0; toolZahl < tools.size(); toolZahl++)
 			{
-				ItemStack newStack = stack.copy();
-				newStack.stackTagCompound.setString("type", tools.get(toolZahl).name);
-				list.add(newStack);
+				if(!tools.get(toolZahl).external)
+				{
+					ItemStack newStack = stack.copy();
+					newStack.stackTagCompound.setString("type", tools.get(toolZahl).name);
+					list.add(newStack);
+				}
 			}
 		}
     }
@@ -336,7 +356,7 @@ public class ItemTool extends ItemCore{
 	@Override
 	public String getUnlocalizedName(ItemStack par1ItemStack)
     {
-		return this.getUnlocalizedName() + "." + getMaterial(par1ItemStack.getItemDamage()).name + "." + getTool(par1ItemStack).displayName;
+		return this.getUnlocalizedName() + "." + getMaterial(par1ItemStack).name + "." + getTool(par1ItemStack).displayName;
     }
 	
 	@Override
@@ -345,7 +365,7 @@ public class ItemTool extends ItemCore{
 		String name = this.getUnlocalizedNameInefficiently(par1ItemStack) + ".name";
 		if(StatCollector.canTranslate(name))
 			return ("" + StatCollector.translateToLocal(this.getUnlocalizedNameInefficiently(par1ItemStack) + ".name")).trim();
-		return getMaterial(par1ItemStack.getItemDamage()).displayName + " " + getTool(par1ItemStack).displayName;
+		return getMaterial(par1ItemStack).displayName + " " + getTool(par1ItemStack).displayName;
     }
 	
 	@Override
@@ -372,6 +392,10 @@ public class ItemTool extends ItemCore{
 	
 	public static Tool getTool(ItemStack stack)
 	{
+		if(stack.getItem() instanceof ItemRandomArmor)
+		{
+			return ((ItemRandomArmor)stack.getItem()).getTool();
+		}
 		String type = "";
 		if(stack.stackTagCompound == null)
 			stack.stackTagCompound = new NBTTagCompound();
@@ -384,6 +408,10 @@ public class ItemTool extends ItemCore{
 	
 	public static int getToolID(ItemStack stack)
 	{
+		if(stack.getItem() instanceof ItemRandomArmor)
+		{
+			return ((ItemRandomArmor)stack.getItem()).getToolID();
+		}
 		String type = "";
 		if(stack.stackTagCompound == null)
 			stack.stackTagCompound = new NBTTagCompound();
@@ -396,6 +424,10 @@ public class ItemTool extends ItemCore{
 	
 	public static CraftMaterial getMaterial(ItemStack stack)
 	{
+		if(stack.getItem() instanceof ItemRandomArmor)
+		{
+			return ((ItemRandomArmor)stack.getItem()).material;
+		}
 		return getMaterial(stack.getItemDamage());
 	}
 	

@@ -104,7 +104,7 @@ public class Furnace extends SubBlockMachine{
 		if(world != null)
 		{
 			TileEntity tileEntity = world.getTileEntity(x, y, z);
-			if(tileEntity instanceof TileEntityMachine && ((TileEntityMachine)tileEntity).progress > 0)
+			if(tileEntity instanceof TileEntityMachine && ((TileEntityMachine)tileEntity).progress > 0 && ((TileEntityMachine) tileEntity).active)
 				cubes.add(new CubeObject(0.9, 0.1, 0.2, 0.95, 0.5, 0.9, Blocks.fire));
 		}
 		return cubes;

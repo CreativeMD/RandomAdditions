@@ -11,6 +11,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.creativecore.common.utils.InventoryUtils;
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
+import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.common.systems.producer.blocks.HeatGenerator;
 
 public class TileEntityHeatGenerator extends EnergyComponent implements ISidedInventory{
@@ -109,40 +110,45 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 		if(!worldObj.isRemote)
 		{
 			boolean tempActive = isActive;
-			if(getInteralStorage()-getCurrentPower() > 0)
+			if(RedstoneControlHelper.handleRedstoneInput(this, this))
 			{
-				for (int i = 0; i < inventory.length; i++) {
-					if(fuel[i] <= 0)
-					{
-						if(inventory[i] != null)
+				if(getInteralStorage()-getCurrentPower() > 0)
+				{
+					for (int i = 0; i < inventory.length; i++) {
+						if(fuel[i] <= 0)
 						{
-							int burn = TileEntityFurnace.getItemBurnTime(inventory[i]);
-							if(burn > 0)
+							if(inventory[i] != null)
 							{
-								inventory[i].stackSize--;
-								if(inventory[i].stackSize == 0)
-									inventory[i] = null;
-								fuel[i] = (int) (burn/HeatGenerator.fuelGeneration);
-								maxfuel[i] = fuel[i];
-								if(!isActive)
+								int burn = TileEntityFurnace.getItemBurnTime(inventory[i]);
+								if(burn > 0)
 								{
-									isActive = true;
-									updateBlock();
+									inventory[i].stackSize--;
+									if(inventory[i].stackSize == 0)
+										inventory[i] = null;
+									fuel[i] = (int) (burn/HeatGenerator.fuelGeneration);
+									maxfuel[i] = fuel[i];
+									if(!isActive)
+									{
+										isActive = true;
+										updateBlock();
+									}
 								}
 							}
+						}else{
+							int power = producePerTick;
+							if(fuel[i] < power)
+								power = fuel[i];
+							
+							power = recievePower(power);
+							fuel[i] -= power;
+							isActive = true;
 						}
-					}else{
-						int power = producePerTick;
-						if(fuel[i] < power)
-							power = fuel[i];
-						
-						power = recievePower(power);
-						fuel[i] -= power;
-						isActive = true;
 					}
-				}
-			}else
+				}else
+					isActive = false;
+			}else{
 				isActive = false;
+			}
 			if(isActive != tempActive)
 			{
 				updateBlock();

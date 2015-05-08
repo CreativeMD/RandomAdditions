@@ -13,14 +13,17 @@ import mcp.mobius.waila.api.IWailaDataAccessor;
 import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -35,6 +38,7 @@ import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 import com.creativemd.randomadditions.common.systems.cmachine.SubBlockCMachine;
 import com.creativemd.randomadditions.common.systems.cmachine.tileentity.TileEntityLightning;
+import com.creativemd.randomadditions.core.RandomAdditions;
 
 import cpw.mods.fml.common.Optional.Method;
 import cpw.mods.fml.relauncher.Side;
@@ -44,6 +48,26 @@ public class SubBlockLightning extends SubBlockCMachine{
 
 	public SubBlockLightning(SubBlockSystem system) {
 		super("Lightning", system);
+	}
+	
+	public IIcon base;
+	public IIcon ring;
+	public IIcon stick;
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcon(IIconRegister register)
+	{
+		base = register.registerIcon(RandomAdditions.modid + ":" + name + "_base");
+		ring = register.registerIcon(RandomAdditions.modid + ":" + name + "_ring");
+		stick = register.registerIcon(RandomAdditions.modid + ":" + name + "_stick");
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta)
+	{
+		return base;
 	}
 
 	@Override
@@ -66,12 +90,12 @@ public class SubBlockLightning extends SubBlockCMachine{
 	public ArrayList<CubeObject> getCubes(ItemStack stack, IBlockAccess world, int x, int y, int z)
 	{
 		ArrayList<CubeObject> cubes = new ArrayList<CubeObject>();
-		cubes.add(new CubeObject(1, 0.2, 0.2, 0.85, 0.8, 0.8, Blocks.iron_block));
-		cubes.add(new CubeObject(0.85, 0.4, 0.4, 0.05, 0.6, 0.6, Blocks.stone));
+		cubes.add(new CubeObject(1, 0.2, 0.2, 0.85, 0.8, 0.8, base));
+		cubes.add(new CubeObject(0.85, 0.4, 0.4, 0.05, 0.6, 0.6, stick));
 		int amount = 3;
 		double size = 0.7D/amount;
 		for (int i = 0; i < amount; i++) {
-			cubes.add(new CubeObject(i*size+size/2+0.05, 0.3, 0.3, i*size+size/2+0.15, 0.7, 0.7, Blocks.planks));
+			cubes.add(new CubeObject(i*size+size/2+0.05, 0.3, 0.3, i*size+size/2+0.15, 0.7, 0.7, ring));
 		}
 		if(stack != null)
 		{
@@ -89,7 +113,10 @@ public class SubBlockLightning extends SubBlockCMachine{
 		if(((TileEntityLightning) entity).getCurrentPower() > ((TileEntityLightning) entity).usePerHit)
 		{
 			Entity living = ((TileEntityLightning) entity).getEntityInRange();
-			if(living != null)
+			boolean canrender = true;
+			if(living instanceof EntityPlayer)
+				canrender = !((EntityPlayer)living).capabilities.isCreativeMode;
+			if(living != null && canrender)
 			{
 				Vec3 start = Vec3.createVectorHelper(0.5, 0.5, 0.5);
 				Vec3 end = Vec3.createVectorHelper(living.posX-entity.xCoord+0.5, living.posY-entity.yCoord+0.5, living.posZ-entity.zCoord+0.5);
