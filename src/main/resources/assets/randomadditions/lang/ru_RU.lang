@@ -33,6 +33,8 @@ tile.BlockRAMachine.Anvil.name=Механическая наковальня
 tile.BlockRAMachine.Crusher.name=Механическая дробилка
 tile.BlockRAMachine.CoolingPool.name=Охлаждающий бассейн
 
+tile.BlockRAcmachine.Lightning.name=Генератор грозовых импульсов
+
 tile.BlockRAUpgrade.UpgradeTable.name=Стол модернизаций
 tile.BlockRAUpgrade.CombineTable.name=Стол объединения
 tile.BlockRAUpgrade.RepairTable.name=Стол починки
@@ -212,6 +214,9 @@ item.ItemRA.rubyDust.name=Рубиновая пыль
 item.ItemRA.silverDust.name=Серебряная пыль
 item.ItemRA.tinDust.name=Оловянная пыль
 item.ItemRA.tourmalineDust.name=Турмалиновая пыль
+item.ItemRA.zincDust.name=Цинковая пыль
+item.ItemRA.ferrousDust.name=Железистая пыль
+item.ItemRA.tungstenDust.name=Вольфрамовая пыль
 
 item.ItemRA.axePlate.name=Железная заготовка для топора
 item.ItemRA.shovelPlate.name=Железная заготовка для лопаты
@@ -250,6 +255,7 @@ item.ItemRA.battery2.name=Переносной аккумулятор (II уро
 item.ItemRA.battery3.name=Переносной аккумулятор (III уровень)
 
 item.ItemRA.itemwire.name=Провод
+item.ItemRA.coil.name=Катушка
 
 item.RAArmorHelmetBronze.name=Бронзовый шлем
 item.RAArmorHelmetCopper.name=Медный шлем
@@ -350,3 +356,8 @@ item.RATools.lapis.Hoe.name=Лазуритная мотыга
 item.RATools.lapis.Sword.name=Лазуритный меч
 item.RATools.lapis.Throwingstar.name=Лазуритный сюрикен
 item.RATools.lapis.Bow.name=Лазуритный лук
+
+custom.redstone.ignore=Игнорировать сигнал
+custom.redstone.signal=По сигналу
+custom.redstone.nosignal=Без сигнала
+custom.redstone.impluse=Импульсный сигнал
