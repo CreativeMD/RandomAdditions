@@ -52,7 +52,9 @@ public class WailaHandler implements IWailaDataProvider {
 		currenttip = block.system.getSubBlock(accessor.getMetadata()).getWailaBody(itemStack, currenttip, accessor, config);
 		
 		TileEntity te = accessor.getTileEntity();
-		te.readFromNBT(accessor.getNBTData());
+		NBTTagCompound nbt = accessor.getNBTData();
+		if(!nbt.getBoolean("empty"))
+			te.readFromNBT(accessor.getNBTData());
 		if(te instanceof EnergyComponent)
 		{
 			currenttip.add(((EnergyComponent) te).getCurrentPower() + "/" + ((EnergyComponent) te).getInteralStorage() + " RA");
@@ -80,8 +82,10 @@ public class WailaHandler implements IWailaDataProvider {
 	@Override
 	public NBTTagCompound getNBTData(EntityPlayerMP player, TileEntity te,
 			NBTTagCompound tag, World world, int x, int y, int z) {
-		if (te != null)
+		if (te != null && player.openContainer == null)
             te.writeToNBT(tag);
+		else
+			tag.setBoolean("empty", true);
         return tag;
 	}
 

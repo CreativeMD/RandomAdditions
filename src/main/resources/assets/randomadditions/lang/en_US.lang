@@ -181,6 +181,14 @@ tile.BlockRADecoration.Shelf4.name=Acacia Shelf
 tile.BlockRADecoration.Shelf5.name=Dark Oak Shelf
 tile.BlockRADecoration.MiddleGlass.name=Glass Roof
 
+tile.BlockRALittle.LittleCable_0.name=Little Wire Tier I
+tile.BlockRALittle.LittleCable_1.name=Little Wire Tier II
+tile.BlockRALittle.LittleCable_2.name=Little Wire Tier III
+tile.BlockRALittle.LittleCable_3.name=Little Wire Tier IV
+
+tile.BlockRARFConverters.RAtoRF.name=RA to RF Converter
+tile.BlockRARFConverters.RFtoRA.name=RF to RA Converter
+
 item.ItemRAIngot.bronze.name=Bronze Ingot
 item.ItemRAIngot.copper.name=Copper Ingot
 item.ItemRAIngot.tin.name=Tin Ingot

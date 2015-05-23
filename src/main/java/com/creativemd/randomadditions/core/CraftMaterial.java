@@ -48,6 +48,15 @@ public class CraftMaterial {
 		RandomAdditions.materials.add(this);
 	}
 	
+	public CraftMaterial setAllInternalModifier(EnchantmentModifier modifier)
+	{
+		for (int i = 0; i < ItemTool.tools.size(); i++) {
+			if(!ItemTool.tools.get(i).external)
+				enchantments.put(ItemTool.tools.get(i), modifier);
+		}
+		return this;
+	}
+	
 	public CraftMaterial setAllModifier(EnchantmentModifier modifier)
 	{
 		for (int i = 0; i < ItemTool.tools.size(); i++) {

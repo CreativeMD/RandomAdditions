@@ -89,6 +89,7 @@ public abstract class SubBlock {
 	@SideOnly(Side.CLIENT)
 	public IIcon[] icons;
 	
+	@SideOnly(Side.CLIENT)
 	public void registerIcon(IIconRegister register)
 	{
 		if(hasBlockTexture())

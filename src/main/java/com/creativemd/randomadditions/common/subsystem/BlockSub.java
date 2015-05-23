@@ -31,15 +31,22 @@ import com.creativemd.creativecore.common.gui.IGuiCreator;
 import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.core.CreativeCore;
+import com.creativemd.littletiles.common.blocks.ILittleTile;
+import com.creativemd.littletiles.common.utils.LittleTile;
+import com.creativemd.littletiles.common.utils.LittleTile.LittleTileSize;
+import com.creativemd.littletiles.common.utils.LittleTile.LittleTileVec;
+import com.creativemd.littletiles.common.utils.LittleTilePreview;
 import com.creativemd.randomadditions.client.IBlockAccessFake;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
 
+import cpw.mods.fml.common.Optional.Interface;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockSub extends BlockContainer implements IGuiCreator{
+@Interface(modid = "littletiles", iface = "com.creativemd.littletiles.common.blocks.ILittleTile")
+public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile{
 	
 	public SubBlockSystem system;
 	
@@ -446,5 +453,23 @@ public class BlockSub extends BlockContainer implements IGuiCreator{
 			World world, int x, int y, int z) {
 		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getContainer(world.getTileEntity(x, y, z));
 	}
+
+	@Override
+	public ArrayList<LittleTile> getLittleTile(ItemStack stack, World world, int x, int y,
+			int z) {
+		SubBlock block = system.getSubBlock(stack.getItemDamage());
+		if(block instanceof ILittleTile)
+			return ((ILittleTile) block).getLittleTile(stack, world, x, y, z);
+		return null;
+	}
+
+	@Override
+	public LittleTilePreview getLittlePreview(ItemStack stack) {
+		SubBlock block = system.getSubBlock(stack.getItemDamage());
+		if(block instanceof ILittleTile)
+			return ((ILittleTile) block).getLittlePreview(stack);
+		return null;
+	}
+	
 	
 }

@@ -14,6 +14,7 @@ import com.creativemd.randomadditions.common.energy.core.EnergyUtils.MachineEntr
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.SearchResult;
 import com.creativemd.randomadditions.common.redstone.IRedstoneControl;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
+import com.creativemd.randomadditions.common.systems.littletiles.tileentity.TileEntityLittleCable;
 
 public abstract class EnergyComponent extends EnergyCore implements IRedstoneControl{
 	
@@ -205,6 +206,11 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 					connections.add(entity);
 				else if(entity instanceof EnergyComponent)
 					connections.add(new MachineEntry((EnergyComponent) entity, blockdirection.getOpposite()));
+				else{
+					EnergyCable cable = TileEntityLittleCable.getConnection(worldObj, new ChunkCoordinates(xCoord, yCoord, zCoord), coord, blockdirection);
+					if(cable != null)
+						connections.add(cable);
+				}
 			}
 		}
 		return connections;
@@ -249,8 +255,8 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 		outputPower = pkt.func_148857_g().getInteger("output");
 		currentPower = pkt.func_148857_g().getInteger("power");
 		mode = pkt.func_148857_g().getInteger("mode");
-	     active = pkt.func_148857_g().getBoolean("active");
-		worldObj.markBlockRangeForRenderUpdate(xCoord, yCoord, zCoord, xCoord, yCoord, zCoord);
+	    active = pkt.func_148857_g().getBoolean("active");
+		updateRender();
     }
 	
 	public boolean active = true;

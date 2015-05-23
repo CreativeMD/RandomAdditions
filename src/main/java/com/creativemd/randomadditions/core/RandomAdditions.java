@@ -53,6 +53,7 @@ import com.creativemd.randomadditions.common.systems.deco.SubSystemDeco;
 import com.creativemd.randomadditions.common.systems.enchant.SubSystemEnchant;
 import com.creativemd.randomadditions.common.systems.ic2.SubBlockIC2;
 import com.creativemd.randomadditions.common.systems.ic2.SubSystemIC2;
+import com.creativemd.randomadditions.common.systems.littletiles.SubSystemLittle;
 import com.creativemd.randomadditions.common.systems.machine.SubSystemMachine;
 import com.creativemd.randomadditions.common.systems.ore.SubSystemOre;
 import com.creativemd.randomadditions.common.systems.producer.SubBlockProducer;
@@ -139,7 +140,7 @@ public class RandomAdditions {
 		GameRegistry.registerItem(tools, tools.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(items, items.getUnlocalizedName().substring(5));
 		
-		bronze = new CraftMaterial("bronze", 0, 1000, 9, 6, 20, 3, 6, 5, 2).setOres("", "ingotBronze").setAllModifier(new EnchantmentUnbreaking());
+		bronze = new CraftMaterial("bronze", 0, 1000, 9, 6, 20, 3, 6, 5, 2).setOres("", "ingotBronze").setAllInternalModifier(new EnchantmentUnbreaking());
 		copper = new CraftMaterial("copper", 3, 600, 6.5, 5, 10, 2, 4, 4, 2).setOres("oreCopper", "ingotCopper").setSwordModifier(new EnchantmentPosion()).setHarvestLevel(2).setBowModifier(new EnchantmentInfinity());
 		tin = new CraftMaterial("tin", 3, 500, 6, 4, 10, 2, 4, 3, 1).setOres("oreTin", "ingotTin").setToolModifier(new EnchantmentTorch()).setSwordModifier(new EnchantmentEnderman()).setHarvestLevel(2);
 		ruby = new CraftMaterial("ruby", 2, 900, 8, 7, 25, 3, 7, 5, 3).setOres("oreRuby", "gemRuby").setChestplateModifier(new EnchantmentFireResistance()).setToolModifier(new EnchantmentAutoSmelt()).setSwordModifier(new EnchantmentFlame()).setDropItem().setBowModifier(new EnchantmentFlame());
@@ -172,6 +173,9 @@ public class RandomAdditions {
 			SubBlockSystem.registerSystem(new SubSystemRF());
 		if(Loader.isModLoaded("IC2"))
 			SubBlockSystem.registerSystem(new SubSystemIC2());
+		
+		if(Loader.isModLoaded("littletiles"))
+			SubBlockSystem.registerSystem(new SubSystemLittle());
 		
 		proxy.loadSide();
 		

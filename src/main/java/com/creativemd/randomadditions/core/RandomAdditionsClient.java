@@ -27,7 +27,7 @@ public class RandomAdditionsClient extends RandomAdditionsServer{
 		RenderingRegistry.registerBlockHandler(modelID, new BlockSubSpecialRenderer());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityThrow.class, new RenderThrow());
-		RenderingRegistry.registerEntityRenderingHandler(EntityRandomArrow.class, new RenderRandomArrow());
+		RenderingRegistry.registerEntityRenderingHandler(EntityRandomArrow.class, new RenderArrow());
 		
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(SubSystemDeco.instance.block), new ItemRendererSofa());
 	}

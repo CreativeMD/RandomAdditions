@@ -12,6 +12,7 @@ import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,7 +24,9 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-public class EntityRandomArrow extends Entity implements IProjectile
+/**NOTE: This class is MESSY and should be redone at some time**/
+
+public class EntityRandomArrow extends EntityArrow implements IProjectile
 {
     private int xTile = -1;
     private int yTile = -1;
