@@ -180,6 +180,14 @@ tile.BlockRADecoration.Shelf4.name=Полка из акации
 tile.BlockRADecoration.Shelf5.name=Полка из тёмного дуба
 tile.BlockRADecoration.MiddleGlass.name=Стеклянная крыша
 
+tile.BlockRALittle.LittleCable_0.name=Маленький провод (I уровень)
+tile.BlockRALittle.LittleCable_1.name=Маленький провод (II уровень)
+tile.BlockRALittle.LittleCable_2.name=Маленький провод (III уровень)
+tile.BlockRALittle.LittleCable_3.name=Маленький провод (IV уровень)
+
+tile.BlockRARFConverters.RAtoRF.name=Преобразователь RA в RF
+tile.BlockRARFConverters.RFtoRA.name=Преобразователь RF в RA
+
 item.ItemRAIngot.bronze.name=Бронзовый слиток
 item.ItemRAIngot.copper.name=Медный слиток
 item.ItemRAIngot.tin.name=Оловянный слиток
