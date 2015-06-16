@@ -2,6 +2,8 @@ package com.creativemd.randomadditions.common.energy.core;
 
 import java.util.ArrayList;
 
+import com.creativemd.randomadditions.common.energy.api.IRAReciever;
+
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Vec3;
@@ -59,16 +61,21 @@ public class EnergyUtils {
 	public static class MachineEntry
 	{
 		
-		public EnergyComponent machine;
+		public IRAReciever machine;
 		
 		public boolean recieve;
 		
-		public MachineEntry(EnergyComponent machine, ForgeDirection direction)
+		public MachineEntry(IRAReciever machine, ForgeDirection direction)
 		{
 			this.machine = machine;
 			this.recieve = machine.canRecieveEnergy(direction);
 		}
 		
+	}
+	
+	public static double getDistance(ChunkCoordinates coord, TileEntity pos)
+	{
+		return Math.sqrt(Math.pow(pos.xCoord+coord.posX, 2) + Math.pow(pos.yCoord+coord.posY, 2) + Math.pow(pos.zCoord+coord.posZ, 2));
 	}
 	
 	public static class SearchResult
@@ -88,7 +95,7 @@ public class EnergyUtils {
 			this.machines = new ArrayList<MachineEntry>();
 			for (int i = 0; i < components.size(); i++) {
 				int j = 0;
-				while(j < this.machines.size() && this.machines.get(j).machine.getDistance(origin) > components.get(i).machine.getDistance(origin))
+				while(j < this.machines.size() && getDistance(origin, (TileEntity)this.machines.get(j).machine) > getDistance(origin, (TileEntity)components.get(i).machine))
 					j++;
 				this.machines.add(j, components.get(i));
 			}

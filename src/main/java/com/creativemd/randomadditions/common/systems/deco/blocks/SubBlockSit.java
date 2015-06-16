@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-import com.creativemd.randomadditions.common.entity.EntitySit;
+import com.creativemd.creativecore.common.entity.EntitySit;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
 import com.creativemd.randomadditions.common.systems.deco.SubBlockDeco;
 

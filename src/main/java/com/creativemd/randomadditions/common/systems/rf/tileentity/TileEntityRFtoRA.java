@@ -44,7 +44,7 @@ public class TileEntityRFtoRA extends EnergyComponent implements IEnergyReceiver
 			boolean simulate) {
 		int power = (int) Math.min(SubSystemRF.RFtoRA(maxReceive), getInteralStorage()-getCurrentPower());
 		if(!simulate)
-			recievePower(power);
+			receivePower(power);
 		return power;
 	}
 

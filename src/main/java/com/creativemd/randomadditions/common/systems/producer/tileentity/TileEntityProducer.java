@@ -53,9 +53,9 @@ public class TileEntityProducer extends EnergyComponent{
 		if(!worldObj.isRemote)
 		{
 			if(getCurrentPower() + speed > getInteralStorage())
-				recievePower(getInteralStorage() - getCurrentPower());
+				receivePower(getInteralStorage() - getCurrentPower());
 			else
-				recievePower(speed);
+				receivePower(speed);
 			if(canStay == 0)
 			{
 				maxSpeed = getBlock().getMaxSpeed(this, null);

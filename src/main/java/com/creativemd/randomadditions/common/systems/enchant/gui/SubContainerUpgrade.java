@@ -6,10 +6,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.item.ItemTool;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.systems.enchant.SubSystemEnchant;
 import com.creativemd.randomadditions.common.systems.enchant.tileentity.TileEntityUpgrade;
 import com.creativemd.randomadditions.core.CraftMaterial;

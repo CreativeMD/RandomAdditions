@@ -139,7 +139,7 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 							if(fuel[i] < power)
 								power = fuel[i];
 							
-							power = recievePower(power);
+							power = receivePower(power);
 							fuel[i] -= power;
 							isActive = true;
 						}

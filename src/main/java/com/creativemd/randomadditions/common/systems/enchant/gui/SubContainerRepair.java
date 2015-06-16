@@ -6,16 +6,13 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.item.ItemTool;
-import com.creativemd.randomadditions.common.item.enchantment.EnchantmentModifier;
 import com.creativemd.randomadditions.common.item.tools.Tool;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.systems.enchant.tileentity.TileEntityUpgrade;
 import com.creativemd.randomadditions.core.CraftMaterial;
-import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.server.slots.SlotOutput;
 
 public class SubContainerRepair extends SubContainerTileEntity{

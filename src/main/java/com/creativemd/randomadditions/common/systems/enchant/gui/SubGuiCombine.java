@@ -9,10 +9,9 @@ import org.lwjgl.opengl.GL11;
 
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.common.gui.GuiContainerSub;
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 
 public class SubGuiCombine extends SubGuiTileEntity{

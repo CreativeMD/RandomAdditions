@@ -24,7 +24,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.creativecore.common.container.SubContainer;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.common.utils.RotationUtils;
 import com.creativemd.randomadditions.core.RandomAdditions;

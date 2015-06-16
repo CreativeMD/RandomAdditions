@@ -30,18 +30,11 @@ public abstract class TileEntityRandom extends TileEntityCreative{
         nbt.setByte("direction", direction);
     }
 	
+	@Override
 	public void getDescriptionNBT(NBTTagCompound nbt)
 	{
 		nbt.setByte("direction", direction);
 	}
-	
-	@Override
-	public final Packet getDescriptionPacket()
-    {
-		NBTTagCompound nbt = new NBTTagCompound();
-		getDescriptionNBT(nbt);
-        return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, blockMetadata, nbt);
-    }
 	
 	@Override
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt)

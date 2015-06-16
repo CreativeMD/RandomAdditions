@@ -9,12 +9,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 
-import com.creativemd.creativecore.common.container.SubContainer;
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.SubBlock;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 import com.creativemd.randomadditions.common.systems.battery.SubSystemBattery;
 import com.creativemd.randomadditions.common.systems.machine.tileentity.TileEntityMachine;

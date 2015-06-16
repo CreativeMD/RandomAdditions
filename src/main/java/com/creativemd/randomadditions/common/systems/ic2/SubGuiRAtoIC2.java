@@ -4,10 +4,9 @@ import java.util.ArrayList;
 
 import net.minecraft.client.gui.FontRenderer;
 
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiPowerOMeter;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.systems.ic2.tileentity.TileEntityRAtoIC2;
 
 public class SubGuiRAtoIC2 extends SubGuiTileEntity {

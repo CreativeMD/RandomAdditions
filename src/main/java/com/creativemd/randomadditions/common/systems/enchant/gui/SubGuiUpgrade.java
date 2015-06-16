@@ -5,14 +5,13 @@ import java.util.ArrayList;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.item.ItemStack;
 
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiBookControl;
 import com.creativemd.randomadditions.common.item.ItemRandomArmor;
 import com.creativemd.randomadditions.common.item.ItemTool;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentModifier;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.systems.enchant.SubSystemEnchant;
 import com.creativemd.randomadditions.common.systems.enchant.tileentity.TileEntityUpgrade;
 

@@ -10,6 +10,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.creativemd.creativecore.common.utils.RotationUtils;
 import com.creativemd.littletiles.common.tileentity.TileEntityLittleTiles;
 import com.creativemd.littletiles.common.utils.LittleTile;
+import com.creativemd.randomadditions.common.energy.api.IRAReciever;
 import com.creativemd.randomadditions.common.energy.core.EnergyCable;
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.MachineEntry;
@@ -46,6 +47,8 @@ public class TileEntityLittleCable extends EnergyCable{
 				{
 					if(te instanceof EnergyComponent)
 						connections.add(new MachineEntry((EnergyComponent) te, blockdirection.getOpposite()));
+					else if(te instanceof IRAReciever)
+						connections.add(new MachineEntry((IRAReciever) te, ForgeDirection.getOrientation(i).getOpposite()));
 					else if(te instanceof TileEntityLittleTiles && cable.connections[i].vec != null){
 						LittleTile tile = ((TileEntityLittleTiles) te).getTile(cable.connections[i].vec.posX, cable.connections[i].vec.posY, cable.connections[i].vec.posZ);
 						if(tile instanceof LittleCable)

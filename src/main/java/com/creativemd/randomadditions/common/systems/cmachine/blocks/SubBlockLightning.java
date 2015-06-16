@@ -1,46 +1,27 @@
 package com.creativemd.randomadditions.common.systems.cmachine.blocks;
 
-import ic2.core.util.Vector3;
-
 import java.util.ArrayList;
-import java.util.List;
 
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
-import mcp.mobius.waila.api.IWailaConfigHandler;
-import mcp.mobius.waila.api.IWailaDataAccessor;
-import net.minecraft.block.BlockPressurePlate;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.creativecore.client.rendering.RenderHelper3D;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.utils.CubeObject;
-import com.creativemd.creativecore.common.utils.RotationUtils;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 import com.creativemd.randomadditions.common.systems.cmachine.SubBlockCMachine;
 import com.creativemd.randomadditions.common.systems.cmachine.tileentity.TileEntityLightning;
 import com.creativemd.randomadditions.core.RandomAdditions;
 
-import cpw.mods.fml.common.Optional.Method;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

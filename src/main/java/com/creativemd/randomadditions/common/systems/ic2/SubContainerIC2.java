@@ -2,12 +2,11 @@ package com.creativemd.randomadditions.common.systems.ic2;
 
 import java.util.ArrayList;
 
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Slot;
-import net.minecraft.tileentity.TileEntity;
+
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 
 public class SubContainerIC2 extends SubContainerTileEntity{
 

@@ -6,12 +6,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 
-import com.creativemd.creativecore.common.container.SubContainer;
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.SubBlock;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

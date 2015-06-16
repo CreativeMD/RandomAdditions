@@ -28,7 +28,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SubBlockLittleCable extends SubBlockLittle implements ILittleTile{
 	
-	public static final int[] power = new int[]{200, 100, 10000, 200000};
+	public static final int[] power = new int[]{200, 1000, 10000, 200000};
 	
 	public SubBlockLittleCable(String name, SubBlockSystem system) {
 		super(name, system);

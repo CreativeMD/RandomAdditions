@@ -2,12 +2,10 @@ package com.creativemd.randomadditions.common.systems.cable;
 
 import net.minecraft.tileentity.TileEntity;
 
-import com.creativemd.creativecore.common.container.SubContainer;
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.SubBlock;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 
 public abstract class SubBlockCableBase extends SubBlock{
 	

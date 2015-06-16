@@ -4,14 +4,13 @@ import java.util.ArrayList;
 
 import net.minecraft.client.gui.FontRenderer;
 
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiGearInformation;
 import com.creativemd.randomadditions.common.gui.controls.GuiMachineProgressControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiPowerOMeter;
 import com.creativemd.randomadditions.common.gui.controls.GuiRedstoneControl;
 import com.creativemd.randomadditions.common.gui.controls.SubGuiMachineRecipeControl;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.systems.machine.tileentity.TileEntityMachine;
 
 import cpw.mods.fml.common.Loader;

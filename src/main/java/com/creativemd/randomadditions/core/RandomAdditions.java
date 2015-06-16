@@ -18,7 +18,6 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import com.creativemd.creativecore.common.packet.CreativeCorePacket;
 import com.creativemd.randomadditions.client.RandomTab;
 import com.creativemd.randomadditions.common.entity.EntityRandomArrow;
-import com.creativemd.randomadditions.common.entity.EntitySit;
 import com.creativemd.randomadditions.common.entity.EntityThrow;
 import com.creativemd.randomadditions.common.event.EventHandlerRandom;
 import com.creativemd.randomadditions.common.item.ItemCoreRandom;
@@ -228,7 +227,7 @@ public class RandomAdditions {
 		
 		EntityRegistry.registerModEntity(EntityThrow.class, "Throw", 0, this, 250, 250, true);
 		EntityRegistry.registerModEntity(EntityRandomArrow.class, "RAArrow", 1, this, 250, 250, true);
-		EntityRegistry.registerModEntity(EntitySit.class, "Sit", 2, this, 250, 250, true);
+		
 		
 		RandomItem.startRegistry();
 		

@@ -15,12 +15,10 @@ import net.minecraftforge.common.util.ForgeDirection;
 import org.lwjgl.opengl.GL11;
 
 import com.creativemd.creativecore.client.rendering.RenderHelper3D;
-import com.creativemd.creativecore.common.container.SubContainer;
-import com.creativemd.creativecore.common.gui.SubGui;
+import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
+import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
-import com.creativemd.randomadditions.common.subsystem.SubContainerTileEntity;
-import com.creativemd.randomadditions.common.subsystem.SubGuiTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 import com.creativemd.randomadditions.common.systems.producer.SubBlockProducer;
 import com.creativemd.randomadditions.common.systems.producer.gui.SubContainerHeatGen;

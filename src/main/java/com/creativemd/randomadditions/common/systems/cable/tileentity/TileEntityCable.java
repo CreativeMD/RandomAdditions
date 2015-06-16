@@ -12,6 +12,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.creativecore.common.utils.RotationUtils;
+import com.creativemd.randomadditions.common.energy.api.IRAReciever;
 import com.creativemd.randomadditions.common.energy.core.EnergyCable;
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
 import com.creativemd.randomadditions.common.energy.core.EnergyCore;
@@ -191,6 +192,8 @@ public class TileEntityCable extends TileEntityCableBase{
 					connections.add(entity);
 				else if(entity instanceof EnergyComponent)
 					connections.add(new MachineEntry((EnergyComponent) entity, ForgeDirection.getOrientation(i).getOpposite()));
+				else if(entity instanceof IRAReciever)
+					connections.add(new MachineEntry((IRAReciever) entity, ForgeDirection.getOrientation(i).getOpposite()));
 			}
 		}
 		return connections;

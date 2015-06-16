@@ -10,13 +10,14 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.creativecore.common.utils.RotationUtils;
+import com.creativemd.randomadditions.common.energy.api.IRAReciever;
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.MachineEntry;
 import com.creativemd.randomadditions.common.energy.core.EnergyUtils.SearchResult;
 import com.creativemd.randomadditions.common.redstone.IRedstoneControl;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.common.systems.littletiles.tileentity.TileEntityLittleCable;
 
-public abstract class EnergyComponent extends EnergyCore implements IRedstoneControl{
+public abstract class EnergyComponent extends EnergyCore implements IRedstoneControl, IRAReciever{
 	
 	public abstract boolean canRecieveEnergy(ForgeDirection direction);
 	
@@ -77,7 +78,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 		return false;
 	}
 	
-	public int recievePower(int amount)
+	public int receivePower(int amount)
 	{
 		if(!hasEnoughSpace(amount))
 			amount = getInteralStorage()-getCurrentPower();
@@ -121,7 +122,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 		return output;
 	}
 	
-	public int providePower(EnergyComponent machine, int max)
+	public int providePower(IRAReciever machine, int max)
 	{
 		int power = this.getProvideablePower();
 		int maxrecieve = machine.getRecieveablePower();
@@ -129,7 +130,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 			power = maxrecieve;
 		if(power > max)
 			power = max;
-		power = machine.recievePower(power);
+		power = machine.receivePower(power);
 		if(power > 0)
 			drainPower(power);
 		return power;
@@ -206,6 +207,8 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 					connections.add(entity);
 				else if(entity instanceof EnergyComponent)
 					connections.add(new MachineEntry((EnergyComponent) entity, blockdirection.getOpposite()));
+				else if(entity instanceof IRAReciever)
+					connections.add(new MachineEntry((IRAReciever) entity, blockdirection.getOpposite()));
 				else{
 					EnergyCable cable = TileEntityLittleCable.getConnection(worldObj, new ChunkCoordinates(xCoord, yCoord, zCoord), coord, blockdirection);
 					if(cable != null)
