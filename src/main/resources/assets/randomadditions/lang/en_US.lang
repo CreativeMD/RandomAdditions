@@ -32,6 +32,7 @@ tile.BlockRAMachine.Furnace.name=Mechanic Furnace
 tile.BlockRAMachine.Anvil.name=Mechanic Anvil
 tile.BlockRAMachine.Crusher.name=Mechanic Crusher
 tile.BlockRAMachine.CoolingPool.name=Cooling Pool
+tile.BlockRAMachine.Sawing.name=Mechanic Sawing Machine
 
 tile.BlockRAcmachine.Lightning.name=Lightning Machine
 
