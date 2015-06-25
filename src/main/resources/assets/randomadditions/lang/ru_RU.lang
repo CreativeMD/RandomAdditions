@@ -32,6 +32,7 @@ tile.BlockRAMachine.Furnace.name=Механическая печь
 tile.BlockRAMachine.Anvil.name=Механическая наковальня
 tile.BlockRAMachine.Crusher.name=Механическая дробилка
 tile.BlockRAMachine.CoolingPool.name=Охлаждающий бассейн
+tile.BlockRAMachine.Sawing.name=Механический распиловочный станок
 
 tile.BlockRAcmachine.Lightning.name=Генератор грозовых импульсов
 
