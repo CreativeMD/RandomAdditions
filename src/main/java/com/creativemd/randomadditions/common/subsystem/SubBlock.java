@@ -65,9 +65,9 @@ public abstract class SubBlock {
 	}
 	
 	@SideOnly(Side.CLIENT)
-	public abstract SubGuiTileEntity getGui(TileEntity tileEntity);
+	public abstract SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player);
 	
-	public abstract SubContainerTileEntity getContainer(TileEntity tileEntity);
+	public abstract SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player);
 	
 	public abstract TileEntityRandom getTileEntity();
 	

@@ -2,6 +2,7 @@ package com.creativemd.randomadditions.common.systems.enchant.blocks;
 
 import java.util.ArrayList;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -72,13 +73,13 @@ public class SubBlockUpgradeTable extends SubBlockEnchant{
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return new SubGuiUpgrade((TileEntityUpgrade) tileEntity);
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
-		return new SubContainerUpgrade((TileEntityUpgrade) tileEntity);
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
+		return new SubContainerUpgrade((TileEntityUpgrade) tileEntity, player);
 	}
 
 }

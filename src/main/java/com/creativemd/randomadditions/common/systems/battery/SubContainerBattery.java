@@ -13,8 +13,8 @@ import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 
 public class SubContainerBattery extends SubContainerTileEntity{
 
-	public SubContainerBattery(TileEntityRandom tileEntity) {
-		super(tileEntity);
+	public SubContainerBattery(TileEntityRandom tileEntity, EntityPlayer player) {
+		super(tileEntity, player);
 	}
 
 	@Override

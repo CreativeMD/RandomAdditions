@@ -17,9 +17,9 @@ public class SubContainerMachine extends SubContainerTileEntity{
 	
 	public SubBlockMachine block;
 	
-	public SubContainerMachine(TileEntityMachine machine, SubBlockMachine block)
+	public SubContainerMachine(TileEntityMachine machine, SubBlockMachine block, EntityPlayer player)
 	{
-		super(machine);
+		super(machine, player);
 		this.block = block;
 	}
 	

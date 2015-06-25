@@ -20,9 +20,9 @@ public class SubContainerCombine extends SubContainerTileEntity{
 	
 	public TileEntityUpgrade upgrade;
 	
-	public SubContainerCombine(TileEntityUpgrade upgrade)
+	public SubContainerCombine(TileEntityUpgrade upgrade, EntityPlayer player)
 	{
-		super(upgrade);
+		super(upgrade, player);
 		this.upgrade = upgrade;
 	}
 	

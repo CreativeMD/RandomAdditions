@@ -17,6 +17,7 @@ public class NEILoading {
 			SubSystemMachine.instance.crusher.neiClass = NEICrusher.class;
 			SubSystemMachine.instance.pool.neiClass = NEICoolingPool.class;
 			SubSystemMachine.instance.anvil.neiClass = NEIAnvil.class;
+			SubSystemMachine.instance.saw.neiClass = NEISaw.class;
 			for (int i = 0; i < SubSystemMachine.instance.blocks.size(); i++) {
 				try {
 					ClassLoader.getSystemClassLoader().loadClass(SubSystemMachine.instance.blocks.get(i).neiClass.getName());

@@ -8,6 +8,7 @@ import com.creativemd.randomadditions.common.systems.machine.blocks.CoolingPool;
 import com.creativemd.randomadditions.common.systems.machine.blocks.Crusher;
 import com.creativemd.randomadditions.common.systems.machine.blocks.DefaultMachine;
 import com.creativemd.randomadditions.common.systems.machine.blocks.Furnace;
+import com.creativemd.randomadditions.common.systems.machine.blocks.Sawing;
 import com.creativemd.randomadditions.common.systems.ore.SubSystemOre;
 import com.creativemd.randomadditions.support.nei.NEILoading;
 
@@ -36,6 +37,7 @@ public class SubSystemMachine extends SubBlockSystem<SubBlockMachine>{
 	public Furnace furnace;
 	public Anvil anvil;
 	public CoolingPool pool;
+	public Sawing saw;
 
 	@Override
 	public void registerBlocks() {
@@ -43,6 +45,7 @@ public class SubSystemMachine extends SubBlockSystem<SubBlockMachine>{
 		furnace = (Furnace) registerBlock(new Furnace(this));
 		anvil = (Anvil) registerBlock(new Anvil(this));
 		pool = (CoolingPool) registerBlock(new CoolingPool(this));
+		saw = (Sawing) registerBlock(new Sawing(this));
 		
 		SubSystemMachine.instance = this;
 		

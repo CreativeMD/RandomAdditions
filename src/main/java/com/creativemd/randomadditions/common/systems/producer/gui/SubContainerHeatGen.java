@@ -12,8 +12,8 @@ import com.creativemd.randomadditions.common.systems.producer.tileentity.TileEnt
 
 public class SubContainerHeatGen extends SubContainerTileEntity{
 
-	public SubContainerHeatGen(TileEntityRandom tileEntity) {
-		super(tileEntity);
+	public SubContainerHeatGen(TileEntityRandom tileEntity, EntityPlayer player) {
+		super(tileEntity, player);
 	}
 
 	@Override

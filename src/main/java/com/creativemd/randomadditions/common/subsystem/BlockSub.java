@@ -39,6 +39,7 @@ import com.creativemd.littletiles.common.utils.LittleTile.LittleTileVec;
 import com.creativemd.littletiles.common.utils.LittleTilePreview;
 import com.creativemd.randomadditions.client.IBlockAccessFake;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
+import com.creativemd.randomadditions.common.systems.machine.blocks.Sawing;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
 
@@ -272,7 +273,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 		SubBlock subBlock = system.getSubBlock(world.getBlockMetadata(x, y, z));
 		if(subBlock.onBlockActivated(player, player.getHeldItem(), world.getTileEntity(x, y, z)))
 			return true;
-		SubContainer gui = subBlock.getContainer(world.getTileEntity(x, y, z));
+		SubContainer gui = subBlock.getContainer(world.getTileEntity(x, y, z), player);
 		if(gui != null)
 		{
 			if(!world.isRemote)
@@ -338,6 +339,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 		RedstoneControlHelper.nosignal = register.registerIcon(RandomAdditions.modid + ":custom/signals/nosignal");
 		RedstoneControlHelper.signal = register.registerIcon(RandomAdditions.modid + ":custom/signals/signal");
 		RedstoneControlHelper.icons = new IIcon[]{RedstoneControlHelper.ignore, RedstoneControlHelper.signal, RedstoneControlHelper.nosignal, RedstoneControlHelper.impulse};
+		Sawing.sawblade = register.registerIcon(RandomAdditions.modid + ":custom/sawblade");
         this.blockIcon = register.registerIcon(this.getTextureName());
 		for (int j = 0; j < system.blocks.size(); j++) {
 			((SubBlock) system.blocks.get(j)).registerIcon(register);
@@ -380,13 +382,13 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 	@SideOnly(Side.CLIENT)
 	public SubGui getGui(EntityPlayer player, ItemStack stack, World world,
 			int x, int y, int z) {
-		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getGui(world.getTileEntity(x, y, z));
+		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getGui(world.getTileEntity(x, y, z), player);
 	}
 
 	@Override
 	public SubContainer getContainer(EntityPlayer player, ItemStack stack,
 			World world, int x, int y, int z) {
-		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getContainer(world.getTileEntity(x, y, z));
+		return system.getSubBlock(world.getBlockMetadata(x, y, z)).getContainer(world.getTileEntity(x, y, z), player);
 	}
 
 	@Override

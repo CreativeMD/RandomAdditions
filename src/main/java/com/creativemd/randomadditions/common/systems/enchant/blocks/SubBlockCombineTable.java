@@ -2,6 +2,7 @@ package com.creativemd.randomadditions.common.systems.enchant.blocks;
 
 import java.util.ArrayList;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -78,12 +79,12 @@ public class SubBlockCombineTable extends SubBlockEnchant{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return new SubGuiCombine((TileEntityRandom) tileEntity);
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
-		return new SubContainerCombine((TileEntityUpgrade) tileEntity);
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
+		return new SubContainerCombine((TileEntityUpgrade) tileEntity, player);
 	}
 }

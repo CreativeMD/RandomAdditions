@@ -31,7 +31,7 @@ public abstract class SubBlockProducer extends SubBlock {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		if(tileEntity instanceof TileEntityProducer)
 			return new SubGuiProducer((TileEntityProducer) tileEntity, this);
 		return null;
@@ -44,9 +44,9 @@ public abstract class SubBlockProducer extends SubBlock {
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
 		if(tileEntity instanceof TileEntityProducer)
-			return new SubContainerProducer((TileEntityRandom) tileEntity);
+			return new SubContainerProducer((TileEntityRandom) tileEntity, player);
 		return null;
 	}
 	

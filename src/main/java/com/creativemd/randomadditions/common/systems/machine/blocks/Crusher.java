@@ -228,7 +228,7 @@ public class Crusher extends SubBlockMachine{
 	public void renderProgressField(double percent) {
 		for (int i = 0; i < 11; i++) {
         	RenderHelper2D.renderIcon(Blocks.piston_head.getIcon(0, 2), i*8+4, 40+getOffset(i), percent, true, 0, 8, 8);
-        	RenderHelper2D.renderIcon(Blocks.piston_head.getIcon(0, 2), i*8-4, -5-getOffset(i), percent, true, 180, 8, 8);
+        	RenderHelper2D.renderIcon(Blocks.piston_head.getIcon(0, 2), i*8+4, 3-getOffset(i), percent, true, 180, 8, 8);
 		}
 	}
 	

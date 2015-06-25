@@ -2,6 +2,7 @@ package com.creativemd.randomadditions.common.systems.deco;
 
 import java.util.ArrayList;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
@@ -24,7 +25,7 @@ public abstract class SubBlockDeco extends SubBlock{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return null;
 	}
 	
@@ -47,7 +48,7 @@ public abstract class SubBlockDeco extends SubBlock{
     }
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
 		return null;
 	}
 	

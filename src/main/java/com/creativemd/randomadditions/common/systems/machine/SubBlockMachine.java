@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -62,15 +63,15 @@ public abstract class SubBlockMachine extends SubBlock{
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity)
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player)
 	{
 		return new SubGuiMachine(this, (TileEntityMachine) tileEntity);
 	}
 	
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity)
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player)
 	{
-		return new SubContainerMachine((TileEntityMachine) tileEntity, this);
+		return new SubContainerMachine((TileEntityMachine) tileEntity, this, player);
 	}
 	
 	public boolean isItemValid(ItemStack stack)

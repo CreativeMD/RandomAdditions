@@ -11,8 +11,8 @@ import com.creativemd.randomadditions.common.systems.deco.tileentity.TileEntityS
 
 public class SubContainerShelf extends SubContainerTileEntity{
 
-	public SubContainerShelf(TileEntityRandom tileEntity) {
-		super(tileEntity);
+	public SubContainerShelf(TileEntityRandom tileEntity, EntityPlayer player) {
+		super(tileEntity, player);
 	}
 
 	@Override

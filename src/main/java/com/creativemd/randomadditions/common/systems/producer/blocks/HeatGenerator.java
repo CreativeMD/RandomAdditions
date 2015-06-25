@@ -59,7 +59,7 @@ public class HeatGenerator extends SubBlockProducer{
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		if(tileEntity instanceof TileEntityHeatGenerator)
 			return new SubGuiHeatGen((TileEntityHeatGenerator) tileEntity, this);
 		return null;
@@ -72,9 +72,9 @@ public class HeatGenerator extends SubBlockProducer{
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
 		if(tileEntity instanceof TileEntityHeatGenerator)
-			return new SubContainerHeatGen((TileEntityRandom) tileEntity);
+			return new SubContainerHeatGen((TileEntityRandom) tileEntity, player);
 		return null;
 	}
 	

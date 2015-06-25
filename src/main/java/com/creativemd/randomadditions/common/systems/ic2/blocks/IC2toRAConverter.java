@@ -1,5 +1,6 @@
 package com.creativemd.randomadditions.common.systems.ic2.blocks;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
@@ -22,13 +23,13 @@ public class IC2toRAConverter extends SubBlockIC2{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return new SubGuiIC2toRA((TileEntityIC2toRA) tileEntity, this);
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
-		return new SubContainerIC2((TileEntityRandom) tileEntity);
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
+		return new SubContainerIC2((TileEntityRandom) tileEntity, player);
 	}
 
 	@Override

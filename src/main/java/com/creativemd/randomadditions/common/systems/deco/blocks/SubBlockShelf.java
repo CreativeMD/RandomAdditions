@@ -2,6 +2,7 @@ package com.creativemd.randomadditions.common.systems.deco.blocks;
 
 import java.util.ArrayList;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemBlock;
@@ -201,12 +202,12 @@ public class SubBlockShelf extends SubBlockDeco{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return new SubGuiShelf((TileEntityRandom) tileEntity);
 	}
 	
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
-		return new SubContainerShelf((TileEntityRandom) tileEntity);
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
+		return new SubContainerShelf((TileEntityRandom) tileEntity, player);
 	}
 }

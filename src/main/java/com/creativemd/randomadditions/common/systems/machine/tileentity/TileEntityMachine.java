@@ -137,7 +137,18 @@ public class TileEntityMachine extends EnergyComponent implements ISidedInventor
 
 	@Override
 	public ItemStack getStackInSlot(int slot) {
-		return inventory[slot];
+		if(slot > inventory.length && slot < 4 + getBlock().getNumberOfInputs())
+		{
+			ItemStack[] tempInv = new ItemStack[4 + getBlock().getNumberOfInputs()];
+			for (int i = 0; i < inventory.length; i++) {
+				tempInv[i] = inventory[i];
+			}
+			inventory = tempInv;
+		}
+		if(slot < inventory.length)
+			return inventory[slot];
+		else
+			return null;
 	}
 
 	@Override

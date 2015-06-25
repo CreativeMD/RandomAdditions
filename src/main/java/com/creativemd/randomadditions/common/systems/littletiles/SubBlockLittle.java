@@ -1,5 +1,6 @@
 package com.creativemd.randomadditions.common.systems.littletiles;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
@@ -18,12 +19,12 @@ public abstract class SubBlockLittle extends SubBlock{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return null;
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
 		return null;
 	}
 	

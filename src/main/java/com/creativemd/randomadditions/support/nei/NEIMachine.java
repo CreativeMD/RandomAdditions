@@ -18,6 +18,7 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.common.gui.GuiContainerSub;
+import com.creativemd.creativecore.core.CreativeCore;
 import com.creativemd.randomadditions.common.systems.machine.SubBlockMachine;
 import com.creativemd.randomadditions.core.RandomAdditions;
 
@@ -119,7 +120,7 @@ public abstract class NEIMachine extends TemplateRecipeHandler
     
     @Override
 	public String getGuiTexture() {
-    	return RandomAdditions.modid + ":textures/gui/GUI.png";
+    	return CreativeCore.modid + ":textures/gui/GUI.png";
     }
     
 	@Override

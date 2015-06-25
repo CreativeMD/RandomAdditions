@@ -46,13 +46,13 @@ public class SubBlockBattery extends SubBlock{
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public SubGuiTileEntity getGui(TileEntity tileEntity) {
+	public SubGuiTileEntity getGui(TileEntity tileEntity, EntityPlayer player) {
 		return new SubGuiBattery((TileEntityBattery) tileEntity, this);
 	}
 
 	@Override
-	public SubContainerTileEntity getContainer(TileEntity tileEntity) {
-		return new SubContainerBattery((TileEntityRandom) tileEntity);
+	public SubContainerTileEntity getContainer(TileEntity tileEntity, EntityPlayer player) {
+		return new SubContainerBattery((TileEntityRandom) tileEntity, player);
 	}
 
 	@Override
