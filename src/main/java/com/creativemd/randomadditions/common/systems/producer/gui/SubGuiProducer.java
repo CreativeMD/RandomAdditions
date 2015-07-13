@@ -23,20 +23,13 @@ public class SubGuiProducer extends SubGuiTileEntity{
 	}
 	
 	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		controls.add(new GuiPowerOMeter(block, producer, 87, 20, 170, 10));
-		return controls;
-	}
-
-	@Override
 	public void drawForeground(FontRenderer fontRenderer) {
 		fontRenderer.drawString("Speed/Max: " + producer.speed + "/" + producer.maxSpeed, 3, 30, 0);
 	}
 
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
-		
+	public void createControls() {
+		controls.add(new GuiPowerOMeter(block, producer, 87, 20, 170, 10));
 	}
 
 }

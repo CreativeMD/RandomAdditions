@@ -10,5 +10,57 @@
 		  "lightning/espark6",
 		  "lightning/espark7"
 		]
+  },
+  "anvil": {
+	  "category": "block",
+	  "sounds": [
+		  "machines/anvil1",
+		  "machines/anvil2",
+		  "machines/anvil3",
+		  "machines/anvil4", 
+		  "machines/anvil5",
+		  "machines/anvil6",
+		  "machines/anvil7"
+		]
+  },
+  "crusher":{
+	"sounds": [
+		{
+			"name":"machines/crusher",
+			"stream":false
+		}],
+	"category":"block"
+  },
+  "sawing":{
+	"sounds": [
+		{
+			"name":"machines/sawing",
+			"stream":false
+		}],
+	"category":"block"
+  },
+  "furnace":{
+	"sounds": [
+		{
+			"name":"machines/furnace",
+			"stream":false
+		}],
+	"category":"block"
+  },
+  "coolingpool":{
+	"sounds": [
+		{
+			"name":"machines/coolingpool",
+			"stream":false
+		}],
+	"category":"block"
+  },
+  "watermill":{
+	"sounds": [
+		{
+			"name":"machines/watermill",
+			"stream":false
+		}],
+	"category":"block"
   }
 }

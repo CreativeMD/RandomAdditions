@@ -3,7 +3,9 @@ package com.creativemd.randomadditions.common.item.tools;
 import java.util.ArrayList;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
@@ -83,11 +85,15 @@ public abstract class Tool {
 		return this;
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(ItemStack stack, ItemStack usingItem, int useRemaining)
 	{
-		return icons.get(ItemTool.getMaterial(stack).id);
+		if(ItemTool.getMaterial(stack).id < icons.size())
+			return icons.get(ItemTool.getMaterial(stack).id);
+		return ((TextureMap)Minecraft.getMinecraft().getTextureManager().getTexture(Minecraft.getMinecraft().renderEngine.getResourceLocation(1))).getAtlasSprite("missingno");
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public void registerIcon(IIconRegister par1IconRegister, CraftMaterial material)
 	{
 		icons.add(par1IconRegister.registerIcon(RandomAdditions.modid + ":" + material.name + displayName));

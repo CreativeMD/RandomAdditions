@@ -121,4 +121,12 @@ public abstract class SubBlockProducer extends SubBlock {
 	{
 		return 0;
 	}
+	
+	public abstract int getPlayTime();
+	
+	public float getPlayVolume(TileEntityProducer producer)
+	{
+		float test = Math.max((float)producer.speed/130F, 0.05F);
+		return Math.min(Math.max((float)producer.speed/130F, 0.05F), 1);
+	}
 }

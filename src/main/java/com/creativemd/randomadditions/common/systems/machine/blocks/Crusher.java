@@ -236,5 +236,14 @@ public class Crusher extends SubBlockMachine{
 	{
 		return (int)((Math.sin((double)System.nanoTime()/(250000000D*Math.sin((index+1)*0.369D)))-1)*2.5D);
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 40;
+	}
 	
+	@Override
+	public float getPlayVolume(){
+		return 0.25F;
+	}
 }

@@ -36,4 +36,9 @@ public class DefaultMachine extends SubBlockMachine{
 		
 	}
 
+	@Override
+	public int getPlayTime() {
+		return 0;
+	}
+
 }

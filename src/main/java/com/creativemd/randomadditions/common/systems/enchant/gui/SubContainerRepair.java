@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
@@ -27,7 +28,7 @@ public class SubContainerRepair extends SubContainerTileEntity{
 	
 	
 	@Override
-	public void onGuiPacket(int control, String value, EntityPlayer player) {
+	public void onGuiPacket(int control, NBTTagCompound value, EntityPlayer player) {
 		if(upgrade.inventory[0] != null && upgrade.inventory[2] == null)
 		{
 			ItemStack stackTool = null;
@@ -91,18 +92,10 @@ public class SubContainerRepair extends SubContainerTileEntity{
 	}
 
 	@Override
-	public ArrayList<Slot> getSlots(EntityPlayer player) {
-		ArrayList<Slot> slots = new ArrayList<Slot>();
-		slots.add(new Slot((IInventory) tileEntity, 0, 26, 31));
-		slots.add(new Slot((IInventory) tileEntity, 1, 71, 31));
-		slots.add(new SlotOutput((IInventory) tileEntity, 2, 134, 31));
-		slots.addAll(getPlayerSlots(player, 8, 84));
-		return slots;
+	public void createControls() {
+		addSlotToContainer(new Slot((IInventory) tileEntity, 0, 26, 31));
+		addSlotToContainer(new Slot((IInventory) tileEntity, 1, 71, 31));
+		addSlotToContainer(new SlotOutput((IInventory) tileEntity, 2, 134, 31));
+		addPlayerSlotsToContainer(player);
 	}
-
-	@Override
-	public boolean doesGuiNeedUpdate() {
-		return false;
-	}
-
 }

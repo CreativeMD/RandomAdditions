@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
+import com.creativemd.creativecore.common.gui.SubGui.ControlEvent;
 import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.gui.controls.GuiBookControl;
@@ -25,21 +27,6 @@ public class SubGuiUpgrade extends SubGuiTileEntity{
 	{
 		super(upgrade);
 		this.upgrade = upgrade;
-	}
-	
-	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		book = new GuiBookControl(new String[0], 115, 40, 105, 70);
-		controls.add(book);
-		controls.add(new GuiButtonControl("Upgrade", 34, 60, 50, 20));
-		return controls;
-	}
-	
-	@Override
-	public void onControlClicked(GuiControl control)
-	{
-		sendGuiPacket(0, "Clicked");
 	}
 
 	@Override
@@ -64,8 +51,18 @@ public class SubGuiUpgrade extends SubGuiTileEntity{
 	}
 	
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
-		
+	public void onControlEvent(GuiControl control, ControlEvent event)
+	{
+		NBTTagCompound nbt = new NBTTagCompound();
+		nbt.setInteger("type", 0);
+		sendPacketToServer(0, nbt);
+	}
+	
+	@Override
+	public void createControls() {
+		book = new GuiBookControl(new String[0], 115, 40, 105, 70);
+		controls.add(book);
+		controls.add(new GuiButtonControl("Upgrade", 34, 60, 50, 20));
 	}
 
 }

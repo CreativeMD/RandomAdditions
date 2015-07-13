@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.nbt.NBTTagCompound;
 
 import org.lwjgl.opengl.GL11;
 
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.common.gui.GuiContainerSub;
 import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
+import com.creativemd.creativecore.common.gui.SubGui.ControlEvent;
 import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
@@ -19,17 +21,13 @@ public class SubGuiCombine extends SubGuiTileEntity{
 	public SubGuiCombine(TileEntityRandom tileEntity) {
 		super(tileEntity);
 	}
-
-	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		controls.add(new GuiButtonControl("Combine", 110, 60, 60, 20));
-		return controls;
-	}
 	
-	public void onControlClicked(GuiControl control)
+	@Override
+	public void onControlEvent(GuiControl control, ControlEvent event)
 	{
-		sendGuiPacket(0, "Clicked");
+		NBTTagCompound nbt = new NBTTagCompound();
+		nbt.setInteger("type", 0);
+		sendPacketToServer(0, nbt);
 	}
 	
 	@Override
@@ -44,8 +42,8 @@ public class SubGuiCombine extends SubGuiTileEntity{
 	}
 
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
-		
+	public void createControls() {
+		controls.add(new GuiButtonControl("Combine", 110, 60, 60, 20));
 	}
 
 }

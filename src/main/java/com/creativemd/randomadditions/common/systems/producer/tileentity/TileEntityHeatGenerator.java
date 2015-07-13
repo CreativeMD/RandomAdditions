@@ -13,6 +13,7 @@ import com.creativemd.creativecore.common.utils.InventoryUtils;
 import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.common.systems.producer.blocks.HeatGenerator;
+import com.creativemd.randomadditions.core.RandomAdditions;
 
 public class TileEntityHeatGenerator extends EnergyComponent implements ISidedInventory{
 	
@@ -103,6 +104,9 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 	        }
 	}
 	
+	public int playTimeLeft = 0;
+	public static final int playTime = 120;
+	
 	@Override
 	public void updateEntity() 
 	{
@@ -152,6 +156,15 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 			if(isActive != tempActive)
 			{
 				updateBlock();
+			}
+			if(isActive)
+			{
+				if(playTimeLeft == 0)
+				{
+					playTimeLeft = playTime;
+					worldObj.playSoundEffect(xCoord, yCoord, zCoord, RandomAdditions.modid + ":furnace", 1, 1);
+				}
+				playTimeLeft--;
 			}
 		}
 	}

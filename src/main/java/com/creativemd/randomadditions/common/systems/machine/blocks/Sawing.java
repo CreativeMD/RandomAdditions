@@ -123,4 +123,14 @@ public class Sawing extends SubBlockMachine{
 		}
 	}
 
+	@Override
+	public int getPlayTime() {
+		return 49;
+	}
+	
+	@Override
+	public float getPlayVolume(){
+		return 0.3F;
+	}
+
 }

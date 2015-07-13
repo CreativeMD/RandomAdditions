@@ -22,21 +22,14 @@ public class SubGuiIC2toRA extends SubGuiTileEntity {
 	}
 	
 	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
-		return controls;
-	}
-
-	@Override
 	public void drawForeground(FontRenderer fontRenderer) {
 		fontRenderer.drawString("Input: " + SubSystemIC2.RAtoEU(battery.getInputPower()) + " EU/t", 3, 45, 0);
 		fontRenderer.drawString("Output: " + battery.getOutputPower() + " RA/t", 3, 55, 0);
 	}
-
+	
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
-		
+	public void createControls() {
+		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
 	}
 
 }

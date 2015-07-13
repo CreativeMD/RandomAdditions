@@ -169,4 +169,14 @@ public class Anvil extends SubBlockMachine{
 				"COC", "PAP", "COC", 'A', battery, 'O', Blocks.obsidian, 'C', Blocks.cobblestone, 'P', Blocks.piston
 				});
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 30;
+	}
+	
+	@Override
+	public float getPlayVolume(){
+		return 1;
+	}
 }

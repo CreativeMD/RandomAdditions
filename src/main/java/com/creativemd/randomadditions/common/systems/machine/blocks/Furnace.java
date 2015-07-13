@@ -11,10 +11,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
+import com.creativemd.creativecore.client.rendering.EffectUtils;
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
@@ -66,26 +68,6 @@ public class Furnace extends SubBlockMachine{
 	}
 	
 	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
-    {	
-		TileEntityMachine machine = (TileEntityMachine) par1World.getTileEntity(par2, par3, par4);
-		if(machine.progress > 0)
-		{
-		    Random random = par1World.rand;
-		    double d = 0.0625D;
-		
-		    for (int i = 0; i < 10; i++)
-		    {
-		
-		    	double d1 = (float)par2 + random.nextFloat();
-		        double d2 = (float)par3 + random.nextFloat();
-		        double d3 = (float)par4 + random.nextFloat();	
-		        par1World.spawnParticle("smoke", d1, d2, d3, 0.0D, random.nextDouble()*0.05, 0.0D);
-		    }
-		}
-    }
-	
-	@Override
 	public ArrayList<CubeObject> getCubes(IBlockAccess world, int x, int y, int z)
 	{
 		Block block = Blocks.brick_block;
@@ -119,6 +101,20 @@ public class Furnace extends SubBlockMachine{
 	public void registerRecipes() {
 		FurnaceRecipes.smelting().func_151393_a(Blocks.sandstone, new ItemStack(Blocks.glass, 4), 0.4F);
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 120;
+	}
 	
+	@Override
+	public void onClientTick(TileEntityMachine machine)
+	{
+		if(machine.progress > 0)
+		{
+			EffectUtils.spawnParticles(machine.getWorldObj(), "smoke", machine.xCoord, machine.yCoord, machine.zCoord, Vec3.createVectorHelper(0.5, -0.3, 0), Vec3.createVectorHelper(0.1, 0.01, Math.random()*0.1-0.05), machine.getDirection());
+			EffectUtils.spawnParticles(machine.getWorldObj(), "flame", machine.xCoord, machine.yCoord, machine.zCoord, Vec3.createVectorHelper(0.5, -0.3, 0), Vec3.createVectorHelper(0.05, 0.01+Math.random()*0.01, Math.random()*0.05-0.025), machine.getDirection());
+		}
+	}
 	
 }

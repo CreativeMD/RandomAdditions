@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
@@ -17,27 +18,21 @@ public class SubContainerHeatGen extends SubContainerTileEntity{
 	}
 
 	@Override
-	public void onGuiPacket(int control, String value, EntityPlayer player) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public ArrayList<Slot> getSlots(EntityPlayer player) {
-		ArrayList<Slot> slots = new ArrayList<Slot>();
+	public void createControls() {
 		if(tileEntity instanceof TileEntityHeatGenerator)
 		{
 			for (int i = 0; i < ((TileEntityHeatGenerator)tileEntity).inventory.length; i++) {
-				slots.add(new Slot((IInventory) tileEntity, i, 50+i*18, 20));
+				addSlotToContainer(new Slot((IInventory) tileEntity, i, 50+i*18, 20));
 			}
 		}
-		slots.addAll(getPlayerSlots(player, 8, 84));
-		return slots;
+		addPlayerSlotsToContainer(player);
 	}
 
 	@Override
-	public boolean doesGuiNeedUpdate() {
-		return true;
+	public void onGuiPacket(int controlID, NBTTagCompound nbt,
+			EntityPlayer player) {
+		
+		
 	}
 
 }

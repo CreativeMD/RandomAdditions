@@ -38,9 +38,9 @@ public class CoolingPool extends SubBlockMachine{
 			for (int i = 0; i < 4; i++) {
 				String name = "RAArmor" + ItemRandomArmor.getArmorType(i) + RandomAdditions.materials.get(j).displayName;
 				ItemStack output = new ItemStack((Item)Item.itemRegistry.getObject(RandomAdditions.modid + ":" + name));
-				ItemStack input = output.copy();
-				ItemCore.makeHot(input);
-				registerRecipe(new MachineRecipe(input, output));
+				//ItemStack input = output.copy();
+				//ItemCore.makeHot(input);
+				registerRecipe(new MachineRecipe((Item)Item.itemRegistry.getObject(RandomAdditions.modid + ":" + name), output));
 			}
 		}
 	}
@@ -79,7 +79,15 @@ public class CoolingPool extends SubBlockMachine{
 				"XBX", "WWW", "WAW", 'A', battery, 'X', Blocks.cobblestone, 'W', Blocks.planks, 'B', Items.water_bucket
 				});
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 100;
+	}
 	
-	
+	@Override
+	public float getPlayVolume(){
+		return 1;
+	}
 	
 }

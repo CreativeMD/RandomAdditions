@@ -173,4 +173,9 @@ public class HeatGenerator extends SubBlockProducer{
 		return 2;
 	}
 
+	@Override
+	public int getPlayTime() {
+		return 120;
+	}
+
 }

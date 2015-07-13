@@ -10,6 +10,7 @@ import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
 import com.creativemd.randomadditions.common.systems.machine.SubSystemMachine;
 import com.creativemd.randomadditions.common.systems.producer.SubBlockProducer;
 import com.creativemd.randomadditions.common.systems.producer.SubSystemProducer;
+import com.creativemd.randomadditions.core.RandomAdditions;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -46,6 +47,8 @@ public class TileEntityProducer extends EnergyComponent{
         return 100000.0D;
     }
 	
+	public int playTimeLeft = 0;
+	
 	@Override
 	public void updateEntity() 
 	{
@@ -79,6 +82,16 @@ public class TileEntityProducer extends EnergyComponent{
 			}
 			if(speed > maxSpeed)
 				speed = maxSpeed;
+			
+			if(speed > 0)
+			{
+				if(playTimeLeft == 0 && getBlock().getPlayTime() > 0)
+				{
+					playTimeLeft = getBlock().getPlayTime();
+					worldObj.playSoundEffect(xCoord, yCoord, zCoord, RandomAdditions.modid + ":" + getBlock().name.toLowerCase(), getBlock().getPlayVolume(this), 1);
+				}
+				playTimeLeft--;
+			}
 		}
 		super.updateEntity();
 	}

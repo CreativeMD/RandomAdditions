@@ -28,6 +28,7 @@ public class MachineRecipeCool extends MachineRecipe{
 		return result;
 	}
 	
+	@Override
 	public ItemStack getOutput(ArrayList<ItemStack> input)
 	{
 		if(input.size() > 0 && input.get(0) != null)

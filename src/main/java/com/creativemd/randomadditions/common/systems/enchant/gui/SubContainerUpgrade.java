@@ -6,6 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.item.ItemTool;
@@ -24,7 +25,7 @@ public class SubContainerUpgrade extends SubContainerTileEntity{
 	}
 	
 	@Override
-	public void onGuiPacket(int control, String value, EntityPlayer player) {
+	public void onGuiPacket(int control, NBTTagCompound value, EntityPlayer player) {
 		ItemStack stack = upgrade.getStackInSlot(0);
 		if(SubSystemEnchant.canEnchantItem(stack, player))
 		{
@@ -33,18 +34,10 @@ public class SubContainerUpgrade extends SubContainerTileEntity{
 			upgrade.getWorldObj().playAuxSFX(1021, upgrade.xCoord, upgrade.yCoord, upgrade.zCoord, 1);
 		}
 	}
-
+	
 	@Override
-	public ArrayList<Slot> getSlots(EntityPlayer player) {
-		ArrayList<Slot> slots = new ArrayList<Slot>();
-		slots.add(new Slot((IInventory) tileEntity, 0, 26, 26));
-		slots.addAll(getPlayerSlots(player, 8, 84));
-		return slots;
+	public void createControls() {
+		addSlotToContainer(new Slot((IInventory) tileEntity, 0, 26, 26));
+		addPlayerSlotsToContainer(player);
 	}
-
-	@Override
-	public boolean doesGuiNeedUpdate() {
-		return false;
-	}
-
 }

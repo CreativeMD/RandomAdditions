@@ -19,19 +19,12 @@ public class SubGuiShelf extends SubGuiTileEntity{
 	}
 
 	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		
-		return controls;
-	}
-
-	@Override
 	public void drawForeground(FontRenderer fontRenderer) {
 		
 	}
 
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
+	public void createControls() {
 		
 	}
 

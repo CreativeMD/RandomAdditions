@@ -54,5 +54,10 @@ public class CreativeProducer extends SubBlockProducer{
 	public int getModifiers() {
 		return 0;
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 0;
+	}
 	
 }

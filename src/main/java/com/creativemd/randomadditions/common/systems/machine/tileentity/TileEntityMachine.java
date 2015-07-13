@@ -18,6 +18,7 @@ import com.creativemd.randomadditions.common.systems.machine.MachineRecipe;
 import com.creativemd.randomadditions.common.systems.machine.SubBlockMachine;
 import com.creativemd.randomadditions.common.systems.machine.SubSystemMachine;
 import com.creativemd.randomadditions.common.upgrade.Upgrade;
+import com.creativemd.randomadditions.core.RandomAdditions;
 
 public class TileEntityMachine extends EnergyComponent implements ISidedInventory{
 
@@ -285,6 +286,8 @@ public class TileEntityMachine extends EnergyComponent implements ISidedInventor
 		return power;
 	}
 	
+	public int playTimeLeft = 0;
+	
 	@Override
 	public void updateEntity() 
 	{
@@ -341,14 +344,24 @@ public class TileEntityMachine extends EnergyComponent implements ISidedInventor
 					}
 					progress = 0;
 				}
+			}else{
+				if(working)
+				{
+					working = false;
+					updateBlock();
+				}
 			}
-		}else{
 			if(working)
 			{
-				working = false;
-				updateBlock();
+				if(playTimeLeft == 0)
+				{
+					playTimeLeft = getBlock().getPlayTime();
+					worldObj.playSoundEffect(xCoord, yCoord, zCoord, RandomAdditions.modid + ":" + getBlock().name.toLowerCase(), getBlock().getPlayVolume(), 1);
+				}
+				playTimeLeft--;
 			}
+		}else{
+			getBlock().onClientTick(this);
 		}
 	}
-	
 }

@@ -359,4 +359,15 @@ public class Watermill extends SubBlockProducer{
 		return power;
 	}
 	
+	@Override
+	public float getPlayVolume(TileEntityProducer producer)
+	{
+		return Math.min(Math.max((float)producer.speed/130F, 0.05F), 1);
+	}
+
+	@Override
+	public int getPlayTime() {
+		return 220;
+	}
+	
 }

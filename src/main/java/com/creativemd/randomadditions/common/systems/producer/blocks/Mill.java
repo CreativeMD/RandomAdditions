@@ -414,6 +414,11 @@ public class Mill extends SubBlockProducer{
 	{
 		return 2;
 	}
+
+	@Override
+	public int getPlayTime() {
+		return 0;
+	}
 	
 	
 }

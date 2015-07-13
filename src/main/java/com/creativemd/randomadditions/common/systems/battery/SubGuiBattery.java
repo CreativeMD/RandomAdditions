@@ -21,14 +21,6 @@ public class SubGuiBattery extends SubGuiTileEntity {
 		this.battery = battery;
 		this.block = block;
 	}
-	
-	@Override
-	public ArrayList<GuiControl> getControls() {
-		ArrayList<GuiControl> controls = new ArrayList<GuiControl>();
-		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
-		controls.add(new GuiRedstoneControl(15, 15, 20, 20, 0, battery));
-		return controls;
-	}
 
 	@Override
 	public void drawForeground(FontRenderer fontRenderer) {
@@ -37,7 +29,9 @@ public class SubGuiBattery extends SubGuiTileEntity {
 	}
 
 	@Override
-	public void drawBackground(FontRenderer fontRenderer) {
+	public void createControls() {
+		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
+		controls.add(new GuiRedstoneControl(15, 15, 20, 20, 0, battery));
 		
 	}
 

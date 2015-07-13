@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
 import com.creativemd.creativecore.common.container.SubContainer;
@@ -16,23 +17,16 @@ public class SubContainerBattery extends SubContainerTileEntity{
 	public SubContainerBattery(TileEntityRandom tileEntity, EntityPlayer player) {
 		super(tileEntity, player);
 	}
+	
+	@Override
+	public void createControls() {
+		addSlotToContainer(new Slot((IInventory) tileEntity, 0, 75, 10));
+		addPlayerSlotsToContainer(player, 8, 84);
+	}
 
 	@Override
-	public void onGuiPacket(int control, String value, EntityPlayer player) {
+	public void onGuiPacket(int controlID, NBTTagCompound nbt, EntityPlayer player) {
 		
-	}
-
-	@Override
-	public boolean doesGuiNeedUpdate() {
-		return true;
-	}
-
-	@Override
-	public ArrayList<Slot> getSlots(EntityPlayer player) {
-		ArrayList<Slot> slots = new ArrayList<Slot>();
-		slots.add(new Slot((IInventory) tileEntity, 0, 75, 10));
-		slots.addAll(getPlayerSlots(player, 8, 84));
-		return slots;
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Slot;
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.creativemd.creativecore.common.gui.SubContainerTileEntity;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
@@ -15,18 +16,14 @@ public class SubContainerProducer extends SubContainerTileEntity{
 	}
 
 	@Override
-	public void onGuiPacket(int control, String value, EntityPlayer player) {
+	public void createControls() {
 		
 	}
 
 	@Override
-	public ArrayList<Slot> getSlots(EntityPlayer player) {
-		return new ArrayList<Slot>();
-	}
-
-	@Override
-	public boolean doesGuiNeedUpdate() {
-		return true;
+	public void onGuiPacket(int controlID, NBTTagCompound nbt,
+			EntityPlayer player) {
+		
 	}
 
 }

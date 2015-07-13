@@ -109,6 +109,12 @@ public abstract class SubBlockMachine extends SubBlock{
 		addRecipe(SubSystemBattery.instance.getItemStack(0), getItemStack());
 	}
 	
+	public abstract int getPlayTime();
+	
+	public float getPlayVolume(){
+		return 1;
+	}
+	
 	@Override
 	public int getRotation()
 	{
@@ -132,4 +138,6 @@ public abstract class SubBlockMachine extends SubBlock{
 		}
 		return result;
 	}
+	
+	public void onClientTick(TileEntityMachine machine){}
 }
