@@ -7,15 +7,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
-import com.creativemd.creativecore.common.gui.SubGui.ControlEvent;
-import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
+import com.creativemd.creativecore.common.gui.controls.GuiButton;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
+import com.creativemd.creativecore.common.gui.event.ControlClickEvent;
 import com.creativemd.randomadditions.common.gui.controls.GuiBookControl;
 import com.creativemd.randomadditions.common.item.ItemRandomArmor;
 import com.creativemd.randomadditions.common.item.ItemTool;
 import com.creativemd.randomadditions.common.item.enchantment.EnchantmentModifier;
 import com.creativemd.randomadditions.common.systems.enchant.SubSystemEnchant;
 import com.creativemd.randomadditions.common.systems.enchant.tileentity.TileEntityUpgrade;
+import com.n247s.api.eventapi.eventsystem.CustomEventSubscribe;
 
 public class SubGuiUpgrade extends SubGuiTileEntity{
 	
@@ -30,7 +31,7 @@ public class SubGuiUpgrade extends SubGuiTileEntity{
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		ItemStack stack = upgrade.inventory[0];
 		if(stack != null && (stack.getItem() instanceof ItemTool || stack.getItem() instanceof ItemRandomArmor)  && SubSystemEnchant.getLevel(stack) < 3)
 		{
@@ -50,8 +51,8 @@ public class SubGuiUpgrade extends SubGuiTileEntity{
 			book.text = new String[0];
 	}
 	
-	@Override
-	public void onControlEvent(GuiControl control, ControlEvent event)
+	@CustomEventSubscribe
+	public void onClicked(ControlClickEvent event)
 	{
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setInteger("type", 0);
@@ -60,9 +61,9 @@ public class SubGuiUpgrade extends SubGuiTileEntity{
 	
 	@Override
 	public void createControls() {
-		book = new GuiBookControl(new String[0], 115, 40, 105, 70);
+		book = new GuiBookControl("book", new String[0], 65, 5, 105, 70);
 		controls.add(book);
-		controls.add(new GuiButtonControl("Upgrade", 34, 60, 50, 20));
+		controls.add(new GuiButton("Upgrade", 10, 50, 50, 20));
 	}
 
 }

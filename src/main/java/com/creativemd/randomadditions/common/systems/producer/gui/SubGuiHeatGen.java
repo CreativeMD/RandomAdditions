@@ -24,16 +24,16 @@ public class SubGuiHeatGen extends SubGuiTileEntity{
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		
 	}
 
 	@Override
 	public void createControls() {
-		controls.add(new GuiPowerOMeter(block, producer, 87, 10, 170, 10));
-		controls.add(new GuiRedstoneControl(35, 70, 20, 20, 0, producer));
+		controls.add(new GuiPowerOMeter("power", block, producer, 2, 5, 170, 10));
+		controls.add(new GuiRedstoneControl(15, 60, 20, 20, 0, producer));
 		for (int i = 0; i < producer.fuel.length; i++) {
-			controls.add(new GuiHeatOMeter(block, producer, 58+i*18, 60, 40, 16, i));
+			controls.add(new GuiHeatOMeter("heat", block, producer, 39+i*18, 50, 40, 16, i));
 			controls.get(controls.size()-1).rotation = -90;
 		}
 	}

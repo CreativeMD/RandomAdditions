@@ -25,6 +25,8 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import org.lwjgl.opengl.GL11;
 
+import com.creativemd.creativecore.client.block.BlockRenderHelper;
+import com.creativemd.creativecore.client.block.IBlockAccessFake;
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.client.rendering.RenderHelper3D;
 import com.creativemd.creativecore.common.container.SubContainer;
@@ -33,11 +35,9 @@ import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.core.CreativeCore;
 import com.creativemd.littletiles.common.blocks.ILittleTile;
+import com.creativemd.littletiles.common.tileentity.TileEntityLittleTiles;
 import com.creativemd.littletiles.common.utils.LittleTile;
-import com.creativemd.littletiles.common.utils.LittleTile.LittleTileSize;
-import com.creativemd.littletiles.common.utils.LittleTile.LittleTileVec;
 import com.creativemd.littletiles.common.utils.LittleTilePreview;
-import com.creativemd.randomadditions.client.IBlockAccessFake;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
 import com.creativemd.randomadditions.common.systems.machine.blocks.Sawing;
 import com.creativemd.randomadditions.core.RandomAdditions;
@@ -201,7 +201,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 	public boolean renderInventoryBlock(Block machine, int metadata, int modelId, RenderBlocks renderer) {
 		
 		ArrayList<CubeObject> cubes = system.getSubBlock(metadata).getCubes(new ItemStack(machine, 1, metadata),null, 0, 0, 0);
-		RenderHelper2D.renderInventoryCubes(renderer, cubes, machine, metadata);
+		BlockRenderHelper.renderInventoryCubes(renderer, cubes, machine, metadata);
 		return true;
 	}
 	
@@ -214,7 +214,8 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
 		SubBlock subblock = system.getSubBlock(world.getBlockMetadata(x, y, z));
 		ArrayList<CubeObject> cubes = subblock.getCubes(null, world, x, y, z);
-		for (int i = 0; i < cubes.size(); i++) {
+		BlockRenderHelper.renderCubes(world, cubes, x, y, z, block, renderer, subblock.getRotation() != 0 ? subblock.getDirection(world, x, y, z) : ForgeDirection.EAST);
+		/*for (int i = 0; i < cubes.size(); i++) {
 			renderer.setRenderBounds(cubes.get(i).minX, cubes.get(i).minY, cubes.get(i).minZ, cubes.get(i).maxX, cubes.get(i).maxY, cubes.get(i).maxZ);
 			if(subblock.getRotation() != 0)
 				RenderHelper3D.applyBlockRotation(renderer, subblock.getDirection(world, x, y, z));
@@ -241,7 +242,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 			
 			if(cubes.get(i).icon != null || cubes.get(i).block != null)
 				renderer.clearOverrideBlockTexture();
-		}
+		}*/
 		return true;
 	}
 	
@@ -392,16 +393,7 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 	}
 
 	@Override
-	public ArrayList<LittleTile> getLittleTile(ItemStack stack, World world, int x, int y,
-			int z) {
-		SubBlock block = system.getSubBlock(stack.getItemDamage());
-		if(block instanceof ILittleTile)
-			return ((ILittleTile) block).getLittleTile(stack, world, x, y, z);
-		return null;
-	}
-
-	@Override
-	public LittleTilePreview getLittlePreview(ItemStack stack) {
+	public ArrayList<LittleTilePreview> getLittlePreview(ItemStack stack) {
 		SubBlock block = system.getSubBlock(stack.getItemDamage());
 		if(block instanceof ILittleTile)
 			return ((ILittleTile) block).getLittlePreview(stack);

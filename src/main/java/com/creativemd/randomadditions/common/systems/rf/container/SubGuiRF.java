@@ -24,7 +24,7 @@ public class SubGuiRF extends SubGuiTileEntity {
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		String in = "Input: " + battery.getInputPower() + " RA/t";
 		String out = "Output: " + SubSystemRF.RAtoRF(battery.getOutputPower()) + " RF/t";
 		if(!block.isRA)
@@ -38,7 +38,7 @@ public class SubGuiRF extends SubGuiTileEntity {
 
 	@Override
 	public void createControls() {
-		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
+		controls.add(new GuiPowerOMeter("power", block, battery, 2, 30, 170, 10));
 	}
 
 }

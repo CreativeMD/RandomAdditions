@@ -22,14 +22,14 @@ public class SubGuiIC2toRA extends SubGuiTileEntity {
 	}
 	
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		fontRenderer.drawString("Input: " + SubSystemIC2.RAtoEU(battery.getInputPower()) + " EU/t", 3, 45, 0);
 		fontRenderer.drawString("Output: " + battery.getOutputPower() + " RA/t", 3, 55, 0);
 	}
 	
 	@Override
 	public void createControls() {
-		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
+		controls.add(new GuiPowerOMeter("power", block, battery, 2, 30, 170, 10));
 	}
 
 }

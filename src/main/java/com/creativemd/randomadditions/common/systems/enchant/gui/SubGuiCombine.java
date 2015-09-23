@@ -11,10 +11,11 @@ import org.lwjgl.opengl.GL11;
 import com.creativemd.creativecore.client.rendering.RenderHelper2D;
 import com.creativemd.creativecore.common.gui.GuiContainerSub;
 import com.creativemd.creativecore.common.gui.SubGuiTileEntity;
-import com.creativemd.creativecore.common.gui.SubGui.ControlEvent;
-import com.creativemd.creativecore.common.gui.controls.GuiButtonControl;
+import com.creativemd.creativecore.common.gui.controls.GuiButton;
 import com.creativemd.creativecore.common.gui.controls.GuiControl;
+import com.creativemd.creativecore.common.gui.event.ControlClickEvent;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
+import com.n247s.api.eventapi.eventsystem.CustomEventSubscribe;
 
 public class SubGuiCombine extends SubGuiTileEntity{
 
@@ -22,8 +23,8 @@ public class SubGuiCombine extends SubGuiTileEntity{
 		super(tileEntity);
 	}
 	
-	@Override
-	public void onControlEvent(GuiControl control, ControlEvent event)
+	@CustomEventSubscribe
+	public void onClicked(ControlClickEvent event)
 	{
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setInteger("type", 0);
@@ -31,7 +32,7 @@ public class SubGuiCombine extends SubGuiTileEntity{
 	}
 	
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		Minecraft.getMinecraft().getTextureManager().bindTexture(GuiContainerSub.background);
 		//GL11.glTranslated(mc.displayWidth/8, mc.displayHeight/8, 0);
 		GL11.glPushMatrix();
@@ -43,7 +44,7 @@ public class SubGuiCombine extends SubGuiTileEntity{
 
 	@Override
 	public void createControls() {
-		controls.add(new GuiButtonControl("Combine", 110, 60, 60, 20));
+		controls.add(new GuiButton("Combine", 80, 50, 60, 20));
 	}
 
 }

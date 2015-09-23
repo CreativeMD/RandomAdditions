@@ -49,7 +49,6 @@ public class SubSystemProducer extends SubBlockSystem<SubBlockProducer>{
 	
 	@Override
 	public void registerBlocks() {
-		// TODO Add more prodcuer
 		registerBlock(defaultSubBlock);
 		registerBlock(new Mill(this));
 		registerBlock(new Watermill(this));

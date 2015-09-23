@@ -19,8 +19,8 @@ public class GuiGearInformation extends GuiControl{
 	public SubBlockMachine block;
 	public TileEntityMachine machine;
 	
-	public GuiGearInformation(SubBlockMachine block, TileEntityMachine machine, int x, int y, int width, int height) {
-		super(x, y, width, height);
+	public GuiGearInformation(String name, SubBlockMachine block, TileEntityMachine machine, int x, int y, int width, int height) {
+		super(name, x, y, width, height);
 		this.block = block;
 		this.machine = machine;
 	}

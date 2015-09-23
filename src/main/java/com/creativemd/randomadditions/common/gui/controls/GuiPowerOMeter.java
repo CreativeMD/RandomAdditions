@@ -20,8 +20,8 @@ public class GuiPowerOMeter extends GuiProgressBar{
 	public SubBlock block;
 	public EnergyComponent machine;
 	
-	public GuiPowerOMeter(SubBlock block, EnergyComponent machine, int x, int y, int width, int height) {
-		super(x, y, width, height);
+	public GuiPowerOMeter(String name, SubBlock block, EnergyComponent machine, int x, int y, int width, int height) {
+		super(name, x, y, width, height);
 		this.block = block;
 		this.machine = machine;
 	}

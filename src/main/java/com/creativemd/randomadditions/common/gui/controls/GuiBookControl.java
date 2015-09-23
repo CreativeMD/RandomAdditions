@@ -16,8 +16,8 @@ public class GuiBookControl extends GuiControl{
 	public static final int pageHeight = 64;
 	public static final int pageWidth = 104;
 	
-	public GuiBookControl(String[] text, int x, int y, int width, int height) {
-		super(x, y, width, height);
+	public GuiBookControl(String name, String[] text, int x, int y, int width, int height) {
+		super(name, x, y, width, height);
 		this.text = text;
 	}
 

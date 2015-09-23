@@ -23,15 +23,15 @@ public class SubGuiBattery extends SubGuiTileEntity {
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		fontRenderer.drawString("Input: " + battery.getInputPower() + "/" + block.input, 3, 45, 0);
 		fontRenderer.drawString("Output: " + battery.getOutputPower() + "/" + block.output, 3, 55, 0);
 	}
 
 	@Override
 	public void createControls() {
-		controls.add(new GuiPowerOMeter(block, battery, 87, 35, 170, 10));
-		controls.add(new GuiRedstoneControl(15, 15, 20, 20, 0, battery));
+		controls.add(new GuiPowerOMeter("power", block, battery, 2, 30, 170, 10));
+		controls.add(new GuiRedstoneControl(5, 5, 20, 20, 0, battery));
 		
 	}
 

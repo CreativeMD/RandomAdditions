@@ -42,7 +42,7 @@ public class TileEntityLittleCable extends EnergyCable{
 				if(coord != null)
 					te = worldObj.getTileEntity(coord.posX, coord.posY, coord.posZ);
 				else
-					te = worldObj.getTileEntity(xCoord, yCoord, zCoord);
+					te = worldObj.getTileEntity(cable.te.xCoord, cable.te.yCoord, cable.te.zCoord);
 				if(te != null)
 				{
 					if(te instanceof EnergyComponent)
@@ -50,7 +50,7 @@ public class TileEntityLittleCable extends EnergyCable{
 					else if(te instanceof IRAReciever)
 						connections.add(new MachineEntry((IRAReciever) te, ForgeDirection.getOrientation(i).getOpposite()));
 					else if(te instanceof TileEntityLittleTiles && cable.connections[i].vec != null){
-						LittleTile tile = ((TileEntityLittleTiles) te).getTile(cable.connections[i].vec.posX, cable.connections[i].vec.posY, cable.connections[i].vec.posZ);
+						LittleTile tile = ((TileEntityLittleTiles) te).getTile(cable.connections[i].vec.x, cable.connections[i].vec.y, cable.connections[i].vec.z);
 						if(tile instanceof LittleCable)
 							connections.add(((LittleCable) tile).tileEntity);
 					}
@@ -73,7 +73,7 @@ public class TileEntityLittleCable extends EnergyCable{
 				{
 					LittleCable cable = (LittleCable) teTiles.tiles.get(i);
 					int index = RotationUtils.getIndex(direction.getOpposite());
-					if(cable.connections[index] != null && cable.connections[index].coord != null && cable.connections[index].coord.equals(origin)) //Pos{x=-590, y=4, z=-1631}
+					if(cable.connections[index] != null && cable.connections[index].coord != null && cable.connections[index].coord.equals(origin))
 						return (TileEntityLittleCable) cable.tileEntity;
 				}
 			}

@@ -23,8 +23,8 @@ public class GuiMachineProgressControl extends GuiControl{
 	
 	public static final int amount = 6;
 	
-	public GuiMachineProgressControl(SubBlockMachine block, TileEntityMachine machine, int x, int y, int width, int height) {
-		super(x, y, width, height);
+	public GuiMachineProgressControl(String name, SubBlockMachine block, TileEntityMachine machine, int x, int y, int width, int height) {
+		super(name, x, y, width, height);
 		this.block = block;
 		this.machine = machine;
 	}

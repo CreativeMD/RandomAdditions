@@ -29,20 +29,20 @@ public class SubGuiMachine extends SubGuiTileEntity{
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		
 	}
 	
 	@Override
 	public void createControls() {
-		controls.add(new GuiMachineProgressControl(block, machine, 93, 33, 96, 51));
-		GuiPowerOMeter meter = new GuiPowerOMeter(block, machine, 15, 42, 78, 15);
-		meter.rotation = -90;
+		controls.add(new GuiMachineProgressControl("progress", block, machine, 46, 6, 96, 51));
+		GuiPowerOMeter meter = new GuiPowerOMeter("power", block, machine, -23, 34, 78, 15);
+		meter.rotation = 90;
 		controls.add(meter);
-		controls.add(new GuiGearInformation(block, machine, 155, 68, 30, 30));
-		controls.add(new GuiRedstoneControl(35, 70, 20, 20, 0, machine));
+		controls.add(new GuiGearInformation("gear", block, machine, 140, 53, 30, 30));
+		controls.add(new GuiRedstoneControl(25, 60, 20, 20, 0, machine));
 		if(Loader.isModLoaded("NotEnoughItems"))
-			controls.add(new SubGuiMachineRecipeControl(block, 155, 13, 16, 16));
+			controls.add(new SubGuiMachineRecipeControl("recipe", block, 147, 5, 16, 16));
 	}
 
 }

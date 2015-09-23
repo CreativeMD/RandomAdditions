@@ -14,8 +14,8 @@ public class SubGuiMachineRecipeControl extends GuiControl{
 	
 	public SubBlockMachine machine;
 	
-	public SubGuiMachineRecipeControl(SubBlockMachine machine, int x, int y, int width, int height) {
-		super(x, y, width, height);
+	public SubGuiMachineRecipeControl(String name, SubBlockMachine machine, int x, int y, int width, int height) {
+		super(name, x, y, width, height);
 		this.machine = machine;
 	}
 

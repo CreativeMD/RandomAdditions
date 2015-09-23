@@ -19,7 +19,7 @@ public class SubGuiShelf extends SubGuiTileEntity{
 	}
 
 	@Override
-	public void drawForeground(FontRenderer fontRenderer) {
+	public void drawOverlay(FontRenderer fontRenderer) {
 		
 	}
 

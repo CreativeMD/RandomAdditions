@@ -8,17 +8,20 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.creativemd.littletiles.common.blocks.ILittleTile;
+import com.creativemd.littletiles.common.tileentity.TileEntityLittleTiles;
 import com.creativemd.littletiles.common.utils.LittleTile;
-import com.creativemd.littletiles.common.utils.LittleTile.LittleTileSize;
-import com.creativemd.littletiles.common.utils.LittleTile.LittleTileVec;
 import com.creativemd.littletiles.common.utils.LittleTilePreview;
+import com.creativemd.littletiles.common.utils.small.LittleTileSize;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
+import com.creativemd.randomadditions.common.systems.littletiles.LittleShiftHandler;
 import com.creativemd.randomadditions.common.systems.littletiles.SubBlockLittle;
+import com.creativemd.randomadditions.common.systems.littletiles.SubSystemLittle;
 import com.creativemd.randomadditions.common.systems.littletiles.littleblocks.LittleCable;
 import com.creativemd.randomadditions.common.systems.littletiles.tileentity.TileEntityLittleCable;
 import com.creativemd.randomadditions.core.RandomAdditions;
@@ -55,21 +58,14 @@ public class SubBlockLittleCable extends SubBlockLittle implements ILittleTile{
 	}
 
 	@Override
-	public LittleTilePreview getLittlePreview(ItemStack stack) {
-		
-		return new LittleTilePreview(new LittleTileSize(1, 1, 1));
-	}
-
-	@Override
-	public ArrayList<LittleTile> getLittleTile(ItemStack stack, World world, int x, int y,
-			int z) {
-		ArrayList<LittleTile> tiles = new ArrayList<LittleTile>();
-		TileEntityLittleCable cable = new TileEntityLittleCable();
-		cable.setWorldObj(world);
-		cable.xCoord = x;
-		cable.yCoord = y;
-		cable.zCoord = z;
-		tiles.add(new LittleCable(stack.getItemDamage(), cable));
-		return tiles;
+	public ArrayList<LittleTilePreview> getLittlePreview(ItemStack stack) {
+		ArrayList<LittleTilePreview> preview = new ArrayList<LittleTilePreview>();
+		NBTTagCompound nbt = new NBTTagCompound();
+		LittleCable cable = new LittleCable(new TileEntityLittleCable(), SubSystemLittle.instance.block, stack.getItemDamage());
+		cable.saveTile(nbt);
+		new LittleTileSize(1, 1, 1).writeToNBT("size", nbt);
+		preview.add(new LittleTilePreview(new LittleTileSize(1, 1, 1), nbt));
+		preview.get(0).shifthandlers.add(new LittleShiftHandler());
+		return preview;
 	}
 }
