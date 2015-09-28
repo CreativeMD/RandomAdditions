@@ -54,6 +54,7 @@ import com.creativemd.randomadditions.common.systems.ic2.SubBlockIC2;
 import com.creativemd.randomadditions.common.systems.ic2.SubSystemIC2;
 import com.creativemd.randomadditions.common.systems.littletiles.SubSystemLittle;
 import com.creativemd.randomadditions.common.systems.machine.SubSystemMachine;
+import com.creativemd.randomadditions.common.systems.machine.config.RAConfigLoader;
 import com.creativemd.randomadditions.common.systems.ore.SubSystemOre;
 import com.creativemd.randomadditions.common.systems.producer.SubBlockProducer;
 import com.creativemd.randomadditions.common.systems.producer.SubSystemProducer;
@@ -175,6 +176,9 @@ public class RandomAdditions {
 		
 		if(Loader.isModLoaded("littletiles"))
 			SubBlockSystem.registerSystem(new SubSystemLittle());
+		
+		if(Loader.isModLoaded("ingameconfigmanager"))
+			RAConfigLoader.loadConfig();
 		
 		proxy.loadSide();
 		

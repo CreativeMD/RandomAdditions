@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.creativemd.creativecore.common.utils.stack.StackInfo;
+import com.creativemd.creativecore.common.utils.stack.StackInfoOre;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,13 +15,46 @@ import net.minecraftforge.oredict.OreDictionary;
 public class MachineRecipe{
 	
 	/**Can be String(Ore), Block, Item, ItemStack**/
-	public ArrayList input;
+	public ArrayList<StackInfo> input;
 	public ItemStack output;
 	public int neededPower;
 	
+	public void addObject(Object input)
+	{
+		StackInfo info = StackInfo.parseObject(input);
+		if(info != null && !(input instanceof ItemStack))
+			info.stackSize = 1;
+		if(info != null)
+			this.input.add(info);
+		else if(input instanceof StackInfo)
+			this.input.add((StackInfo) input);
+		else if(input instanceof CustomOreInput)
+			this.input.add(new StackInfoOre(((CustomOreInput) input).ore, ((CustomOreInput) input).stackSize));
+	}
+	
+	public MachineRecipe(StackInfo[] input, ItemStack output, int power)
+	{
+		this.input = new ArrayList<StackInfo>();
+		for (int i = 0; i < input.length; i++)
+			this.input.add(input[i]);
+		this.output = output;
+		this.neededPower = power;
+	}
+	
+	public MachineRecipe(Object[] input, ItemStack output, int power)
+	{
+		this.input = new ArrayList<StackInfo>();
+		for (int i = 0; i < input.length; i++)
+			addObject(input[i]);
+		this.output = output;
+		this.neededPower = power;
+	}
+	
 	public MachineRecipe(ArrayList input, ItemStack output, int power)
 	{
-		this.input = input;
+		this.input = new ArrayList<StackInfo>();
+		for (int i = 0; i < input.size(); i++)
+			addObject(input.get(i));
 		this.output = output;
 		this.neededPower = power;
 	}
@@ -31,13 +67,13 @@ public class MachineRecipe{
 	public MachineRecipe(Object input, ItemStack output, int power)
 	{
 		this(new ArrayList(), output, power);
-		this.input.add(input);
+		addObject(input);
 	}
 	
 	public MachineRecipe(Object input, ItemStack output)
 	{
 		this(new ArrayList(), output);
-		this.input.add(input);
+		addObject(input);
 	}
 	
 	public boolean isRecipeDoable(ArrayList<ItemStack> inputs)
@@ -51,7 +87,10 @@ public class MachineRecipe{
 	
 	public ItemStack getItemStack(int index, ArrayList<ItemStack> inputs)
 	{
-		if(input.get(index) instanceof ItemStack)
+		if(input.get(index) != null)
+			return input.get(index).getItemStack();
+		return null;
+		/*if(input.get(index) instanceof ItemStack)
 			return ((ItemStack) input.get(index)).copy();
 		
 		if(input.get(index) instanceof Block)
@@ -78,7 +117,7 @@ public class MachineRecipe{
 				return stack;
 			}
 		}
-		return null;
+		return null;*/
 	}
 	
 	public ArrayList<ItemStack> getItemStacks(ArrayList<ItemStack> inputs)
@@ -115,14 +154,19 @@ public class MachineRecipe{
 		return true;
 	} 
 	
-	public boolean isObjectEqual(ItemStack stack, Object input)
+	public boolean isObjectEqual(ItemStack stack, StackInfo input)
 	{
 		return isObjectEqual(stack, input, false);
 	}
 	
-	public boolean isObjectEqual(ItemStack stack, Object input, boolean ignoreStackSize)
+	public boolean isObjectEqual(ItemStack stack, StackInfo input, boolean ignoreStackSize)
 	{
-		if(stack == null)
+		if(stack == null || stack.getItem() == null)
+			return false;
+		if(ignoreStackSize)
+			return input.isInstanceIgnoreSize(stack);
+		return input.isInstance(stack);
+		/*if(stack == null)
 			return false;
 		if(input instanceof ItemStack)
 		{
@@ -170,13 +214,15 @@ public class MachineRecipe{
 				}
 			}
 		}
-		return false;
+		return false;*/
 	}
 	
 	public int getStackSize(int index)
 	{
-		
-		if(input.get(index) instanceof ItemStack)
+		if(input.get(index) != null)
+			return input.get(index).stackSize;
+		return 0;
+		/*if(input.get(index) instanceof ItemStack)
 			return ((ItemStack) input.get(index)).stackSize;
 		
 		if(input.get(index) instanceof Block)
@@ -191,7 +237,7 @@ public class MachineRecipe{
 		if(input.get(index) instanceof CustomOreInput)
 			return ((CustomOreInput)input.get(index)).stackSize;
 		
-		return 0;
+		return 0;*/
 	}
 	
 	public boolean doesContainItem(ItemStack stack)

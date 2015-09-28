@@ -26,6 +26,7 @@ public abstract class SubBlockMachine extends SubBlock{
 	private ArrayList<MachineRecipe> recipes = new ArrayList<MachineRecipe>();
 	public Class<?> neiClass;
 	
+	
 	@Override
 	public IIcon getIcon(int side, int meta) {
 		return Blocks.planks.getIcon(side, meta);
