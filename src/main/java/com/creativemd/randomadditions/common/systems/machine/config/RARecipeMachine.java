@@ -31,14 +31,20 @@ public class RARecipeMachine extends RecipeMachine<MachineRecipe>{
 		this.machine = machine;
 		if(FMLCommonHandler.instance().getEffectiveSide().isClient())
 		{
-			Avatar avatar = new AvatarItemStack(machine.getItemStack());
-			if(hasDisableBranch())
-				disableBranch.avatar = avatar;
-			if(hasAddedBranch())
-				addBranch.avatar = avatar;
+			initClient();
 		}
 	}
-
+	
+	@SideOnly(Side.CLIENT)
+	public void initClient()
+	{
+		Avatar avatar = new AvatarItemStack(machine.getItemStack());
+		if(hasDisableBranch())
+			disableBranch.avatar = avatar;
+		if(hasAddedBranch())
+			addBranch.avatar = avatar;
+	}
+	
 	@Override
 	public int getWidth() {
 		return 1;
@@ -129,6 +135,11 @@ public class RARecipeMachine extends RecipeMachine<MachineRecipe>{
 	@Override
 	public ItemStack getAvatar() {
 		return null;
+	}
+
+	@Override
+	public boolean doesSupportStackSize() {
+		return true;
 	}
 
 }
