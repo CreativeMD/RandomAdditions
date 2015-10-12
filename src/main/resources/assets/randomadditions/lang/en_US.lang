@@ -226,7 +226,8 @@ item.ItemRA.tinDust.name=Tin Dust
 item.ItemRA.tourmalineDust.name=Tourmaline Dust
 item.ItemRA.zincDust.name=Zinc Dust
 item.ItemRA.ferrousDust.name=Ferrous Dust
-item.ItemRA.tungstenDust.name=Tungsten Dust
+item.ItemRA.yelloriteDust.name=Yellorite Dust
+item.ItemRA.osmiumDust.name=Osmium Dust
 
 item.ItemRA.axePlate.name=Iron Axe Plate
 item.ItemRA.shovelPlate.name=Iron Shovel Plate

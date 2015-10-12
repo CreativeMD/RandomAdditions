@@ -92,6 +92,9 @@ public class RandomItem {
 	
 	public static RandomItem coil = new RandomItem("coil");
 	
+	public static RandomItem osmiumDust = new RandomItemDust("osmium");
+	public static RandomItem yelloriteDust = new RandomItemDust("yellorite");
+	
 	public static void loadItems()
 	{
 		System.out.println("[RandomAdditions] Loaded RandomItems");
