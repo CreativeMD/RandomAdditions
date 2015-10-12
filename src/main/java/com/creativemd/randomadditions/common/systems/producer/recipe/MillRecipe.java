@@ -46,4 +46,9 @@ public class MillRecipe extends ShapelessOreRecipe{
 		return output;
     }
 	
+	public boolean denyHandCraftAccess()
+	{
+		return true;
+	}
+	
 }

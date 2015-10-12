@@ -33,5 +33,10 @@ public class MillArmRecipe extends ShapelessOreRecipe{
 			output.stackTagCompound.setInteger("length", length);
 		return output;
     }
+	
+	public boolean denyHandCraftAccess()
+	{
+		return true;
+	}
 
 }

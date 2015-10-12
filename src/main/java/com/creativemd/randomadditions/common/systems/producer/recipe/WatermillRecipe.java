@@ -46,4 +46,9 @@ public class WatermillRecipe extends ShapelessOreRecipe{
 		return output;
     }
 	
+	public boolean denyHandCraftAccess()
+	{
+		return true;
+	}
+	
 }
