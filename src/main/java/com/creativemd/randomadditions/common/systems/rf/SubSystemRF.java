@@ -1,6 +1,7 @@
 package com.creativemd.randomadditions.common.systems.rf;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -32,14 +33,16 @@ public class SubSystemRF extends SubBlockSystem<SubBlockRF>{
 	public void registerBlocks() {
 		SubBlockRF ra = registerBlock(new SubBlockRF("RAtoRF", this, true));
 		SubBlockRF rf = registerBlock(new SubBlockRF("RFtoRA", this, false));
-		
+		Block block = (Block) Block.blockRegistry.getObject("ThermalExpansion:Cell");
+		if(block == null && block instanceof BlockAir)
+			block = Blocks.redstone_block;
 		GameRegistry.addRecipe(new ShapedOreRecipe(rf.getItemStack(), new Object[]
 				{
-				"IBI", "IRI", "IAI", Character.valueOf('I'), "ingotIron", Character.valueOf('R'), Blocks.redstone_block, Character.valueOf('A'), SubSystemBattery.instance.getBattery(2), Character.valueOf('B'), new ItemStack((Block) Block.blockRegistry.getObject("ThermalExpansion:Cell"), 1, 1)
+				"IBI", "IRI", "IAI", Character.valueOf('I'), "ingotIron", Character.valueOf('R'), Blocks.redstone_block, Character.valueOf('A'), SubSystemBattery.instance.getBattery(2), Character.valueOf('B'), new ItemStack(block, 1, 1)
 				}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(ra.getItemStack(), new Object[]
 				{
-				"IAI", "IRI", "IBI", Character.valueOf('I'), "ingotIron", Character.valueOf('R'), Blocks.redstone_block, Character.valueOf('A'), SubSystemBattery.instance.getBattery(2), Character.valueOf('B'), new ItemStack((Block) Block.blockRegistry.getObject("ThermalExpansion:Cell"), 1, 1)
+				"IAI", "IRI", "IBI", Character.valueOf('I'), "ingotIron", Character.valueOf('R'), Blocks.redstone_block, Character.valueOf('A'), SubSystemBattery.instance.getBattery(2), Character.valueOf('B'), new ItemStack(block, 1, 1)
 				}));
 	}
 
