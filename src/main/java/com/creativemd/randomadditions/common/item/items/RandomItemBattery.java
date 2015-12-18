@@ -22,12 +22,12 @@ public class RandomItemBattery extends RandomItemDamage implements RandomItemEne
 		super(name, maxDamage);
 	}
 	
-	public int getNeededPower(ItemStack stack)
+	public float getNeededPower(ItemStack stack)
 	{
 		return maxDamage - getDamage(stack);
 	}
 	
-	public static int getPower(ItemStack stack)
+	public static float getPower(ItemStack stack)
 	{
 		if(getRandomItem(stack) instanceof RandomItemBattery)
 		{
@@ -76,8 +76,8 @@ public class RandomItemBattery extends RandomItemDamage implements RandomItemEne
 	}
 
 	@Override
-	public int onRecieveEnergy(ItemStack stack, int amount) {
-		int power = getNeededPower(stack);
+	public float onRecieveEnergy(ItemStack stack, float amount) {
+		float power = getNeededPower(stack);
 		if(power > amount)
 			power = amount;
 		damageItem(stack, -power);
@@ -85,7 +85,7 @@ public class RandomItemBattery extends RandomItemDamage implements RandomItemEne
 	}
 
 	@Override
-	public int onProduceEnergy(ItemStack stack, int max) {
+	public float onProduceEnergy(ItemStack stack, int max) {
 		return 0;
 	}
 }

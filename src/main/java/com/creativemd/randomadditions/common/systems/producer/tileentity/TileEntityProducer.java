@@ -108,7 +108,7 @@ public class TileEntityProducer extends EnergyComponent{
 
 	@Override
 	public int getMaxOutput() {
-		return getCurrentPower();
+		return (int) getCurrentPower();
 	}
 	@Override
 	public boolean canRecieveEnergy(ForgeDirection direction) {

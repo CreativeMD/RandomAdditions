@@ -26,7 +26,6 @@ public class ItemRandom extends ItemCore{
 	@SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister par1IconRegister)
     {
-		GuiGearInformation.icon = par1IconRegister.registerIcon(RandomAdditions.modid + ":gear");
 		icons = new IIcon[CraftMaterial.getIngotsCount()];
 		int index = 0;
 		for(int zahl = 0; zahl < RandomAdditions.materials.size(); zahl++)

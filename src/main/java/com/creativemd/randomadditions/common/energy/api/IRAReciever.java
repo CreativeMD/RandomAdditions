@@ -10,9 +10,9 @@ public interface IRAReciever {
 	
 	public int getMaxInput();
 	
-	public int receivePower(int amount);
+	public float receivePower(float amount);
 	
 	/**Based on your already received power and the maxinput power.**/
-	public int getRecieveablePower();
+	public float getRecieveablePower();
 	
 }

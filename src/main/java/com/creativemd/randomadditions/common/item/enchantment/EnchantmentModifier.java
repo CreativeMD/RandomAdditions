@@ -154,7 +154,7 @@ public abstract class EnchantmentModifier {
 		ArrayList<ItemStack> batteries = new ArrayList<ItemStack>();
 		int power = 0;
 		for (int i = 0; i < player.inventory.mainInventory.length; i++) {
-			int powerStack = RandomItemBattery.getPower(player.inventory.mainInventory[i]);
+			float powerStack = RandomItemBattery.getPower(player.inventory.mainInventory[i]);
 			if(powerStack > 0)
 			{
 				power += powerStack;
@@ -168,7 +168,7 @@ public abstract class EnchantmentModifier {
 			for (int i = 0; i < batteries.size(); i++) {
 				if(usedpower < power)
 				{
-					int takenPower = RandomItemBattery.getDamage(batteries.get(i));
+					float takenPower = RandomItemBattery.getDamage(batteries.get(i));
 					if(takenPower > amount-usedpower)
 						takenPower = amount-usedpower;
 					RandomItemBattery.setDamage(batteries.get(i), RandomItemBattery.getDamage(batteries.get(i))-takenPower);

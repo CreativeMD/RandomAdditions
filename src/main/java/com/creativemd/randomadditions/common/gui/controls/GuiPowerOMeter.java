@@ -31,7 +31,7 @@ public class GuiPowerOMeter extends GuiProgressBar{
 		return (double)getPower()/(double)getMaxPower();
 	}
 	
-	public int getPower()
+	public float getPower()
 	{
 		return machine.getCurrentPower();
 	}

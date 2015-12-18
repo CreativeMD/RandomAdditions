@@ -17,11 +17,12 @@ import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
 import com.creativemd.randomadditions.common.subsystem.TileEntityRandom;
 import com.creativemd.randomadditions.common.systems.battery.SubSystemBattery;
 import com.creativemd.randomadditions.common.systems.machine.tileentity.TileEntityMachine;
+import com.creativemd.randomadditions.common.utils.IMachineBase;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class SubBlockMachine extends SubBlock{
+public abstract class SubBlockMachine extends SubBlock implements IMachineBase{
 	
 	private ArrayList<MachineRecipe> recipes = new ArrayList<MachineRecipe>();
 	public Class<?> neiClass;
@@ -122,11 +123,12 @@ public abstract class SubBlockMachine extends SubBlock{
 		return 1;
 	}
 	
+	@Override
 	public void onBlockPlaced(ItemStack stack, TileEntity tileEntity)
 	{
 		if(tileEntity instanceof TileEntityMachine)
 		{
-			((TileEntityMachine) tileEntity).inventory = new ItemStack[4 + getNumberOfInputs()];
+			((TileEntityMachine) tileEntity).createInventory();
 		}
 	}
 
@@ -141,4 +143,24 @@ public abstract class SubBlockMachine extends SubBlock{
 	}
 	
 	public void onClientTick(TileEntityMachine machine){}
+
+	@Override
+	public int getInputWidth() {
+		return 1;
+	}
+
+	@Override
+	public int getInputHeight() {
+		return getNumberOfInputs();
+	}
+
+	@Override
+	public int getNumberOfOutputs() {
+		return 1;
+	}
+
+	@Override
+	public int getNumberOfUpgradeSlots() {
+		return 3;
+	}
 }

@@ -28,20 +28,17 @@ public class SubContainerMachine extends SubContainerTileEntity{
 	public void createControls() {
 		if(tileEntity instanceof TileEntityMachine)
 		{
-			addSlotToContainer(new SlotOutput((IInventory) tileEntity, 0, 145, 28));
+			addSlotToContainer(new SlotOutput(((TileEntityMachine) tileEntity).output, 0, 145, 28));
 			int x = 66;
-			addSlotToContainer(new SlotUpgrade((IInventory) tileEntity, 1, x, 62));
-			addSlotToContainer(new SlotUpgrade((IInventory) tileEntity, 2, x+18, 62));
-			addSlotToContainer(new SlotUpgrade((IInventory) tileEntity, 3, x+18*2, 62));
-			int inputs = block.getNumberOfInputs();
-			if(tileEntity.getWorldObj().isRemote && ((TileEntityMachine)tileEntity).inventory.length != 4 + inputs)
-				((TileEntityMachine)tileEntity).inventory = new ItemStack[4+inputs];
-				
+			addSlotToContainer(new SlotUpgrade(((TileEntityMachine) tileEntity).upgrade, 0, x, 62));
+			addSlotToContainer(new SlotUpgrade(((TileEntityMachine) tileEntity).upgrade, 1, x+18, 62));
+			addSlotToContainer(new SlotUpgrade(((TileEntityMachine) tileEntity).upgrade, 2, x+18*2, 62));
+			int inputs = ((TileEntityMachine) tileEntity).input.getSizeInventory();
 			for (int i = 0; i < inputs; i++) {
 				if(inputs == 1)
-					addSlotToContainer(new SlotInput(this, (IInventory) tileEntity, 4+i, 26, 28));
+					addSlotToContainer(new SlotInput(this, ((TileEntityMachine) tileEntity).input, i, 26, 28));
 				else
-					addSlotToContainer(new SlotInput(this, (IInventory) tileEntity, 4+i, 26, 10+i*18));
+					addSlotToContainer(new SlotInput(this, ((TileEntityMachine) tileEntity).input, i, 26, 10+i*18));
 			}
 		}
 		addPlayerSlotsToContainer(player);

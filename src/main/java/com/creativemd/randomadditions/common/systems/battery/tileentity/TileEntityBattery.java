@@ -97,7 +97,7 @@ public class TileEntityBattery extends EnergyComponent implements ISidedInventor
 			if(RandomItem.getRandomItem(stack) instanceof RandomItemEnergy)
 			{
 				RandomItemEnergy item = (RandomItemEnergy) RandomItem.getRandomItem(stack);
-				int power = getProvideablePower();
+				float power = getProvideablePower();
 				if(power > 0)
 				{
 					power = item.onRecieveEnergy(stack, power);

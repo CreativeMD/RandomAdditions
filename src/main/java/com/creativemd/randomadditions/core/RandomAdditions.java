@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.util.IIcon;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
@@ -45,6 +46,7 @@ import com.creativemd.randomadditions.common.item.enchantment.armor.EnchantmentF
 import com.creativemd.randomadditions.common.item.items.RandomItem;
 import com.creativemd.randomadditions.common.packet.RedstonePacket;
 import com.creativemd.randomadditions.common.subsystem.SubBlockSystem;
+import com.creativemd.randomadditions.common.systems.assembly.SubSystemAssembly;
 import com.creativemd.randomadditions.common.systems.battery.SubSystemBattery;
 import com.creativemd.randomadditions.common.systems.cable.SubSystemCable;
 import com.creativemd.randomadditions.common.systems.cmachine.SubSystemCMachine;
@@ -80,12 +82,13 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = RandomAdditions.modid, version = RandomAdditions.version, name = "RandomAdditions")
 public class RandomAdditions {
 	
 	public static final String modid = "randomadditions";
-	public static final String version = "0.11";
+	public static final String version = "0.11.21";
 	
 	@Instance(RandomAdditions.modid)
 	public static RandomAdditions instance = new RandomAdditions();
@@ -108,6 +111,9 @@ public class RandomAdditions {
 	public static CraftMaterial emerald;
 	public static CraftMaterial obsidian;
 	public static CraftMaterial lapis;
+	
+	@SideOnly(Side.CLIENT)
+	public static IIcon[] gears;
 	
 	//Items
 	public static Item itemIngot = new ItemRandom().setUnlocalizedName("ItemRAIngot").setCreativeTab(tab);
@@ -179,6 +185,9 @@ public class RandomAdditions {
 		
 		if(Loader.isModLoaded("ingameconfigmanager"))
 			RAConfigLoader.loadConfig();
+		
+		if(Loader.isModLoaded("handcraft"))
+			SubBlockSystem.registerSystem(new SubSystemAssembly());
 		
 		proxy.loadSide();
 		

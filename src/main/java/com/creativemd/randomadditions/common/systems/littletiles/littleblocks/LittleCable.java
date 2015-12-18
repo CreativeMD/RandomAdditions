@@ -178,9 +178,9 @@ public class LittleCable extends LittleTileTileEntity{
 		int index = RotationUtils.getIndex(direction);
 		double distance = Double.MAX_VALUE;
 		if(connections[index] != null)
-			distance = connections[index].getDistance(te.xCoord, te.yCoord, te.zCoord, cornerVec.x, cornerVec.y, cornerVec.z);
+			distance = connections[index].getDistance(te.xCoord, te.yCoord, te.zCoord, (byte)cornerVec.x, (byte)cornerVec.y, (byte)cornerVec.z);
 		
-		if(distance > newConnect.getDistance(te.xCoord, te.yCoord, te.zCoord, cornerVec.x, cornerVec.y, cornerVec.z))
+		if(distance > newConnect.getDistance(te.xCoord, te.yCoord, te.zCoord, (byte)cornerVec.x, (byte)cornerVec.y, (byte)cornerVec.z))
 			connections[index] = newConnect;
 	}
 	
@@ -317,9 +317,9 @@ public class LittleCable extends LittleTileTileEntity{
 			}
 			if(vec != null)
 			{
-				nbt.setByte("vx", vec.x);
-				nbt.setByte("vy", vec.y);
-				nbt.setByte("vz", vec.z);
+				nbt.setByte("vx", (byte) vec.x);
+				nbt.setByte("vy", (byte) vec.y);
+				nbt.setByte("vz", (byte) vec.z);
 			}
 			return nbt;
 		}

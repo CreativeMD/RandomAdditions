@@ -433,6 +433,9 @@ public class ItemTool extends ItemCore{
 	
 	public static CraftMaterial getMaterial(int meta)
 	{
-		return RandomAdditions.materials.get(meta);
+		if(meta >= 0 && meta < RandomAdditions.materials.size())
+			return RandomAdditions.materials.get(meta);
+		else
+			return RandomAdditions.materials.get(0);
 	}
 }

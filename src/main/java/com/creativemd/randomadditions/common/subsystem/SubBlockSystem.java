@@ -80,7 +80,7 @@ public abstract class SubBlockSystem<T extends SubBlock> {
 		registerBlocks();
 	}
 	
-	public T registerBlock(T block)
+	public <K extends T> K registerBlock(K block)
 	{
 		TileEntityRandom tileEntityRandom = block.getTileEntity();
 		if(tileEntityRandom != null)

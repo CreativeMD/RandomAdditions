@@ -35,10 +35,13 @@ import com.creativemd.creativecore.common.gui.SubGui;
 import com.creativemd.creativecore.common.utils.CubeObject;
 import com.creativemd.creativecore.core.CreativeCore;
 import com.creativemd.littletiles.common.blocks.ILittleTile;
+import com.creativemd.littletiles.common.structure.LittleStructure;
 import com.creativemd.littletiles.common.tileentity.TileEntityLittleTiles;
 import com.creativemd.littletiles.common.utils.LittleTile;
 import com.creativemd.littletiles.common.utils.LittleTilePreview;
+import com.creativemd.randomadditions.common.gui.controls.GuiGearInformation;
 import com.creativemd.randomadditions.common.redstone.RedstoneControlHelper;
+import com.creativemd.randomadditions.common.systems.assembly.SubSystemAssembly;
 import com.creativemd.randomadditions.common.systems.machine.blocks.Sawing;
 import com.creativemd.randomadditions.core.RandomAdditions;
 import com.creativemd.randomadditions.core.RandomAdditionsClient;
@@ -341,7 +344,13 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 		RedstoneControlHelper.signal = register.registerIcon(RandomAdditions.modid + ":custom/signals/signal");
 		RedstoneControlHelper.icons = new IIcon[]{RedstoneControlHelper.ignore, RedstoneControlHelper.signal, RedstoneControlHelper.nosignal, RedstoneControlHelper.impulse};
 		Sawing.sawblade = register.registerIcon(RandomAdditions.modid + ":custom/sawblade");
-        this.blockIcon = register.registerIcon(this.getTextureName());
+		
+		RandomAdditions.gears = new IIcon[5];
+		for (int i = 0; i < 5; i++) {
+				RandomAdditions.gears[i] = register.registerIcon(RandomAdditions.modid + ":custom/amachine" + (i+1));
+		}
+		
+		this.blockIcon = register.registerIcon(this.getTextureName());
 		for (int j = 0; j < system.blocks.size(); j++) {
 			((SubBlock) system.blocks.get(j)).registerIcon(register);
 		}
@@ -397,6 +406,16 @@ public class BlockSub extends BlockContainer implements IGuiCreator, ILittleTile
 		SubBlock block = system.getSubBlock(stack.getItemDamage());
 		if(block instanceof ILittleTile)
 			return ((ILittleTile) block).getLittlePreview(stack);
+		return null;
+	}
+
+	@Override
+	public void rotateLittlePreview(ItemStack stack, ForgeDirection direction) {
+		LittleTilePreview.rotatePreview(stack.stackTagCompound, direction);
+	}
+
+	@Override
+	public LittleStructure getLittleStructure(ItemStack stack) {
 		return null;
 	}
 	

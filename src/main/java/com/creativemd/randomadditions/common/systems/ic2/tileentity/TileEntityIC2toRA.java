@@ -1,26 +1,17 @@
 package com.creativemd.randomadditions.common.systems.ic2.tileentity;
 
-import java.util.ArrayList;
+import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
+import com.creativemd.randomadditions.common.systems.ic2.SubSystemIC2;
 
-import ic2.api.energy.IEnergyNet;
-import ic2.api.energy.NodeStats;
 import ic2.api.energy.event.EnergyTileLoadEvent;
 import ic2.api.energy.event.EnergyTileUnloadEvent;
-import ic2.api.energy.tile.IEnergyAcceptor;
 import ic2.api.energy.tile.IEnergySink;
 import ic2.api.energy.tile.IEnergySource;
-import ic2.api.network.INetworkClientTileEntityEventListener;
 import ic2.api.tile.IEnergyStorage;
 import ic2.core.IC2;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.creativemd.randomadditions.common.energy.core.EnergyComponent;
-import com.creativemd.randomadditions.common.energy.core.EnergyUtils.SearchResult;
-import com.creativemd.randomadditions.common.systems.ic2.SubSystemIC2;
 
 public class TileEntityIC2toRA extends EnergyComponent implements IEnergyStorage, IEnergySink, IEnergySource{
 
@@ -61,7 +52,7 @@ public class TileEntityIC2toRA extends EnergyComponent implements IEnergyStorage
 
 	@Override
 	public int addEnergy(int amount) {
-		return receivePower(SubSystemIC2.EUtoRA(amount));
+		return (int) receivePower(SubSystemIC2.EUtoRA(amount));
 	}
 
 	@Override

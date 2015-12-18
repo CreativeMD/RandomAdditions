@@ -23,9 +23,9 @@ public class RandomItemDamage extends RandomItem {
 			stack.stackTagCompound = new NBTTagCompound();
 	}
 	
-	public boolean damageItem(ItemStack stack, int amount)
+	public boolean damageItem(ItemStack stack, float amount)
 	{
-		int damage = getDamage(stack);
+		float damage = getDamage(stack);
 		if(amount <= damage && damage+amount <= maxDamage)
 		{
 			setDamage(stack, getDamage(stack)-amount);
@@ -38,16 +38,16 @@ public class RandomItemDamage extends RandomItem {
 			return false;
 	}
 	
-	public static int getDamage(ItemStack stack)
+	public static float getDamage(ItemStack stack)
 	{
 		checkNBT(stack);
-		return stack.stackTagCompound.getInteger("damage");
+		return stack.stackTagCompound.getFloat("damage");
 	}
 	
-	public static void setDamage(ItemStack stack, int damage)
+	public static void setDamage(ItemStack stack, float damage)
 	{
 		checkNBT(stack);
-		stack.stackTagCompound.setInteger("damage", damage);
+		stack.stackTagCompound.setFloat("damage", damage);
 	}
 	
 	@Override

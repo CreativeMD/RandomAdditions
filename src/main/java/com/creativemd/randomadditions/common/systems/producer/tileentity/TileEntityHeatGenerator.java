@@ -23,7 +23,9 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 	public void readFromNBT(NBTTagCompound nbt)
     {
        super.readFromNBT(nbt);
-       inventory = InventoryUtils.loadInventory(nbt);
+       inventory = InventoryUtils.loadInventory(nbt.getCompoundTag("inventory"));
+       if(inventory == null || inventory.length < 4)
+			inventory = new ItemStack[4];
        fuel = nbt.getIntArray("fuel");
        maxfuel = nbt.getIntArray("maxfuel");
     }
@@ -32,7 +34,7 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 	public void getDescriptionNBT(NBTTagCompound nbt)
     {
 		super.getDescriptionNBT(nbt);
-		InventoryUtils.saveInventory(inventory, nbt);
+		nbt.setTag("inventory", InventoryUtils.saveInventory(inventory));
 		nbt.setBoolean("active", isActive);
 		nbt.setIntArray("fuel", fuel);
 		nbt.setIntArray("maxfuel", maxfuel);
@@ -42,7 +44,9 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt)
     {
 		super.onDataPacket(net, pkt);
-		inventory = InventoryUtils.loadInventory(pkt.func_148857_g());
+		inventory = InventoryUtils.loadInventory(pkt.func_148857_g().getCompoundTag("inventory"));
+		if(inventory == null || inventory.length < 4)
+			inventory = new ItemStack[4];
 		isActive = pkt.func_148857_g().getBoolean("active");
 		fuel = pkt.func_148857_g().getIntArray("fuel");
 		maxfuel = pkt.func_148857_g().getIntArray("maxfuel");
@@ -52,7 +56,7 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 	public void writeToNBT(NBTTagCompound nbt)
     {
         super.writeToNBT(nbt);
-        InventoryUtils.saveInventory(inventory, nbt);
+        nbt.setTag("inventory", InventoryUtils.saveInventory(inventory));
         nbt.setIntArray("fuel", fuel);
         nbt.setIntArray("maxfuel", maxfuel);
     }
@@ -139,7 +143,7 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 								}
 							}
 						}else{
-							int power = producePerTick;
+							float power = producePerTick;
 							if(fuel[i] < power)
 								power = fuel[i];
 							
@@ -254,7 +258,7 @@ public class TileEntityHeatGenerator extends EnergyComponent implements ISidedIn
 
 	@Override
 	public int getMaxOutput() {
-		return getCurrentPower();
+		return (int) getCurrentPower();
 	}
 
 	@Override

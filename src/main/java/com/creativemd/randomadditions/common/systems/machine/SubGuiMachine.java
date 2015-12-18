@@ -37,9 +37,9 @@ public class SubGuiMachine extends SubGuiTileEntity{
 	public void createControls() {
 		controls.add(new GuiMachineProgressControl("progress", block, machine, 46, 6, 96, 51));
 		GuiPowerOMeter meter = new GuiPowerOMeter("power", block, machine, -23, 34, 78, 15);
-		meter.rotation = 90;
+		meter.rotation = -90;
 		controls.add(meter);
-		controls.add(new GuiGearInformation("gear", block, machine, 140, 53, 30, 30));
+		controls.add(new GuiGearInformation("gear", machine, 140, 53, 30, 30));
 		controls.add(new GuiRedstoneControl(25, 60, 20, 20, 0, machine));
 		if(Loader.isModLoaded("NotEnoughItems"))
 			controls.add(new SubGuiMachineRecipeControl("recipe", block, 147, 5, 16, 16));

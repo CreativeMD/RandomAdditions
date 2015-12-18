@@ -53,12 +53,12 @@ public class SubSystemRF extends SubBlockSystem<SubBlockRF>{
 	
 	public static double converter = 1;
 	
-	public static int RFtoRA(double rf)
+	public static float RFtoRA(double rf)
 	{
 		return (int) (rf/converter);
 	}
 	
-	public static double RAtoRF(int ra)
+	public static double RAtoRF(float ra)
 	{
 		return (double)ra*converter;
 	}

@@ -62,7 +62,7 @@ public class TileEntityRAtoIC2 extends EnergyComponent implements IEnergyStorage
 
 	@Override
 	public int addEnergy(int amount) {
-		return receivePower(SubSystemIC2.EUtoRA(amount));
+		return (int) receivePower(SubSystemIC2.EUtoRA(amount));
 	}
 
 	@Override

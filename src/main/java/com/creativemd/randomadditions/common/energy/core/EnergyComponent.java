@@ -29,45 +29,45 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 	
 	public abstract int getMaxInput();
 	
-	private int currentPower;
+	private float currentPower;
 	
-	private int outputPower;
-	private int sendedOutputPower;
+	private float outputPower;
+	private float sendedOutputPower;
 	
-	private int inputPower;
-	private int sendedInputPower;
+	private float inputPower;
+	private float sendedInputPower;
 	
-	public int getOutputPower()
+	public float getOutputPower()
 	{
 		return outputPower;
 	}
 	
-	public void setOutputPower(int power)
+	public void setOutputPower(float power)
 	{
 		outputPower = power;
 	}
 	
-	public int getInputPower()
+	public float getInputPower()
 	{
 		return inputPower;
 	}
 	
-	public void setInputPower(int power)
+	public void setInputPower(float power)
 	{
 		inputPower = power;
 	}
 	
-	public boolean hasEnoughPower(int amount)
+	public boolean hasEnoughPower(float amount)
 	{
 		return amount <= currentPower;
 	}
 	
-	public boolean hasEnoughSpace(int amount)
+	public boolean hasEnoughSpace(float amount)
 	{
 		return (getInteralStorage() - getCurrentPower()) >= amount;
 	}
 	
-	public boolean drainPower(int amount)
+	public boolean drainPower(float amount)
 	{
 		if(hasEnoughPower(amount))
 		{
@@ -78,7 +78,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 		return false;
 	}
 	
-	public int receivePower(int amount)
+	public float receivePower(float amount)
 	{
 		if(!hasEnoughSpace(amount))
 			amount = getInteralStorage()-getCurrentPower();
@@ -91,41 +91,41 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 		return 0;
 	}
 	
-	public int getCurrentPower()
+	public float getCurrentPower()
 	{
 		return currentPower;
 	}
 	
 	/**Please use recievePower instead if possible**/
-	protected void setCurrentPower(int power)
+	protected void setCurrentPower(float power)
 	{
 		currentPower = power;
 	}
 	
-	public int getRecieveablePower()
+	public float getRecieveablePower()
 	{
 		if(!active)
 			return 0;
-		int input = getMaxInput() - inputPower;
-		int space = getInteralStorage() - getCurrentPower();
+		float input = getMaxInput() - inputPower;
+		float space = getInteralStorage() - getCurrentPower();
 		if(space < input)
 			input = space;
 		return input;
 	}
 	
-	public int getProvideablePower()
+	public float getProvideablePower()
 	{
-		int output = getMaxOutput() - outputPower;
-		int power = getCurrentPower();
+		float output = getMaxOutput() - outputPower;
+		float power = getCurrentPower();
 		if(power < output)
 			output = power;
 		return output;
 	}
 	
-	public int providePower(IRAReciever machine, int max)
+	public float providePower(IRAReciever machine, int max)
 	{
-		int power = this.getProvideablePower();
-		int maxrecieve = machine.getRecieveablePower();
+		float power = this.getProvideablePower();
+		float maxrecieve = machine.getRecieveablePower();
 		if(power > maxrecieve)
 			power = maxrecieve;
 		if(power > max)
@@ -223,7 +223,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 	public void readFromNBT(NBTTagCompound nbt)
     {
        super.readFromNBT(nbt);
-       currentPower = nbt.getInteger("power");
+       currentPower = nbt.getFloat("power");
        mode = nbt.getInteger("mode");
        active = nbt.getBoolean("active");
        hadSignal = nbt.getBoolean("hadSignal");
@@ -233,7 +233,7 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
     public void writeToNBT(NBTTagCompound nbt)
     {
         super.writeToNBT(nbt);
-        nbt.setInteger("power", currentPower);
+        nbt.setFloat("power", currentPower);
         nbt.setInteger("mode", mode);
         nbt.setBoolean("active", active);
         nbt.setBoolean("hadSignal", hadSignal);
@@ -243,9 +243,9 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 	public void getDescriptionNBT(NBTTagCompound nbt)
     {
 		super.getDescriptionNBT(nbt);;
-		nbt.setInteger("output", sendedOutputPower);
-		nbt.setInteger("input", sendedInputPower);
-		nbt.setInteger("power", currentPower);
+		nbt.setFloat("output", sendedOutputPower);
+		nbt.setFloat("input", sendedInputPower);
+		nbt.setFloat("power", currentPower);
 		nbt.setInteger("mode", mode);
         nbt.setBoolean("active", active);
     }
@@ -254,9 +254,9 @@ public abstract class EnergyComponent extends EnergyCore implements IRedstoneCon
 	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity pkt)
     {
 		super.onDataPacket(net, pkt);
-		inputPower = pkt.func_148857_g().getInteger("input");
-		outputPower = pkt.func_148857_g().getInteger("output");
-		currentPower = pkt.func_148857_g().getInteger("power");
+		inputPower = pkt.func_148857_g().getFloat("input");
+		outputPower = pkt.func_148857_g().getFloat("output");
+		currentPower = pkt.func_148857_g().getFloat("power");
 		mode = pkt.func_148857_g().getInteger("mode");
 	    active = pkt.func_148857_g().getBoolean("active");
 		updateRender();

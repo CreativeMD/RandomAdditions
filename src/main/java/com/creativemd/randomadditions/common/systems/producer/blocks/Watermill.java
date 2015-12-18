@@ -71,7 +71,7 @@ public class Watermill extends SubBlockProducer{
 		case WEST:
 			return new CubeObject(0, -radius, -radius, length, radius, radius);
 		case SOUTH:
-			return new CubeObject(-radius, -radius, length, radius, radius, 0);
+			return new CubeObject(-radius, -radius, -length, radius, radius, 0);
 		case NORTH:
 			return new CubeObject(-radius, -radius, 0, radius, radius, length);	
 		default:

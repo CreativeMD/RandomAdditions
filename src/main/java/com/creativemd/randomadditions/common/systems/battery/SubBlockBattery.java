@@ -72,7 +72,7 @@ public class SubBlockBattery extends SubBlock{
 		{
 			if(stack.stackTagCompound == null)
 				stack.stackTagCompound = new NBTTagCompound();
-			((TileEntityBattery) tileEntity).receivePower(stack.stackTagCompound.getInteger("power"));
+			((TileEntityBattery) tileEntity).receivePower(stack.stackTagCompound.getFloat("power"));
 		}
 	}
 	
@@ -141,7 +141,7 @@ public class SubBlockBattery extends SubBlock{
 		{
 			ItemStack stack = new ItemStack(system.block, 1, getID());
 			stack.stackTagCompound = new NBTTagCompound();
-			stack.stackTagCompound.setInteger("power", ((TileEntityBattery) tileEntity).getCurrentPower());
+			stack.stackTagCompound.setFloat("power", ((TileEntityBattery) tileEntity).getCurrentPower());
 			stacks.add(stack);
 		}
 		return stacks;

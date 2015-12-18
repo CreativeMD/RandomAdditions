@@ -55,12 +55,12 @@ public class SubSystemIC2 extends SubBlockSystem<SubBlockIC2>{
 	
 	public static double converter = 1;
 	
-	public static int EUtoRA(double eu)
+	public static float EUtoRA(double eu)
 	{
 		return (int) (eu/converter);
 	}
 	
-	public static double RAtoEU(int ra)
+	public static double RAtoEU(float ra)
 	{
 		return (double)ra*converter;
 	}

@@ -85,14 +85,17 @@ public class Anvil extends SubBlockMachine{
 		if(entity instanceof TileEntityMachine)
 		{
 			TileEntityMachine machine = (TileEntityMachine) entity;
-			if(machine.inventory.length != getNumberOfInputs()+4)
-				machine.inventory = new ItemStack[getNumberOfInputs()+4];
-			MachineRecipe recipe = machine.getBlock().getRecipe(machine.getInput());
-			ItemStack stack = machine.inventory[0];
-			if(recipe != null && machine.progress > 0)
-				stack = recipe.getOutput(machine.getInput());
-			if(stack != null)
-				RenderHelper3D.renderItem(stack, x, y-0.23, z, 90, 0, 0, 1, machine.getDirection(), 0, 0, 0);
+			//if(machine.input.length != getNumberOfInputs()+4)
+				//machine.inventory = new ItemStack[getNumberOfInputs()+4];
+			if(machine.input != null)
+			{
+				MachineRecipe recipe = machine.getBlock().getRecipe(machine.getInput());
+				ItemStack stack = machine.output.getStackInSlot(0);
+				if(recipe != null && machine.progress > 0)
+					stack = recipe.getOutput(machine.getInput());
+				if(stack != null)
+					RenderHelper3D.renderItem(stack, x, y-0.23, z, 90, 0, 0, 1, machine.getDirection(), 0, 0, 0);
+			}
 		}
 		
 		GL11.glColor3d(1, 1, 1);

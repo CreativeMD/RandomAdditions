@@ -11,8 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.creativemd.littletiles.common.blocks.ILittleTile;
+import com.creativemd.littletiles.common.structure.LittleStructure;
 import com.creativemd.littletiles.common.tileentity.TileEntityLittleTiles;
 import com.creativemd.littletiles.common.utils.LittleTile;
 import com.creativemd.littletiles.common.utils.LittleTilePreview;
@@ -67,5 +69,15 @@ public class SubBlockLittleCable extends SubBlockLittle implements ILittleTile{
 		preview.add(new LittleTilePreview(new LittleTileSize(1, 1, 1), nbt));
 		preview.get(0).shifthandlers.add(new LittleShiftHandler());
 		return preview;
+	}
+
+	@Override
+	public void rotateLittlePreview(ItemStack stack, ForgeDirection direction) {
+		LittleTilePreview.rotatePreview(stack.stackTagCompound, direction);
+	}
+
+	@Override
+	public LittleStructure getLittleStructure(ItemStack stack) {
+		return null;
 	}
 }

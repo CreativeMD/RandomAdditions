@@ -31,9 +31,9 @@ public class SubBlockLightning extends SubBlockCMachine{
 		super("Lightning", system);
 	}
 	
-	public IIcon base;
-	public IIcon ring;
-	public IIcon stick;
+	public static IIcon base;
+	public static IIcon ring;
+	public static IIcon stick;
 	
 	@Override
 	@SideOnly(Side.CLIENT)

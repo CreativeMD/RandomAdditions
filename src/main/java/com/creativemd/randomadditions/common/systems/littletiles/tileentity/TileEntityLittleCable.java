@@ -50,7 +50,7 @@ public class TileEntityLittleCable extends EnergyCable{
 					else if(te instanceof IRAReciever)
 						connections.add(new MachineEntry((IRAReciever) te, ForgeDirection.getOrientation(i).getOpposite()));
 					else if(te instanceof TileEntityLittleTiles && cable.connections[i].vec != null){
-						LittleTile tile = ((TileEntityLittleTiles) te).getTile(cable.connections[i].vec.x, cable.connections[i].vec.y, cable.connections[i].vec.z);
+						LittleTile tile = ((TileEntityLittleTiles) te).getTile((byte)cable.connections[i].vec.x, (byte)cable.connections[i].vec.y, (byte)cable.connections[i].vec.z);
 						if(tile instanceof LittleCable)
 							connections.add(((LittleCable) tile).tileEntity);
 					}

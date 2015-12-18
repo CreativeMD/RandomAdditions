@@ -22,7 +22,7 @@ public class MachineRecipe{
 	public void addObject(Object input)
 	{
 		StackInfo info = StackInfo.parseObject(input);
-		if(info != null && !(input instanceof ItemStack))
+		if(info != null && info.stackSize == 0)
 			info.stackSize = 1;
 		if(info != null)
 			this.input.add(info);
@@ -45,7 +45,11 @@ public class MachineRecipe{
 	{
 		this.input = new ArrayList<StackInfo>();
 		for (int i = 0; i < input.length; i++)
+		{
 			addObject(input[i]);
+			//if(this.input.get(i).stackSize == 0)
+				//this.input.get(i).stackSize = 1;
+		}
 		this.output = output;
 		this.neededPower = power;
 	}
@@ -54,7 +58,11 @@ public class MachineRecipe{
 	{
 		this.input = new ArrayList<StackInfo>();
 		for (int i = 0; i < input.size(); i++)
+		{
 			addObject(input.get(i));
+			//if(this.input.get(i).stackSize == 0)
+				//this.input.get(i).stackSize = 1;
+		}
 		this.output = output;
 		this.neededPower = power;
 	}

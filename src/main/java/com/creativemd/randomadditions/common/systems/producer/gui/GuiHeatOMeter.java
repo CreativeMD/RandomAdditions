@@ -19,7 +19,7 @@ public class GuiHeatOMeter extends GuiPowerOMeter{
 	}
 	
 	@Override
-	public int getPower()
+	public float getPower()
 	{
 		return heat.fuel[index];
 	}
