@@ -1,0 +1,310 @@
+itemGroup.RandomAdditions=Random Items
+
+tile.BlockRAOre.name=随机矿石
+tile.BlockRAOre.copperOre.name=铜矿石
+tile.BlockRAOre.tinOre.name=锡矿石
+tile.BlockRAOre.tourmalineOre.name=电气石矿石
+tile.BlockRAOre.rubyOre.name=红宝石矿石
+
+tile.BlockRABattery.Battery0.name=机械电池(层级 I)
+tile.BlockRABattery.Battery1.name=机械电池(层级 II)
+tile.BlockRABattery.Battery2.name=机械电池(层级 III)
+tile.BlockRABattery.Battery3.name=机械电池(层级 IV)
+tile.BlockRABattery.Battery4.name=机械电池(层级 V)
+tile.BlockRABattery.Battery5.name=机械电池(层级 VI)
+tile.BlockRABattery.Battery6.name=机械电池(层级 VII)
+tile.BlockRABattery.Battery7.name=机械电池(层级 VIII)
+
+tile.BlockRACable.Cable0.name=机械线缆(层级 I)
+tile.BlockRACable.Cable1.name=机械线缆(层级 II)
+tile.BlockRACable.Cable2.name=机械线缆(层级 III)
+tile.BlockRACable.Cable3.name=机械线缆(层级 IV)
+tile.BlockRACable.Wire.name=接线器
+
+tile.BlockRARAIC2Converter.IC2toRAConverter.name=IC2至RA转换器
+tile.BlockRARAIC2Converter.RAtoIC2Converter.name=RA至IC2转换器
+
+tile.BlockRAProducer.Creative.name=创造发电机
+tile.BlockRAProducer.Mill.name=风车
+tile.BlockRAProducer.Watermill.name=水车
+tile.BlockRAProducer.HeatGenerator.name=热发电机
+tile.BlockRAMachine.Furnace.name=机械熔炉
+tile.BlockRAMachine.Anvil.name=机械铁砧
+tile.BlockRAMachine.Crusher.name=机械破碎机
+tile.BlockRAMachine.CoolingPool.name=冷却池
+tile.BlockRAMachine.Sawing.name=机械锯床
+
+tile.BlockRAcmachine.Lightning.name=打雷机
+
+
+tile.BlockRAUpgrade.UpgradeTable.name=升级桌
+tile.BlockRAUpgrade.CombineTable.name=复合桌
+tile.BlockRAUpgrade.RepairTable.name=修理桌
+
+tile.BlockRADecoration.Sofa00.name=白色橡木沙发
+tile.BlockRADecoration.Sofa01.name=橙色橡木沙发
+tile.BlockRADecoration.Sofa02.name=品红色橡木沙发
+tile.BlockRADecoration.Sofa03.name=浅蓝色橡木沙发
+tile.BlockRADecoration.Sofa04.name=黄色橡木沙发
+tile.BlockRADecoration.Sofa05.name=黄绿色橡木沙发
+tile.BlockRADecoration.Sofa06.name=粉红色橡木沙发
+tile.BlockRADecoration.Sofa07.name=灰色橡木沙发
+tile.BlockRADecoration.Sofa08.name=浅灰色橡木沙发
+tile.BlockRADecoration.Sofa09.name=青色橡木沙发
+tile.BlockRADecoration.Sofa010.name=紫色橡木沙发
+tile.BlockRADecoration.Sofa011.name=蓝色橡木沙发
+tile.BlockRADecoration.Sofa012.name=棕色橡木沙发
+tile.BlockRADecoration.Sofa013.name=绿色橡木沙发
+tile.BlockRADecoration.Sofa014.name=红色橡木沙发
+tile.BlockRADecoration.Sofa015.name=黑色橡木沙发
+
+tile.BlockRADecoration.Sofa10.name=白色云杉木沙发
+tile.BlockRADecoration.Sofa11.name=橙色云杉木沙发
+tile.BlockRADecoration.Sofa12.name=品红色云杉木沙发
+tile.BlockRADecoration.Sofa13.name=浅蓝色云杉木沙发
+tile.BlockRADecoration.Sofa14.name=黄色云杉木沙发
+tile.BlockRADecoration.Sofa15.name=黄绿色云杉木沙发
+tile.BlockRADecoration.Sofa16.name=粉红色云杉木沙发
+tile.BlockRADecoration.Sofa17.name=灰色云杉木沙发
+tile.BlockRADecoration.Sofa18.name=浅灰色云杉木沙发
+tile.BlockRADecoration.Sofa19.name=青色云杉木沙发
+tile.BlockRADecoration.Sofa110.name=紫色云杉木沙发
+tile.BlockRADecoration.Sofa111.name=蓝色云杉木沙发
+tile.BlockRADecoration.Sofa112.name=棕色云杉木沙发
+tile.BlockRADecoration.Sofa113.name=绿色云杉木沙发
+tile.BlockRADecoration.Sofa114.name=红色云杉木沙发
+tile.BlockRADecoration.Sofa115.name=黑色云杉木沙发
+
+tile.BlockRADecoration.Sofa20.name=白色桦木沙发
+tile.BlockRADecoration.Sofa21.name=橙色桦木沙发
+tile.BlockRADecoration.Sofa22.name=品红色桦木沙发
+tile.BlockRADecoration.Sofa23.name=浅蓝色桦木沙发
+tile.BlockRADecoration.Sofa24.name=黄色桦木沙发
+tile.BlockRADecoration.Sofa25.name=黄绿色桦木沙发
+tile.BlockRADecoration.Sofa26.name=粉红色桦木沙发
+tile.BlockRADecoration.Sofa27.name=灰色桦木沙发
+tile.BlockRADecoration.Sofa28.name=浅灰色桦木沙发
+tile.BlockRADecoration.Sofa29.name=青色桦木沙发
+tile.BlockRADecoration.Sofa210.name=紫色桦木沙发
+tile.BlockRADecoration.Sofa211.name=蓝色桦木沙发
+tile.BlockRADecoration.Sofa212.name=棕色桦木沙发
+tile.BlockRADecoration.Sofa213.name=绿色桦木沙发
+tile.BlockRADecoration.Sofa214.name=红色桦木沙发
+tile.BlockRADecoration.Sofa215.name=黑色桦木沙发
+
+tile.BlockRADecoration.Sofa30.name=白色丛林木沙发
+tile.BlockRADecoration.Sofa31.name=橙色丛林木沙发
+tile.BlockRADecoration.Sofa32.name=品红色丛林木沙发
+tile.BlockRADecoration.Sofa33.name=浅蓝色丛林木沙发
+tile.BlockRADecoration.Sofa34.name=黄色丛林木沙发
+tile.BlockRADecoration.Sofa35.name=黄绿色丛林木沙发
+tile.BlockRADecoration.Sofa36.name=粉红色丛林木沙发
+tile.BlockRADecoration.Sofa37.name=灰色丛林木沙发
+tile.BlockRADecoration.Sofa38.name=浅灰色丛林木沙发
+tile.BlockRADecoration.Sofa39.name=青色丛林木沙发
+tile.BlockRADecoration.Sofa310.name=紫色丛林木沙发
+tile.BlockRADecoration.Sofa311.name=蓝色丛林木沙发
+tile.BlockRADecoration.Sofa312.name=棕色丛林木沙发
+tile.BlockRADecoration.Sofa313.name=绿色丛林木沙发
+tile.BlockRADecoration.Sofa314.name=红色丛林木沙发
+tile.BlockRADecoration.Sofa315.name=黑色丛林木沙发
+
+tile.BlockRADecoration.Sofa40.name=白色金合欢木沙发
+tile.BlockRADecoration.Sofa41.name=橙色金合欢木沙发
+tile.BlockRADecoration.Sofa42.name=品红色金合欢木沙发
+tile.BlockRADecoration.Sofa43.name=浅蓝色金合欢木沙发
+tile.BlockRADecoration.Sofa44.name=黄色金合欢木沙发
+tile.BlockRADecoration.Sofa45.name=黄绿色金合欢木沙发
+tile.BlockRADecoration.Sofa46.name=粉红色金合欢木沙发
+tile.BlockRADecoration.Sofa47.name=灰色金合欢木沙发
+tile.BlockRADecoration.Sofa48.name=浅灰色金合欢木沙发
+tile.BlockRADecoration.Sofa49.name=青色金合欢木沙发
+tile.BlockRADecoration.Sofa410.name=紫色金合欢木沙发
+tile.BlockRADecoration.Sofa411.name=蓝色金合欢木沙发
+tile.BlockRADecoration.Sofa412.name=棕色金合欢木沙发
+tile.BlockRADecoration.Sofa413.name=绿色金合欢木沙发
+tile.BlockRADecoration.Sofa414.name=红色金合欢木沙发
+tile.BlockRADecoration.Sofa415.name=黑色金合欢木沙发
+
+tile.BlockRADecoration.Sofa50.name=白色暗橡木沙发
+tile.BlockRADecoration.Sofa51.name=橙色暗橡木沙发
+tile.BlockRADecoration.Sofa52.name=品红色暗橡木沙发
+tile.BlockRADecoration.Sofa53.name=浅蓝色暗橡木沙发
+tile.BlockRADecoration.Sofa54.name=黄色暗橡木沙发
+tile.BlockRADecoration.Sofa55.name=黄绿色暗橡木沙发
+tile.BlockRADecoration.Sofa56.name=粉红色暗橡木沙发
+tile.BlockRADecoration.Sofa57.name=灰色暗橡木沙发
+tile.BlockRADecoration.Sofa58.name=浅灰色暗橡木沙发
+tile.BlockRADecoration.Sofa59.name=青色暗橡木沙发
+tile.BlockRADecoration.Sofa510.name=紫色暗橡木沙发
+tile.BlockRADecoration.Sofa511.name=蓝色暗橡木沙发
+tile.BlockRADecoration.Sofa512.name=棕色暗橡木沙发
+tile.BlockRADecoration.Sofa513.name=绿色暗橡木沙发
+tile.BlockRADecoration.Sofa514.name=红色暗橡木沙发
+tile.BlockRADecoration.Sofa515.name=黑色暗橡木沙发
+
+tile.BlockRADecoration.Chair0.name=橡木椅子
+tile.BlockRADecoration.Chair1.name=云杉木椅子
+tile.BlockRADecoration.Chair2.name=桦木椅子
+tile.BlockRADecoration.Chair3.name=丛林木椅子
+tile.BlockRADecoration.Chair4.name=金合欢木椅子
+tile.BlockRADecoration.Chair5.name=暗橡木椅子
+
+tile.BlockRADecoration.Table00.name=橡木桌
+tile.BlockRADecoration.Table01.name=橡木玻璃桌
+tile.BlockRADecoration.Table02.name=橡木起居室桌
+
+tile.BlockRADecoration.Table10.name=云杉木桌
+tile.BlockRADecoration.Table11.name=云杉木玻璃桌
+tile.BlockRADecoration.Table12.name=云杉木起居室桌
+
+tile.BlockRADecoration.Table20.name=桦木桌
+tile.BlockRADecoration.Table21.name=桦木玻璃桌
+tile.BlockRADecoration.Table22.name=桦木起居室桌
+
+tile.BlockRADecoration.Table30.name=丛林木桌
+tile.BlockRADecoration.Table31.name=丛林木玻璃桌
+tile.BlockRADecoration.Table32.name=丛林木起居室桌
+
+tile.BlockRADecoration.Table40.name=金合欢木桌
+tile.BlockRADecoration.Table41.name=金合欢木玻璃桌
+tile.BlockRADecoration.Table42.name=金合欢木起居室桌
+
+tile.BlockRADecoration.Table50.name=暗橡木桌
+tile.BlockRADecoration.Table51.name=暗橡木玻璃桌
+tile.BlockRADecoration.Table52.name=暗橡木起居室桌
+
+tile.BlockRADecoration.Shelf0.name=橡木架子
+tile.BlockRADecoration.Shelf1.name=云杉木架子
+tile.BlockRADecoration.Shelf2.name=桦木架子
+tile.BlockRADecoration.Shelf3.name=丛林木架子
+tile.BlockRADecoration.Shelf4.name=金合欢木架子
+tile.BlockRADecoration.Shelf5.name=暗橡木架子
+tile.BlockRADecoration.MiddleGlass.name=玻璃屋顶
+
+tile.BlockRALittle.LittleCable_0.name=细电线(层级 I)
+tile.BlockRALittle.LittleCable_1.name=细电线(层级 II)
+tile.BlockRALittle.LittleCable_2.name=细电线(层级 III)
+tile.BlockRALittle.LittleCable_3.name=细电线(层级 IV)
+
+tile.BlockRARFConverters.RAtoRF.name=RA至RF转换器
+tile.BlockRARFConverters.RFtoRA.name=RF至RA转换器
+
+item.ItemRAIngot.bronze.name=青铜锭
+item.ItemRAIngot.copper.name=铜锭
+item.ItemRAIngot.tin.name=锡锭
+item.ItemRAIngot.ruby.name=红宝石
+item.ItemRAIngot.tourmaline.name=电气石
+item.ItemRAIngot.obsidian.name=黑曜石锭
+item.ItemRA.SpeedUpgrade1.name=速度升级卡 I
+item.ItemRA.SpeedUpgrade2.name=速度升级卡 II
+item.ItemRA.SpeedUpgrade3.name=速度升级卡 III
+item.ItemRA.StorageUpgrade1.name=储存升级卡 I
+item.ItemRA.StorageUpgrade2.name=储存升级卡 II
+item.ItemRA.StorageUpgrade3.name=储存升级卡 III
+item.ItemRA.InputUpgrade1.name=输入升级卡 I
+item.ItemRA.InputUpgrade2.name=输入升级卡 II
+item.ItemRA.InputUpgrade3.name=输入升级卡 III
+item.ItemRA.PowerUpgrade1.name=功率升级卡 I
+item.ItemRA.PowerUpgrade2.name=功率升级卡 II
+item.ItemRA.PowerUpgrade3.name=功率升级卡 III
+
+item.ItemRA.aluminumDust.name=铝粉
+item.ItemRA.bronzeDust.name=青铜粉
+item.ItemRA.coalDust.name=煤粉
+item.ItemRA.copperDust.name=铜粉
+item.ItemRA.diamondDust.name=钻石粉
+item.ItemRA.emeraldDust.name=绿宝石粉
+item.ItemRA.goldDust.name=金粉
+item.ItemRA.ironDust.name=铁粉
+item.ItemRA.lapisDust.name=青金石粉
+item.ItemRA.leadDust.name=铅粉
+item.ItemRA.obsidianDust.name=黑曜石粉
+item.ItemRA.rubyDust.name=红宝石粉
+item.ItemRA.silverDust.name=银粉
+item.ItemRA.tinDust.name=锡粉
+item.ItemRA.tourmalineDust.name=电气石粉
+item.ItemRA.zincDust.name=锌粉
+item.ItemRA.ferrousDust.name=镍粉
+item.ItemRA.yelloriteDust.name=黄铀粉
+item.ItemRA.osmiumDust.name=锇粉
+
+item.ItemRA.axePlate.name=铁斧盖板
+item.ItemRA.shovelPlate.name=铁锹盖板
+item.ItemRA.swordPlate.name=铁剑盖板
+item.ItemRA.pickaxePlate.name=铁镐盖板
+item.ItemRA.hoePlate.name=铁锄盖板
+item.ItemRA.bowPlate.name=铁弓盖板
+item.ItemRA.throwingstarPlate.name=铁飞镖盖板
+item.ItemRA.helmetPlate.name=铁头盔盖板
+item.ItemRA.chestplatePlate.name=铁胸甲盖板
+item.ItemRA.leggingsPlate.name=铁护腿盖板
+item.ItemRA.bootsPlate.name=铁靴子盖板
+
+item.ItemRA.plastic.name=可塑史莱姆
+item.ItemRA.compressedplastic.name=压缩可塑史莱姆
+item.ItemRA.compressedplastic2.name=双倍压缩可塑史莱姆
+item.ItemRA.heatresistantplastic.name=耐热可塑史莱姆
+
+item.ItemRA.cobblestoneWeight1.name=石头砝码 I
+item.ItemRA.cobblestoneWeight2.name=石头砝码 II
+item.ItemRA.cobblestoneWeight3.name=石头砝码 III
+item.ItemRA.bronzeWeight1.name=青铜砝码 I
+item.ItemRA.bronzeWeight2.name=青铜砝码 II
+item.ItemRA.bronzeWeight3.name=青铜砝码 III
+item.ItemRA.obsidianWeight1.name=黑曜石砝码 I
+item.ItemRA.obsidianWeight2.name=黑曜石砝码 II
+item.ItemRA.obsidianWeight3.name=黑曜石砝码 III
+
+item.ItemRA.millarm.name=风车臂
+item.ItemRA.watermillarm.name=水车臂
+
+item.ItemRA.flour.name=面粉
+
+item.ItemRA.battery1.name=电池(等级1)
+item.ItemRA.battery2.name=电池(等级2)
+item.ItemRA.battery3.name=电池(等级3)
+
+item.ItemRA.itemwire.name=电线
+item.ItemRA.coil.name=线圈
+
+item.RAArmorHelmetBronze.name=青铜头盔
+item.RAArmorHelmetCopper.name=铜头盔
+item.RAArmorHelmetTin.name=锡头盔
+item.RAArmorHelmetRuby.name=红宝石头盔
+item.RAArmorHelmetTourmaline.name=电气石头盔
+item.RAArmorHelmetEmerald.name=绿宝石头盔
+item.RAArmorHelmetObsidian.name=黑曜石头盔
+item.RAArmorHelmetLapis.name=青金石头盔
+
+item.RAArmorChestplateBronze.name=青铜胸甲
+item.RAArmorChestplateCopper.name=铜胸甲
+item.RAArmorChestplateTin.name=锡胸甲
+item.RAArmorChestplateRuby.name=红宝石胸甲
+item.RAArmorChestplateTourmaline.name=电气石胸甲
+item.RAArmorChestplateEmerald.name=绿宝石胸甲
+item.RAArmorChestplateObsidian.name=黑曜石胸甲
+item.RAArmorChestplateLapis.name=青金石胸甲
+
+item.RAArmorLeggingsBronze.name=青铜护腿
+item.RAArmorLeggingsCopper.name=铜护腿
+item.RAArmorLeggingsTin.name=锡护腿
+item.RAArmorLeggingsRuby.name=红宝石护腿
+item.RAArmorLeggingsTourmaline.name=电气石护腿
+item.RAArmorLeggingsEmerald.name=绿宝石护腿
+item.RAArmorLeggingsObsidian.name=黑曜石护腿
+item.RAArmorLeggingsLapis.name=青金石护腿
+
+item.RAArmorBootsBronze.name=青铜靴子
+item.RAArmorBootsCopper.name=铜靴子
+item.RAArmorBootsTin.name=锡靴子
+item.RAArmorBootsRuby.name=红宝石靴子
+item.RAArmorBootsTourmaline.name=电气石靴子
+item.RAArmorBootsEmerald.name=绿宝石靴子
+item.RAArmorBootsObsidian.name=黑曜石靴子
+item.RAArmorBootsLapis.name=青金石靴子
+
+custom.redstone.ignore=忽略信号
+custom.redstone.signal=有信号
+custom.redstone.nosignal=无信号
+custom.redstone.impluse=脉冲信号
