@@ -1,0 +1,312 @@
+## Translated by SAMUELPV
+
+itemGroup.RandomAdditions=Random Additions
+
+tile.BlockRAOre.name=Bloco de Minério Aleatório
+tile.BlockRAOre.copperOre.name=Minério de Cobre
+tile.BlockRAOre.tinOre.name=Minério de Estanho
+tile.BlockRAOre.tourmalineOre.name=Minério de Turmalina
+tile.BlockRAOre.rubyOre.name=Minério de Rubi
+
+tile.BlockRABattery.Battery0.name=Bateria Mecânica (Nível I)
+tile.BlockRABattery.Battery1.name=Bateria Mecânica (Nível II)
+tile.BlockRABattery.Battery2.name=Bateria Mecânica (Nível III)
+tile.BlockRABattery.Battery3.name=Bateria Mecânica (Nível IV)
+tile.BlockRABattery.Battery4.name=Bateria Mecânica (Nível V)
+tile.BlockRABattery.Battery5.name=Bateria Mecânica (Nível VI)
+tile.BlockRABattery.Battery6.name=Bateria Mecânica (Nível VII)
+tile.BlockRABattery.Battery7.name=Bateria Mecânica (Nível VIII)
+
+tile.BlockRACable.Cable0.name=Cabo Mecânico (Nível I)
+tile.BlockRACable.Cable1.name=Cabo Mecânico (Nível II)
+tile.BlockRACable.Cable2.name=Cabo Mecânico (Nível III)
+tile.BlockRACable.Cable3.name=Cabo Mecânico (Nível IV)
+tile.BlockRACable.Wire.name=Conector de Fio
+
+tile.BlockRARAIC2Converter.IC2toRAConverter.name=Conversor IC2 para RA
+tile.BlockRARAIC2Converter.RAtoIC2Converter.name=Conversor RA para IC2
+
+tile.BlockRAProducer.Creative.name=Produtor Criativo
+tile.BlockRAProducer.Mill.name=Moinho de Vento
+tile.BlockRAProducer.Watermill.name=Moinho D'água
+tile.BlockRAProducer.HeatGenerator.name=Gerador de Calor
+tile.BlockRAMachine.Furnace.name=Fornalha Mecânica
+tile.BlockRAMachine.Anvil.name=Bigorna Mecânica
+tile.BlockRAMachine.Crusher.name=Triturador Mecânico
+tile.BlockRAMachine.CoolingPool.name=Tanque de Arrefecimento
+tile.BlockRAMachine.Sawing.name=Máquina de Serra Mecânica 
+
+tile.BlockRAcmachine.Lightning.name=Máquina de Raio
+
+
+tile.BlockRAUpgrade.UpgradeTable.name=Mesa de Melhoria
+tile.BlockRAUpgrade.CombineTable.name=Mesa de Combinação
+tile.BlockRAUpgrade.RepairTable.name=Mesa de Reparo
+
+tile.BlockRADecoration.Sofa00.name=Poltrona de Madeira de Carvalho Branco
+tile.BlockRADecoration.Sofa01.name=Poltrona de Madeira de Carvalho Laranja
+tile.BlockRADecoration.Sofa02.name=Poltrona de Madeira de Carvalho Magenta
+tile.BlockRADecoration.Sofa03.name=Poltrona de Madeira de Carvalho Azul Claro
+tile.BlockRADecoration.Sofa04.name=Poltrona de Madeira de Carvalho Amarelo
+tile.BlockRADecoration.Sofa05.name=Poltrona de Madeira de Carvalho Verde Limão
+tile.BlockRADecoration.Sofa06.name=Poltrona de Madeira de Carvalho Rosa
+tile.BlockRADecoration.Sofa07.name=Poltrona de Madeira de Carvalho Cinza
+tile.BlockRADecoration.Sofa08.name=Poltrona de Madeira de Carvalho Cinza Claro
+tile.BlockRADecoration.Sofa09.name=Poltrona de Madeira de Carvalho Ciano
+tile.BlockRADecoration.Sofa010.name=Poltrona de Madeira de Carvalho Lilás
+tile.BlockRADecoration.Sofa011.name=Poltrona de Madeira de Carvalho Azul
+tile.BlockRADecoration.Sofa012.name=Poltrona de Madeira de Carvalho Marrom
+tile.BlockRADecoration.Sofa013.name=Poltrona de Madeira de Carvalho Verde
+tile.BlockRADecoration.Sofa014.name=Poltrona de Madeira de Carvalho Vermelho
+tile.BlockRADecoration.Sofa015.name=Poltrona de Madeira de Carvalho Preto
+
+tile.BlockRADecoration.Sofa10.name=Poltrona de Madeira de Pinheiro Branco
+tile.BlockRADecoration.Sofa11.name=Poltrona de Madeira de Pinheiro Laranja
+tile.BlockRADecoration.Sofa12.name=Poltrona de Madeira de Pinheiro Magenta
+tile.BlockRADecoration.Sofa13.name=Poltrona de Madeira de Pinheiro Azul Claro
+tile.BlockRADecoration.Sofa14.name=Poltrona de Madeira de Pinheiro Amarelo
+tile.BlockRADecoration.Sofa15.name=Poltrona de Madeira de Pinheiro Verde Limão
+tile.BlockRADecoration.Sofa16.name=Poltrona de Madeira de Pinheiro Rosa
+tile.BlockRADecoration.Sofa17.name=Poltrona de Madeira de Pinheiro Cinza
+tile.BlockRADecoration.Sofa18.name=Poltrona de Madeira de Pinheiro Cinza Claro
+tile.BlockRADecoration.Sofa19.name=Poltrona de Madeira de Pinheiro Ciano
+tile.BlockRADecoration.Sofa110.name=Poltrona de Madeira de Pinheiro Lilás
+tile.BlockRADecoration.Sofa111.name=Poltrona de Madeira de Pinheiro Azul
+tile.BlockRADecoration.Sofa112.name=Poltrona de Madeira de Pinheiro Marrom
+tile.BlockRADecoration.Sofa113.name=Poltrona de Madeira de Pinheiro Verde
+tile.BlockRADecoration.Sofa114.name=Poltrona de Madeira de Pinheiro Vermelho
+tile.BlockRADecoration.Sofa115.name=Poltrona de Madeira de Pinheiro Preto
+
+tile.BlockRADecoration.Sofa20.name=Poltrona de Madeira de Eucalipto Branco
+tile.BlockRADecoration.Sofa21.name=Poltrona de Madeira de Eucalipto Laranja
+tile.BlockRADecoration.Sofa22.name=Poltrona de Madeira de Eucalipto Magenta
+tile.BlockRADecoration.Sofa23.name=Poltrona de Madeira de Eucalipto Azul Claro
+tile.BlockRADecoration.Sofa24.name=Poltrona de Madeira de Eucalipto Amarelo
+tile.BlockRADecoration.Sofa25.name=Poltrona de Madeira de Eucalipto Verde Limão
+tile.BlockRADecoration.Sofa26.name=Poltrona de Madeira de Eucalipto Rosa
+tile.BlockRADecoration.Sofa27.name=Poltrona de Madeira de Eucalipto Cinza
+tile.BlockRADecoration.Sofa28.name=Poltrona de Madeira de Eucalipto Cinza Claro
+tile.BlockRADecoration.Sofa29.name=Poltrona de Madeira de Eucalipto Ciano
+tile.BlockRADecoration.Sofa210.name=Poltrona de Madeira de Eucalipto Lilás
+tile.BlockRADecoration.Sofa211.name=Poltrona de Madeira de Eucalipto Azul
+tile.BlockRADecoration.Sofa212.name=Poltrona de Madeira de Eucalipto Marrom
+tile.BlockRADecoration.Sofa213.name=Poltrona de Madeira de Eucalipto Verde
+tile.BlockRADecoration.Sofa214.name=Poltrona de Madeira de Eucalipto Vermelho
+tile.BlockRADecoration.Sofa215.name=Poltrona de Madeira de Eucalipto Preto
+
+tile.BlockRADecoration.Sofa30.name=Poltrona de Madeira da Selva Branco
+tile.BlockRADecoration.Sofa31.name=Poltrona de Madeira da Selva Laranja
+tile.BlockRADecoration.Sofa32.name=Poltrona de Madeira da Selva Magenta
+tile.BlockRADecoration.Sofa33.name=Poltrona de Madeira da Selva Azul Claro
+tile.BlockRADecoration.Sofa34.name=Poltrona de Madeira da Selva Amarelo
+tile.BlockRADecoration.Sofa35.name=Poltrona de Madeira da Selva Verde Limão
+tile.BlockRADecoration.Sofa36.name=Poltrona de Madeira da Selva Rosa
+tile.BlockRADecoration.Sofa37.name=Poltrona de Madeira da Selva Cinza
+tile.BlockRADecoration.Sofa38.name=Poltrona de Madeira da Selva Cinza Claro
+tile.BlockRADecoration.Sofa39.name=Poltrona de Madeira da Selva Ciano
+tile.BlockRADecoration.Sofa310.name=Poltrona de Madeira da Selva Lilás
+tile.BlockRADecoration.Sofa311.name=Poltrona de Madeira da Selva Azul
+tile.BlockRADecoration.Sofa312.name=Poltrona de Madeira da Selva Marrom
+tile.BlockRADecoration.Sofa313.name=Poltrona de Madeira da Selva Verde
+tile.BlockRADecoration.Sofa314.name=Poltrona de Madeira da Selva Vermelho
+tile.BlockRADecoration.Sofa315.name=Poltrona de Madeira da Selva Preto
+
+tile.BlockRADecoration.Sofa40.name=Poltrona de Madeira da Acácia Branco
+tile.BlockRADecoration.Sofa41.name=Poltrona de Madeira da Acácia Laranja
+tile.BlockRADecoration.Sofa42.name=Poltrona de Madeira da Acácia Magenta
+tile.BlockRADecoration.Sofa43.name=Poltrona de Madeira da Acácia Azul Claro
+tile.BlockRADecoration.Sofa44.name=Poltrona de Madeira da Acácia Amarelo
+tile.BlockRADecoration.Sofa45.name=Poltrona de Madeira da Acácia Verde Limão
+tile.BlockRADecoration.Sofa46.name=Poltrona de Madeira da Acácia Rosa
+tile.BlockRADecoration.Sofa47.name=Poltrona de Madeira da Acácia Cinza
+tile.BlockRADecoration.Sofa48.name=Poltrona de Madeira da Acácia Cinza Claro
+tile.BlockRADecoration.Sofa49.name=Poltrona de Madeira da Acácia Ciano
+tile.BlockRADecoration.Sofa410.name=Poltrona de Madeira da Acácia Lilás
+tile.BlockRADecoration.Sofa411.name=Poltrona de Madeira da Acácia Azul
+tile.BlockRADecoration.Sofa412.name=Poltrona de Madeira da Acácia Marrom
+tile.BlockRADecoration.Sofa413.name=Poltrona de Madeira da Acácia Verde
+tile.BlockRADecoration.Sofa414.name=Poltrona de Madeira da Acácia Vermelho
+tile.BlockRADecoration.Sofa415.name=Poltrona de Madeira da Acácia Preto
+
+tile.BlockRADecoration.Sofa50.name=Poltrona de Madeira de Carvalho Escuro Branco
+tile.BlockRADecoration.Sofa51.name=Poltrona de Madeira de Carvalho Escuro Laranja
+tile.BlockRADecoration.Sofa52.name=Poltrona de Madeira de Carvalho Escuro Magenta
+tile.BlockRADecoration.Sofa53.name=Poltrona de Madeira de Carvalho Escuro Azul Claro
+tile.BlockRADecoration.Sofa54.name=Poltrona de Madeira de Carvalho Escuro Amarelo
+tile.BlockRADecoration.Sofa55.name=Poltrona de Madeira de Carvalho Escuro Verde Limão
+tile.BlockRADecoration.Sofa56.name=Poltrona de Madeira de Carvalho Escuro Rosa
+tile.BlockRADecoration.Sofa57.name=Poltrona de Madeira de Carvalho Escuro Cinza
+tile.BlockRADecoration.Sofa58.name=Poltrona de Madeira de Carvalho Escuro Cinza Claro
+tile.BlockRADecoration.Sofa59.name=Poltrona de Madeira de Carvalho Escuro Ciano
+tile.BlockRADecoration.Sofa510.name=Poltrona de Madeira de Carvalho Escuro Lilás
+tile.BlockRADecoration.Sofa511.name=Poltrona de Madeira de Carvalho Escuro Azul
+tile.BlockRADecoration.Sofa512.name=Poltrona de Madeira de Carvalho Escuro Marrom
+tile.BlockRADecoration.Sofa513.name=Poltrona de Madeira de Carvalho Escuro Verde
+tile.BlockRADecoration.Sofa514.name=Poltrona de Madeira de Carvalho Escuro Vermelho
+tile.BlockRADecoration.Sofa515.name=Poltrona de Madeira de Carvalho Escuro Preto
+
+tile.BlockRADecoration.Chair0.name=Cadeira de Carvalho
+tile.BlockRADecoration.Chair1.name=Cadeira de Pinheiro
+tile.BlockRADecoration.Chair2.name=Cadeira de Eucalipto
+tile.BlockRADecoration.Chair3.name=Cadeira de Árvore da Selva
+tile.BlockRADecoration.Chair4.name=Cadeira de Acácia
+tile.BlockRADecoration.Chair5.name=Cadeira de Carvalho Escuro
+
+tile.BlockRADecoration.Table00.name=Mesa de Carvalho
+tile.BlockRADecoration.Table01.name=Mesa de Vidro de Carvalho
+tile.BlockRADecoration.Table02.name=Mesa de Sala de Estar de Carvalho
+
+tile.BlockRADecoration.Table10.name=Mesa de Pinheiro
+tile.BlockRADecoration.Table11.name=Mesa de Vidro Table
+tile.BlockRADecoration.Table12.name=Mesa de Sala de Estar de Pinheiro
+
+tile.BlockRADecoration.Table20.name=Mesa de Eucalipto
+tile.BlockRADecoration.Table21.name=Mesa de Vidro de Eucalipto
+tile.BlockRADecoration.Table22.name=Mesa de Sala de Estar de Eucalipto
+
+tile.BlockRADecoration.Table30.name=Mesa de Madeira da Selva
+tile.BlockRADecoration.Table31.name=Mesa de Vidro de Madeira da Selva
+tile.BlockRADecoration.Table32.name=Mesa de Sala de Estar de Madeira da Selva
+
+tile.BlockRADecoration.Table40.name=Mesa de Acácia
+tile.BlockRADecoration.Table41.name=Mesa de Vidro de Acácia
+tile.BlockRADecoration.Table42.name=Mesa de Sala de Estar de Acácia
+
+tile.BlockRADecoration.Table50.name=Mesa de Carvalho Escuro
+tile.BlockRADecoration.Table51.name=Mesa de Vidro de Carvalho Escuro
+tile.BlockRADecoration.Table52.name=Mesa de Sala de Estar de Carvalho Escuro
+
+tile.BlockRADecoration.Shelf0.name=Estante de Carvalho
+tile.BlockRADecoration.Shelf1.name=Estante de Pinheiro
+tile.BlockRADecoration.Shelf2.name=Estante de Eucalipto
+tile.BlockRADecoration.Shelf3.name=Estante de Madeira da Selva
+tile.BlockRADecoration.Shelf4.name=Estante de Acácia
+tile.BlockRADecoration.Shelf5.name=Estante de Carvalho Escuro
+tile.BlockRADecoration.MiddleGlass.name=Telhado de Vidro
+
+tile.BlockRALittle.LittleCable_0.name=Fio Pequeno (Nível I)
+tile.BlockRALittle.LittleCable_1.name=Fio Pequeno (Nível II)
+tile.BlockRALittle.LittleCable_2.name=Fio Pequeno (Nível III)
+tile.BlockRALittle.LittleCable_3.name=Fio Pequeno (Nível IV)
+
+tile.BlockRARFConverters.RAtoRF.name=Conversor RA para RF
+tile.BlockRARFConverters.RFtoRA.name=Conversor RF para RA
+
+item.ItemRAIngot.bronze.name=Barra de Bronze
+item.ItemRAIngot.copper.name=Barra de Cobre
+item.ItemRAIngot.tin.name=Barra de Estanho
+item.ItemRAIngot.ruby.name=Rubi
+item.ItemRAIngot.tourmaline.name=Turmalina
+item.ItemRAIngot.obsidian.name=Barra de Obsidiana
+item.ItemRA.SpeedUpgrade1.name=Cartão de Melhoria de Velocidade I
+item.ItemRA.SpeedUpgrade2.name=Cartão de Melhoria de Velocidade II
+item.ItemRA.SpeedUpgrade3.name=Cartão de Melhoria de Velocidade III
+item.ItemRA.StorageUpgrade1.name=Cartão de Melhoria de Armazenamento I
+item.ItemRA.StorageUpgrade2.name=Cartão de Melhoria de Armazenamento II
+item.ItemRA.StorageUpgrade3.name=Cartão de Melhoria de Armazenamento III
+item.ItemRA.InputUpgrade1.name=Cartão de Melhoria de Entrada I
+item.ItemRA.InputUpgrade2.name=Cartão de Melhoria de Entrada II
+item.ItemRA.InputUpgrade3.name=Cartão de Melhoria de Entrada III
+item.ItemRA.PowerUpgrade1.name=Cartão de Melhoria de Energia I
+item.ItemRA.PowerUpgrade2.name=Cartão de Melhoria de Energia II
+item.ItemRA.PowerUpgrade3.name=Cartão de Melhoria de Energia III
+
+item.ItemRA.aluminumDust.name=Pó de Alumínio
+item.ItemRA.bronzeDust.name=Pó de Bronze
+item.ItemRA.coalDust.name=Pó de Carvão
+item.ItemRA.copperDust.name=Pó de Cobre
+item.ItemRA.diamondDust.name=Pó de Diamante
+item.ItemRA.emeraldDust.name=Pó de Esmeralda
+item.ItemRA.goldDust.name=Pó de Ouro
+item.ItemRA.ironDust.name=Pó de Ferro
+item.ItemRA.lapisDust.name=Pó de Lápis-Lazúli
+item.ItemRA.leadDust.name=Pó de Chumbo
+item.ItemRA.obsidianDust.name=Pó de Obsidiana
+item.ItemRA.rubyDust.name=Pó de Rubi
+item.ItemRA.silverDust.name=Pó de Prata
+item.ItemRA.tinDust.name=Pó de Estanho
+item.ItemRA.tourmalineDust.name=Pó de Turmalina
+item.ItemRA.zincDust.name=Pó de Zinco
+item.ItemRA.ferrousDust.name=Pó de Ferrous
+item.ItemRA.yelloriteDust.name=Pó de Yellorite
+item.ItemRA.osmiumDust.name=Pó de Osmium
+
+item.ItemRA.axePlate.name=Placa de Machado de Ferro
+item.ItemRA.shovelPlate.name=Placa de Pá de Ferro
+item.ItemRA.swordPlate.name=Placa de Espada de Ferro
+item.ItemRA.pickaxePlate.name=Placa de Picareta de Ferro
+item.ItemRA.hoePlate.name=Placa de Enxada de Ferro
+item.ItemRA.bowPlate.name=Placa de Arco de Ferro
+item.ItemRA.throwingstarPlate.name=Placa de Estrela de Arremesso de Ferro
+item.ItemRA.helmetPlate.name=Placa de Elmo de Ferro
+item.ItemRA.chestplatePlate.name=Placa de Peitoral de Ferro
+item.ItemRA.leggingsPlate.name=Placa de Calça de Ferro
+item.ItemRA.bootsPlate.name=Placa de Botas de Ferro
+
+item.ItemRA.plastic.name=Slime Flexível
+item.ItemRA.compressedplastic.name=Slime Flexível Comprimido
+item.ItemRA.compressedplastic2.name=Slime Flexível Comprimido Duplo
+item.ItemRA.heatresistantplastic.name=Slime Flexível (Resistente ao Calor)
+
+item.ItemRA.cobblestoneWeight1.name=Peso de Pedregulho I
+item.ItemRA.cobblestoneWeight2.name=Peso de Pedregulho II
+item.ItemRA.cobblestoneWeight3.name=Peso de Pedregulho III
+item.ItemRA.bronzeWeight1.name=Peso de Bronze I
+item.ItemRA.bronzeWeight2.name=Peso de Bronze II
+item.ItemRA.bronzeWeight3.name=Peso de Bronze III
+item.ItemRA.obsidianWeight1.name=Peso de Obsidiana I
+item.ItemRA.obsidianWeight2.name=Peso de Obsidiana II
+item.ItemRA.obsidianWeight3.name=Peso de Obsidiana III
+
+item.ItemRA.millarm.name=Braço de Moinho de Vento
+item.ItemRA.watermillarm.name=Braço de Moinho D'água
+
+item.ItemRA.flour.name=Farinha
+
+item.ItemRA.battery1.name=Nível de Bateria 1
+item.ItemRA.battery2.name=Nível de Bateria 2
+item.ItemRA.battery3.name=Nível de Bateria 3
+
+item.ItemRA.itemwire.name=Fio
+item.ItemRA.coil.name=Bobina
+
+item.RAArmorHelmetBronze.name=Elmo de Bronze
+item.RAArmorHelmetCopper.name=Elmo de Cobre
+item.RAArmorHelmetTin.name=Elmo de Estanho
+item.RAArmorHelmetRuby.name=Elmo de Rubi
+item.RAArmorHelmetTourmaline.name=Elmo de Turmalina
+item.RAArmorHelmetEmerald.name=Elmo de Esmeralda
+item.RAArmorHelmetObsidian.name=Elmo de Obsidiana
+item.RAArmorHelmetLapis.name=Elmo de Lápis-Lazúli
+
+item.RAArmorChestplateBronze.name=Peitoral de Bronze
+item.RAArmorChestplateCopper.name=Peitoral de Cobre
+item.RAArmorChestplateTin.name=Peitoral de Estanho
+item.RAArmorChestplateRuby.name=Peitoral de Rubi
+item.RAArmorChestplateTourmaline.name=Peitoral de Turmalina
+item.RAArmorChestplateEmerald.name=Peitoral de Esmeralda
+item.RAArmorChestplateObsidian.name=Peitoral de Obsidiana
+item.RAArmorChestplateLapis.name=Peitoral de Lápis-Lazúli
+
+item.RAArmorLeggingsBronze.name=Calça de Bronze
+item.RAArmorLeggingsCopper.name=Calça de Cobre
+item.RAArmorLeggingsTin.name=Calça de Estanho
+item.RAArmorLeggingsRuby.name=Calça de Rubi
+item.RAArmorLeggingsTourmaline.name=Calça de Turmalina
+item.RAArmorLeggingsEmerald.name=Calça de Esmeralda
+item.RAArmorLeggingsObsidian.name=Calça de Obsidiana
+item.RAArmorLeggingsLapis.name=Calça de Lápis-Lazúli
+
+item.RAArmorBootsBronze.name=Botas de Bronze
+item.RAArmorBootsCopper.name=Botas de Cobre
+item.RAArmorBootsTin.name=Botas de Estanho
+item.RAArmorBootsRuby.name=Botas de Rubi
+item.RAArmorBootsTourmaline.name=Botas de Turmalina
+item.RAArmorBootsEmerald.name=Botas de Esmeralda
+item.RAArmorBootsObsidian.name=Botas de Obsidiana
+item.RAArmorBootsLapis.name=Botas de Lápis-Lazúli
+
+custom.redstone.ignore=Ignorar Sinal
+custom.redstone.signal=Sinal
+custom.redstone.nosignal=Sem Sinal
+custom.redstone.impluse=Sinal de Impulso
